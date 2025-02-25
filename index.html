@@ -131,21 +131,17 @@
                 var hairstyle = match[1];
                 console.log("Hairstyle ID:", hairstyle);
 
-                // Create the deep link URL with the correct format
+                // Use exactly the same format as the working direct link
                 var appLink = "hairvana://open?hairstyle=" + hairstyle;
                 console.log("Attempting to open app with:", appLink);
 
-                // Create and click a link (simulating user interaction)
-                var link = document.createElement('a');
-                link.href = appLink;
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                link.click();
+                // Try opening the app directly
+                window.location.replace(appLink);
 
                 // If the app is not installed, redirect to App Store after a delay
                 setTimeout(function() {
                     console.log("App not opened, redirecting to App Store...");
-                    window.location.href = "https://apps.apple.com/app/id6741509156";
+                    window.location.replace("https://apps.apple.com/app/id6741509156");
                 }, 2500);
             } else {
                 console.log("No valid hairstyle path found in URL");
