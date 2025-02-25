@@ -132,7 +132,8 @@
 
                 // Fallback to custom URL scheme after a short delay
                 setTimeout(function() {
-                    var appLink = "hairvana//open:hairstyle?=" + hairstyle;
+                    // Construct deep link using the correct format: hairvana://open?hairstyle=ID
+                    var appLink = "hairvana://open?hairstyle=" + hairstyle;
                     window.location.href = appLink;
 
                     // If neither worked, redirect to App Store after another delay
