@@ -120,7 +120,7 @@
     <script>
         window.onload = function() {
             console.log("Page loaded, checking for deep link...");
-            var pathname = window.location.pathname; // Get path like "/open/hairstyle/butterfly_bob"
+            var pathname = window.location.pathname;
             console.log("Current pathname:", pathname);
 
             // Match /open/hairstyle/hairstyle_name
@@ -135,15 +135,12 @@
                 var appLink = "hairvana://open?hairstyle=" + hairstyle;
                 console.log("Attempting to open app with:", appLink);
 
-                // Try both methods for maximum compatibility
-                // 1. Direct location change
-                window.location.href = appLink;
-
-                // 2. Hidden iframe method
-                var iframe = document.createElement('iframe');
-                iframe.style.display = 'none';
-                iframe.src = appLink;
-                document.body.appendChild(iframe);
+                // Create and click a link (simulating user interaction)
+                var link = document.createElement('a');
+                link.href = appLink;
+                link.style.display = 'none';
+                document.body.appendChild(link);
+                link.click();
 
                 // If the app is not installed, redirect to App Store after a delay
                 setTimeout(function() {
