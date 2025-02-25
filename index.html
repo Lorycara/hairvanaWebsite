@@ -119,28 +119,39 @@
 
     <script>
         window.onload = function() {
+            console.log("Page loaded, checking for deep link...");
             var pathname = window.location.pathname; // Get path like "/open/hairstyle/butterfly_bob"
+            console.log("Current pathname:", pathname);
 
             // Match /open/hairstyle/hairstyle_name
             var match = pathname.match(/\/open\/hairstyle\/([^\/]+)/);
+            console.log("Pathname match:", match);
+
             if (match && match[1]) {
                 var hairstyle = match[1];
+                console.log("Hairstyle ID:", hairstyle);
 
-                // Try Universal Links first (iOS 9+)
-                var webUrl = "https://hairvana.app" + pathname;
-                window.location.href = webUrl;
+                // Create the deep link URL
+                var appLink = "hairvana://open?hairstyle=" + hairstyle;
+                console.log("Attempting to open app with:", appLink);
 
-                // Fallback to custom URL scheme after a short delay
+                // Try both methods for maximum compatibility
+                // 1. Direct location change
+                window.location.href = appLink;
+
+                // 2. Hidden iframe method
+                var iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                iframe.src = appLink;
+                document.body.appendChild(iframe);
+
+                // If the app is not installed, redirect to App Store after a delay
                 setTimeout(function() {
-                    // Construct deep link using the correct format: hairvana://open?hairstyle=ID
-                    var appLink = "hairvana://open?hairstyle=" + hairstyle;
-                    window.location.href = appLink;
-
-                    // If neither worked, redirect to App Store after another delay
-                    setTimeout(function() {
-                        window.location.href = "https://apps.apple.com/app/id6741509156";
-                    }, 1000);
-                }, 1000);
+                    console.log("App not opened, redirecting to App Store...");
+                    window.location.href = "https://apps.apple.com/app/id6741509156";
+                }, 2500);
+            } else {
+                console.log("No valid hairstyle path found in URL");
             }
         };
     </script>
@@ -159,6 +170,9 @@
     <main class="hero">
         <h1>Find Your Perfect Hairstyle</h1>
         <p class="subtitle">Using advanced AI technology, Hairvana helps you discover the perfect hairstyle that matches your face shape, personality, and lifestyle.</p>
+
+        <!-- Test link for deep linking -->
+        <a href="hairvana://open?hairstyle=the_flow" style="color: white; margin-bottom: 20px; display: block;">Test Direct Deep Link</a>
 
         <a href="https://apps.apple.com/app/id6741509156" class="app-store-button">
             <svg height="24" viewBox="0 0 24 24" width="24">
