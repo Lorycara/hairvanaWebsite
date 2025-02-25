@@ -126,8 +126,8 @@
             if (match && match[1]) {
                 var hairstyle = match[1];
 
-                // Construct deep link
-                var appLink = "hairvana://open/hairstyle?=" + hairstyle;
+                // Construct deep link using the working format
+                var appLink = "hairvana//open:hairstyle?=" + hairstyle;
 
                 // Try opening the app
                 window.location.href = appLink;
