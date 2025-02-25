@@ -126,16 +126,20 @@
             if (match && match[1]) {
                 var hairstyle = match[1];
 
-                // Construct deep link using the working format
-                var appLink = "hairvana//open:hairstyle?=" + hairstyle;
+                // Try Universal Links first (iOS 9+)
+                var webUrl = "https://hairvana.app" + pathname;
+                window.location.href = webUrl;
 
-                // Try opening the app
-                window.location.href = appLink;
-
-                // If the app is not installed, redirect to the App Store after 2 seconds
+                // Fallback to custom URL scheme after a short delay
                 setTimeout(function() {
-                    window.location.href = "https://apps.apple.com/app/id6741509156";
-                }, 2000);
+                    var appLink = "hairvana//open:hairstyle?=" + hairstyle;
+                    window.location.href = appLink;
+
+                    // If neither worked, redirect to App Store after another delay
+                    setTimeout(function() {
+                        window.location.href = "https://apps.apple.com/app/id6741509156";
+                    }, 1000);
+                }, 1000);
             }
         };
     </script>
