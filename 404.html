@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hairvana: Find Your Perfect Hairstyle</title>
+    <title>HairMe: Find Your Perfect Hairstyle</title>
     <script>
         window.onload = function() {
             var pathname = window.location.pathname; // Get path like "/open/hairstyle/butterfly_bob"
@@ -13,7 +13,7 @@
             if (match && match[1]) {
                 var hairstyle = match[1];
 
-                var appLink = "hairvana://open/hairstyle?=" + hairstyle;
+                var appLink = "hairme://open/hairstyle?=" + hairstyle;
                 window.location.href = appLink;
 
                 setTimeout(function() {
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <h1>Hairvana</h1>
+    <h1>HairMe</h1>
     <p>If you're not redirected, <a href="https://apps.apple.com/app/id6741509156">click here</a>.</p>
 </body>
 
