@@ -665,6 +665,53 @@
                 padding: 4rem 1rem;
             }
         }
+        /* Add styles for the new Final CTA section */
+        
+        .final-cta-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(rgba(0, 194, 255, 0.1), rgba(18, 18, 18, 0));
+            text-align: center;
+        }
+        
+        .final-cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .final-cta-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #ffffff, #a9a2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+        
+        .final-cta-container p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+        
+        .final-cta-button {
+            margin: 0 auto;
+            /* Center the button */
+        }
+        
+        @media (max-width: 768px) {
+            .final-cta-container h2 {
+                font-size: 2rem;
+            }
+            .final-cta-container p {
+                font-size: 1rem;
+            }
+            .final-cta-section {
+                padding: 4rem 1rem;
+            }
+        }
+        /* End of Final CTA styles */
     </style>
 
     <script>
@@ -710,8 +757,8 @@
 
     <main class="hero">
         <div class="hero-content">
-            <h1>Find Your Perfect Hairstyle</h1>
-            <p class="subtitle">Using advanced AI technology, HairMe helps you discover the perfect hairstyle that matches your face shape, personality, and lifestyle.</p>
+            <h1>Unlock Your Most Attractive Look</h1>
+            <p class="subtitle">Stop guessing. HairMe's AI analyzes your unique features to reveal the specific hairstyles, products, and techniques proven to enhance *your* attractiveness. Go beyond generic advice and discover your personalized path to confidence.</p>
             <a href="https://apps.apple.com/app/id6741509156" class="app-store-button">
                 <svg height="28" viewBox="0 0 24 24" width="28">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
@@ -724,7 +771,7 @@
     </main>
 
     <section class="features-section">
-        <h2 class="section-title">AI-Powered Hair Solutions</h2>
+        <h2 class="section-title">What HairMe Delivers</h2>
         <div class="features-container">
             <div class="feature-card">
                 <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -732,8 +779,8 @@
                     <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
                     <path d="M12 8v8"/>
                 </svg>
-                <h3 class="feature-title">Perfect Style Match</h3>
-                <p class="feature-desc">Discover hairstyles tailored to your unique face shape, hair texture, and personal style through our advanced matching algorithm.</p>
+                <h3 class="feature-title">Hairstyles That *Actually* Suit You</h3>
+                <p class="feature-desc">Our AI analyzes your unique face shape and features to find haircuts that specifically enhance *your* look, not just generic trends.</p>
                 <img src="images/screenshots/Simulator Screenshot - iPhone 15 - 2025-03-23 at 12.39.32.png" alt="Style Matching Feature" class="feature-img">
             </div>
             <div class="feature-card">
@@ -741,18 +788,93 @@
                     <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
                     <line x1="7" y1="7" x2="7.01" y2="7"/>
                 </svg>
-                <h3 class="feature-title">Product Recommendations</h3>
-                <p class="feature-desc">Get personalized product suggestions that work best for your hair type, addressing your specific hair concerns and goals.</p>
+                <h3 class="feature-title">The *Right* Products & Styling</h3>
+                <p class="feature-desc">Get personalized product recommendations and learn the exact techniques to style and maintain your new look effortlessly.</p>
                 <img src="images/screenshots/Simulator Screenshot - iPhone 15 - 2025-03-23 at 12.39.34.png" alt="Product Recommendations Feature" class="feature-img">
             </div>
             <div class="feature-card">
                 <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 6v6l4 2"/>
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
-                <h3 class="feature-title">Custom Hair Care Routine</h3>
-                <p class="feature-desc">Follow your personalized step-by-step hair care routine for healthier, more beautiful hair that's tailored to your lifestyle.</p>
+                <h3 class="feature-title">Guidance for Your Barber</h3>
+                <p class="feature-desc">Know exactly what details to tell your barber to get the perfect cut every time – the specifics no one else tells you.</p>
                 <img src="images/screenshots/Simulator Screenshot - iPhone 15 - 2025-03-23 at 12.40.36.png" alt="Hair Care Routine Feature" class="feature-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <div class="benefits-content">
+                <h2 class="benefits-title">Become the Most Attractive You've Ever Been</h2>
+                <p class="benefits-subtitle">HairMe identifies your unique facial features and provides the exact strategies to emphasize your strengths and improve weaknesses.</p>
+
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>In-Depth Face Analysis</h3>
+                            <p>Understand your facial strengths and weaknesses like never before.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Targeted Improvement Techniques</h3>
+                            <p>Learn actionable techniques to enhance your best features.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Your Ideal Hairstyle, Found</h3>
+                            <p>Discover the specific hairstyles guaranteed to maximize your look.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Complete Style Matching</h3>
+                            <p>Get recommendations for beard and fashion styles that complement your new look.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://apps.apple.com/app/id6741509156" class="cta-button">
+                    <svg height="28" viewBox="0 0 24 24" width="28">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                    </svg> Download on the App Store
+                </a>
+            </div>
+
+            <div class="benefits-image">
+                <div class="floating-screens">
+                    <div class="screen screen-1">
+                        <img src="images/screenshots/Simulator Screenshot - iPhone 15 - 2025-03-23 at 12.39.41.png" alt="AI Style Matching Screen">
+                    </div>
+                    <div class="screen screen-2">
+                        <img src="images/screenshots/Simulator Screenshot - iPhone 15 - 2025-03-23 at 12.40.22.png" alt="Product Finder Screen">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -811,71 +933,15 @@
         </div>
     </section>
 
-    <section class="benefits-section">
-        <div class="benefits-container">
-            <div class="benefits-content">
-                <h2 class="benefits-title">Transform Your Hair Journey</h2>
-                <p class="benefits-subtitle">HairMe uses advanced AI to provide a complete hair solution tailored specifically to you.</p>
-
-                <div class="benefits-list">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                        </div>
-                        <div class="benefit-text">
-                            <h3>Quick Analysis</h3>
-                            <p>Get perfect hairstyle matches in under 30 seconds</p>
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-                                <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                                <polyline points="7 3 7 8 15 8"></polyline>
-                            </svg>
-                        </div>
-                        <div class="benefit-text">
-                            <h3>Personalized Profile</h3>
-                            <p>Save your preferences and track your hair journey</p>
-                        </div>
-                    </div>
-
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                        </div>
-                        <div class="benefit-text">
-                            <h3>Proven Results</h3>
-                            <p>Join thousands of satisfied users with healthier hair</p>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="https://apps.apple.com/app/id6741509156" class="cta-button">
-                    <svg height="28" viewBox="0 0 24 24" width="28">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
-                    </svg> Download on the App Store
-                </a>
-            </div>
-
-            <div class="benefits-image">
-                <div class="floating-screens">
-                    <div class="screen screen-1">
-                        <img src="images/screenshots/Simulator Screenshot - iPhone 15 - 2025-03-23 at 12.39.41.png" alt="AI Style Matching Screen">
-                    </div>
-                    <div class="screen screen-2">
-                        <img src="images/screenshots/Simulator Screenshot - iPhone 15 - 2025-03-23 at 12.40.22.png" alt="Product Finder Screen">
-                    </div>
-                </div>
-            </div>
+    <section class="final-cta-section">
+        <div class="final-cta-container">
+            <h2>Ready for a Life-Changing Transformation?</h2>
+            <p>Stop settling for generic advice. It's time to unlock the specific look that maximizes *your* attractiveness and confidence. Download HairMe now and finally see the difference personalized AI guidance can make.</p>
+            <a href="https://apps.apple.com/app/id6741509156" class="app-store-button final-cta-button">
+                <svg height="28" viewBox="0 0 24 24" width="28">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                </svg> Download Now & Transform Your Look
+            </a>
         </div>
     </section>
 
