@@ -1,0 +1,163 @@
+{
+    "translations": {
+        "en": {
+            "nav": {
+                "home": "Home",
+                "faceShapes": "Face Shapes",
+                "ovalFace": "Oval Face",
+                "diamondFace": "Diamond Face",
+                "roundFace": "Round Face",
+                "findYours": "Find Yours",
+                "contact": "Contact"
+            },
+            "footer": {
+                "privacy": "Privacy Policy",
+                "terms": "Terms of Service",
+                "contact": "Contact Us",
+                "about": "About",
+                "rightsReserved": "All rights reserved."
+            },
+            "home": {
+                "title": "The most attractive you've ever been",
+                "subtitle": "Imagine turning heads everywhere you go. With the perfect hairstyle that matches your face shape, you'll radiate confidence and showcase your most attractive self. It's not just a haircut—it's your transformation.",
+                "cta": "Become your most confident self",
+                "exploreOptions": "Explore Options"
+            },
+            "privacy": {
+                "title": "PRIVACY NOTICE",
+                "lastUpdated": "Last updated February 04, 2025",
+                "intro": "This Privacy Notice for HairMe (\"we,\" \"us,\" or \"our\"), describes how and why we might access, collect, store, use, and/or share (\"process\") your personal information when you use our services (\"Services\"), including when you:"
+            },
+            "contact": {
+                "title": "Contact Us",
+                "subtitle": "Have questions about finding the perfect hairstyle for your face shape? We're here to help!",
+                "formTitle": "Send Us a Message",
+                "nameLabel": "Your Name",
+                "emailLabel": "Email Address",
+                "subjectLabel": "Subject",
+                "messageLabel": "Your Message",
+                "submitButton": "Send Message",
+                "formSuccess": "Thank you for your message! We will get back to you soon.",
+                "infoTitle": "Get in Touch",
+                "locationTitle": "Location",
+                "locationText": "Milan, Italy",
+                "followUs": "Follow Us",
+                "faqTitle": "Frequently Asked Questions",
+                "faq1Question": "How do I determine my face shape?",
+                "faq1Answer": "To determine your face shape, pull your hair back and look straight into a mirror. Trace the outline of your face and examine its proportions. You can also measure the width of your forehead, cheekbones, and jawline, as well as the length of your face from hairline to chin. Compare these measurements to our face shape guides for accurate identification.",
+                "faq2Question": "Can I request a custom hairstyle recommendation?",
+                "faq2Answer": "Yes! While our guides provide general recommendations based on face shapes, we understand that individual preferences, hair texture, and lifestyle factors matter too. Fill out our contact form with details about your face shape, hair type, and preferences, and our experts will provide personalized recommendations.",
+                "faq3Question": "Do you offer virtual consultations?",
+                "faq3Answer": "We currently don't offer virtual consultations, but we're working on implementing this feature in the future. Stay tuned by signing up for our newsletter to be notified when virtual consultations become available.",
+                "faq4Question": "How often should I update my hairstyle?",
+                "faq4Answer": "This depends on personal preference, but most people benefit from refreshing their look every 6-12 months. However, your maintenance schedule should align with your hair's growth rate and the complexity of your style. Many clients find seasonal updates provide a nice balance between consistency and freshness."
+            }
+        },
+        "de": {
+            "nav": {
+                "home": "Startseite",
+                "faceShapes": "Gesichtsformen",
+                "ovalFace": "Ovales Gesicht",
+                "diamondFace": "Diamantgesicht",
+                "roundFace": "Rundes Gesicht",
+                "findYours": "Finde Deine",
+                "contact": "Kontakt"
+            },
+            "footer": {
+                "privacy": "Datenschutz",
+                "terms": "Nutzungsbedingungen",
+                "contact": "Kontakt",
+                "about": "Über uns",
+                "rightsReserved": "Alle Rechte vorbehalten."
+            },
+            "home": {
+                "title": "Die attraktivste Version deiner selbst",
+                "subtitle": "Stell dir vor, du drehst überall Köpfe. Mit der perfekten Frisur, die zu deiner Gesichtsform passt, strahlst du Selbstvertrauen aus und zeigst dein attraktivstes Ich. Es ist nicht nur ein Haarschnitt - es ist deine Verwandlung.",
+                "cta": "Werde selbstbewusster",
+                "exploreOptions": "Optionen erkunden"
+            },
+            "privacy": {
+                "title": "DATENSCHUTZERKLÄRUNG",
+                "lastUpdated": "Zuletzt aktualisiert am 04. Februar 2025",
+                "intro": "Diese Datenschutzerklärung für HairMe (\"wir\", \"uns\" oder \"unser\") beschreibt, wie und warum wir möglicherweise auf Ihre personenbezogenen Daten zugreifen, sie erheben, speichern, verwenden und/oder weitergeben (\"verarbeiten\"), wenn Sie unsere Dienste (\"Dienste\") nutzen, einschließlich wenn Sie:"
+            },
+            "contact": {
+                "title": "Kontaktieren Sie uns",
+                "subtitle": "Haben Sie Fragen zur Suche nach der perfekten Frisur für Ihre Gesichtsform? Wir sind hier, um zu helfen!",
+                "formTitle": "Senden Sie uns eine Nachricht",
+                "nameLabel": "Ihr Name",
+                "emailLabel": "E-Mail-Adresse",
+                "subjectLabel": "Betreff",
+                "messageLabel": "Ihre Nachricht",
+                "submitButton": "Nachricht senden",
+                "formSuccess": "Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.",
+                "infoTitle": "Kontakt aufnehmen",
+                "locationTitle": "Standort",
+                "locationText": "Mailand, Italien",
+                "followUs": "Folgen Sie uns",
+                "faqTitle": "Häufig gestellte Fragen",
+                "faq1Question": "Wie bestimme ich meine Gesichtsform?",
+                "faq1Answer": "Um Ihre Gesichtsform zu bestimmen, ziehen Sie Ihre Haare zurück und schauen Sie geradeaus in einen Spiegel. Zeichnen Sie die Umrisse Ihres Gesichts nach und untersuchen Sie die Proportionen. Sie können auch die Breite Ihrer Stirn, Wangenknochen und Kieferlinie sowie die Länge Ihres Gesichts vom Haaransatz bis zum Kinn messen. Vergleichen Sie diese Messungen mit unseren Gesichtsform-Anleitungen für eine genaue Identifizierung.",
+                "faq2Question": "Kann ich eine individuelle Frisurempfehlung anfordern?",
+                "faq2Answer": "Ja! Während unsere Anleitungen allgemeine Empfehlungen basierend auf Gesichtsformen bieten, verstehen wir, dass individuelle Vorlieben, Haarstruktur und Lifestyle-Faktoren ebenfalls wichtig sind. Füllen Sie unser Kontaktformular mit Details zu Ihrer Gesichtsform, Haartyp und Vorlieben aus, und unsere Experten werden Ihnen persönliche Empfehlungen geben.",
+                "faq3Question": "Bieten Sie virtuelle Beratungen an?",
+                "faq3Answer": "Derzeit bieten wir keine virtuellen Beratungen an, aber wir arbeiten daran, diese Funktion in Zukunft zu implementieren. Bleiben Sie auf dem Laufenden, indem Sie sich für unseren Newsletter anmelden, um benachrichtigt zu werden, wenn virtuelle Beratungen verfügbar werden.",
+                "faq4Question": "Wie oft sollte ich meine Frisur aktualisieren?",
+                "faq4Answer": "Dies hängt von persönlichen Vorlieben ab, aber die meisten Menschen profitieren davon, ihren Look alle 6-12 Monate aufzufrischen. Ihr Wartungsplan sollte jedoch mit der Wachstumsrate Ihrer Haare und der Komplexität Ihres Stils übereinstimmen. Viele Kunden finden, dass saisonale Updates eine gute Balance zwischen Konsistenz und Frische bieten."
+            }
+        },
+        "fr": {
+            "nav": {
+                "home": "Accueil",
+                "faceShapes": "Formes de Visage",
+                "ovalFace": "Visage Ovale",
+                "diamondFace": "Visage Diamant",
+                "roundFace": "Visage Rond",
+                "findYours": "Trouvez la Vôtre",
+                "contact": "Contact"
+            },
+            "footer": {
+                "privacy": "Politique de Confidentialité",
+                "terms": "Conditions d'Utilisation",
+                "contact": "Contactez-nous",
+                "about": "À Propos",
+                "rightsReserved": "Tous droits réservés."
+            },
+            "home": {
+                "title": "La version la plus séduisante de vous-même",
+                "subtitle": "Imaginez faire tourner les têtes partout où vous allez. Avec la coiffure parfaite qui correspond à la forme de votre visage, vous rayonnerez de confiance et montrerez votre meilleur vous. Ce n'est pas qu'une coupe de cheveux—c'est votre transformation.",
+                "cta": "Devenez plus confiant",
+                "exploreOptions": "Explorer les options"
+            },
+            "privacy": {
+                "title": "AVIS DE CONFIDENTIALITÉ",
+                "lastUpdated": "Dernière mise à jour le 04 février 2025",
+                "intro": "Cet avis de confidentialité pour HairMe (\"nous\", \"notre\" ou \"nos\"), décrit comment et pourquoi nous pourrions accéder, collecter, stocker, utiliser et/ou partager (\"traiter\") vos informations personnelles lorsque vous utilisez nos services (\"Services\"), notamment lorsque vous:"
+            },
+            "contact": {
+                "title": "Contactez-nous",
+                "subtitle": "Vous avez des questions sur la recherche de la coiffure parfaite pour la forme de votre visage ? Nous sommes là pour vous aider !",
+                "formTitle": "Envoyez-nous un message",
+                "nameLabel": "Votre nom",
+                "emailLabel": "Adresse e-mail",
+                "subjectLabel": "Sujet",
+                "messageLabel": "Votre message",
+                "submitButton": "Envoyer le message",
+                "formSuccess": "Merci pour votre message ! Nous vous répondrons bientôt.",
+                "infoTitle": "Prenez contact",
+                "locationTitle": "Emplacement",
+                "locationText": "Milan, Italie",
+                "followUs": "Suivez-nous",
+                "faqTitle": "Questions fréquemment posées",
+                "faq1Question": "Comment déterminer la forme de mon visage ?",
+                "faq1Answer": "Pour déterminer la forme de votre visage, tirez vos cheveux en arrière et regardez droit dans un miroir. Tracez le contour de votre visage et examinez ses proportions. Vous pouvez également mesurer la largeur de votre front, de vos pommettes et de votre mâchoire, ainsi que la longueur de votre visage de la racine des cheveux au menton. Comparez ces mesures à nos guides de forme de visage pour une identification précise.",
+                "faq2Question": "Puis-je demander une recommandation de coiffure personnalisée ?",
+                "faq2Answer": "Oui ! Bien que nos guides fournissent des recommandations générales basées sur les formes de visage, nous comprenons que les préférences individuelles, la texture des cheveux et les facteurs de style de vie sont également importants. Remplissez notre formulaire de contact avec des détails sur la forme de votre visage, le type de cheveux et vos préférences, et nos experts vous fourniront des recommandations personnalisées.",
+                "faq3Question": "Proposez-vous des consultations virtuelles ?",
+                "faq3Answer": "Nous ne proposons pas actuellement de consultations virtuelles, mais nous travaillons à la mise en œuvre de cette fonctionnalité à l'avenir. Restez informé en vous inscrivant à notre newsletter pour être averti lorsque les consultations virtuelles seront disponibles.",
+                "faq4Question": "À quelle fréquence dois-je mettre à jour ma coiffure ?",
+                "faq4Answer": "Cela dépend des préférences personnelles, mais la plupart des gens bénéficient d'un rafraîchissement de leur look tous les 6 à 12 mois. Cependant, votre programme d'entretien doit s'aligner sur le taux de croissance de vos cheveux et la complexité de votre style. De nombreux clients trouvent que les mises à jour saisonnières offrent un bon équilibre entre cohérence et fraîcheur."
+            }
+        }
+    }
+}
