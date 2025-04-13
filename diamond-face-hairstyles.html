@@ -534,6 +534,36 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% - 10px);
+            left: 0;
+            min-width: 220px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            padding: 10px 0.5rem 0.5rem 0.5rem;
+            z-index: 101;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown::after {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 100%;
+            bottom: -20px;
+            left: 0;
+            z-index: 100;
+        }
     </style>
 
     <!-- Structured data for SEO -->
