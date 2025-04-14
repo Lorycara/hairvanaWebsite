@@ -187,12 +187,6 @@
             margin-left: 0.3rem;
             font-size: 0.8rem;
         }
-        
-        .nav-download-btn {
-            padding: 0.7rem 1.5rem;
-            font-size: 0.9rem;
-            margin-left: auto;
-        }
         /* Hero Section - New Design */
         
         .hero {
@@ -283,11 +277,6 @@
         .button-secondary:hover {
             background: rgba(0, 188, 212, 0.1);
             transform: translateY(-3px);
-        }
-        
-        .button-small {
-            padding: 0.5rem 1.2rem;
-            font-size: 0.85rem;
         }
         /* Finally Find Section */
         
@@ -505,8 +494,8 @@
         }
         
         .testimonial-text::before {
-            content: "";
-            font-size: 4rem;
+            content: """;
+ font-size: 4rem;
             color: rgba(0, 188, 212, 0.2);
             position: absolute;
             top: -1.5rem;
@@ -689,9 +678,20 @@
             <a href="index.html" class="logo">
                 <img src="images/hairme.png" alt="HairMe Logo"> HairMe
             </a>
-            <a href="https://apps.apple.com/app/id6741509156" class="button button-primary button-small nav-download-btn">
-                Download App
-            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="perfect-haircut-for-face-shape.html">Face Shapes <span class="dropdown-icon">▾</span></a>
+                    <div class="dropdown-content">
+                        <a href="women-oval-face-hairstyles.html">Oval Face</a>
+                        <a href="diamond-face-hairstyles.html">Diamond Face</a>
+                        <a href="men-round-face-haircuts.html">Round Face</a>
+                        <a href="perfect-haircut-for-face-shape.html">Find Yours</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
         </nav>
     </header>
 
@@ -924,6 +924,16 @@
 
             // Initial check on page load
             handleScrollAnimation();
+
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                });
+            }
         });
     </script>
 </body>

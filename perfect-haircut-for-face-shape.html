@@ -20,29 +20,43 @@
     <meta name="twitter:title" content="How to Find Your Perfect Hairstyle Based on Face Shape">
     <meta name="twitter:description" content="Learn how to find your ideal hairstyle based on your face shape with this simple guide.">
     <meta name="twitter:image" content="https://hairvana.app/images/how-to-find-your-hairstyle-share.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
          :root {
-            --primary-color: #0066cc;
-            --secondary-color: #0055aa;
-            --accent-color: #00c2ff;
-            --text-color: #ffffff;
-            --background-color: #000000;
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --primary-dark: #0097A7;
+            --secondary-color: #26C6DA;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #121212;
+            --background-alt: #1A2229;
+            --card-background: #1E252C;
+            --section-dark: #171E24;
+            --section-darker: #141B21;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         
         body {
-            background: #121212;
+            background: var(--background-color);
             min-height: 100vh;
             color: var(--text-color);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
         }
         
         nav {
@@ -63,8 +77,23 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--text-color);
-            text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
             letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 8px;
+        }
+        
+        .logo a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
         }
         
         .nav-links {
@@ -96,241 +125,251 @@
             transform: scale(0.98) translateY(0);
         }
         
-        .article-container {
-            max-width: 840px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+        .container {
+            max-width: 1140px;
+            margin: 2rem auto 4rem;
+            padding: 2rem;
             line-height: 1.6;
         }
         
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
             color: var(--text-color);
-            line-height: 1.2;
-            font-weight: 800;
-            background: linear-gradient(to right, #ffffff, #a9a2ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .article-meta {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2.5rem;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .article-date {
-            margin-right: 1.5rem;
-        }
-        
-        .article-intro {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 1.5rem;
+            text-align: center;
         }
         
         h2 {
-            font-size: 2rem;
-            margin: 3rem 0 1.5rem;
-            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
         
         h3 {
             font-size: 1.4rem;
-            margin: 2rem 0 1rem;
-            color: #ffffff;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-light);
         }
         
         p {
             margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-light);
         }
         
-        .face-shape-container {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 3rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        ul,
+        ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
         }
         
-        .face-shape-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        li {
+            margin-bottom: 0.5rem;
         }
         
-        .face-shape-card {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .face-shape-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 194, 255, 0.2);
-            border-color: rgba(0, 194, 255, 0.3);
-        }
-        
-        .face-shape-card h3 {
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .face-shape-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 0.8rem;
-        }
-        
-        .face-shape-list {
-            list-style-type: none;
-            margin: 1rem 0;
-        }
-        
-        .face-shape-list li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .face-shape-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-        }
-        
-        .cta-box {
-            background: linear-gradient(45deg, rgba(0, 102, 204, 0.2), rgba(0, 194, 255, 0.2));
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 3rem 0;
-            text-align: center;
-            border: 1px solid rgba(0, 194, 255, 0.2);
-        }
-        
-        .cta-box h3 {
-            margin-top: 0;
-            font-size: 1.6rem;
-        }
-        
-        .app-store-button {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1rem 2.5rem;
-            border-radius: 12px;
-            color: white;
+        a {
+            color: var(--primary-color);
             text-decoration: none;
-            gap: 0.8rem;
-            width: fit-content;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-top: 1.5rem;
         }
         
-        .app-store-button:hover {
-            background: var(--accent-color);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 194, 255, 0.4);
-        }
-        
-        .app-store-button:active {
-            transform: scale(0.98) translateY(0);
+        a:hover {
+            text-decoration: underline;
         }
         
         img {
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
+            border-radius: var(--border-radius);
+            margin: 1.5rem 0;
             display: block;
-            margin: 2rem auto;
         }
         
-        .image-caption {
-            text-align: center;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-            margin-top: -1rem;
+        .article-intro {
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-        }
-        
-        blockquote {
-            border-left: 3px solid var(--accent-color);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .footer {
-            text-align: center;
+            color: var(--text-light);
+            border-left: 4px solid var(--primary-color);
             padding: 1.5rem;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.5);
-            margin-top: auto;
+            background: rgba(0, 188, 212, 0.05);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
         }
         
-        .footer-links {
+        .face-shape-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .face-shape-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .face-shape-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-color);
+        }
+        
+        .face-shape-card img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            margin: 0;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        
+        .face-shape-card-content {
+            padding: 1.5rem;
+        }
+        
+        .face-shape-card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        
+        .face-shape-card p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .face-shape-card .button {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+        
+        .measurement-steps {
+            background: var(--section-dark);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 1.5rem;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: var(--primary-color);
+            color: #000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-section {
+            background: var(--section-dark);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 3rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .cta-section h2 {
+            margin-top: 0;
+        }
+        
+        .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 0.5rem;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
         
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.3s ease;
+        .faq-section {
+            margin: 3rem 0;
         }
         
-        .footer-links a:hover {
-            color: var(--accent-color);
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--border-color);
+        }
+        
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            background-color: var(--section-dark);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.2);
         }
         
         @media (max-width: 768px) {
-            .article-container {
-                padding: 3rem 1.5rem;
+            .container {
+                padding: 1.5rem;
+                margin: 1rem;
             }
             h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             h2 {
-                font-size: 1.6rem;
-            }
-            .article-intro {
-                font-size: 1.1rem;
+                font-size: 1.5rem;
             }
             .face-shape-grid {
                 grid-template-columns: 1fr;
             }
-            nav {
-                padding: 1rem;
-                flex-direction: column;
-                gap: 1rem;
+            .cta-section {
+                padding: 2rem 1.5rem;
             }
-            .nav-links {
+            .step {
+                flex-direction: column;
                 gap: 1rem;
             }
         }
@@ -390,465 +429,285 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">HairMe</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <main class="article-container">
-        <article>
-            <h1>How to Find Your Perfect Hairstyle by Face Shape</h1>
-            <div class="article-meta">
-                <span class="article-read-time">3 min read</span>
-            </div>
-
-            <p class="article-intro">Struggling to find your hairstyle? Your face shape is the key to discovering haircuts that truly complement your features.</p>
-
-            <div class="key-point">
-                The right haircut works with your face shape to highlight your best features. It's not about trends—it's about what works for YOU.
-            </div>
-
-            <div class="approach-container">
-                <div class="approach-card manual">
-                    <h3>DIY Method</h3>
-                    <p>Use our quick guide to find your face shape and see what styles work best.</p>
-                </div>
-
-                <div class="approach-card ai">
-                    <h3>AI Analysis</h3>
-                    <p>Get precise, personalized recommendations based on your exact features.</p>
-                    <a href="https://apps.apple.com/app/id6741509156" class="app-store-button subtle-button">Try HairMe App</a>
-                </div>
-            </div>
-
-            <div class="section-divider"></div>
-
-            <h2>How to Find Your Hairstyle: Start With Face Shape</h2>
-
-            <div class="step-container">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <p>Pull hair back from your face</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <p>Take a front-facing photo</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <p>Notice forehead, cheekbones, jawline</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <p>Match to face shapes below</p>
-                </div>
-            </div>
-
-            <p class="note">Finding your true face shape can be tricky. Many people have a combination of shapes!</p>
-
-            <img src="images/face-shapes-guide.jpg" alt="How to find your hairstyle using face shape guide" class="content-image" />
-            <p class="image-caption">Use this guide to identify your unique face shape and find your perfect hairstyle</p>
-
-            <div class="face-shape-container">
-                <h2>Find Your Hairstyle: Best Cuts by Face Shape</h2>
-
-                <div class="face-shape-grid">
-                    <div class="face-shape-card">
-                        <h3>
-                            <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <ellipse cx="12" cy="12" rx="6" ry="10"></ellipse>
-                            </svg> Oval Face
-                        </h3>
-                        <p><strong>You have:</strong> Balanced proportions, forehead slightly wider than chin</p>
-                        <p><strong>Try these:</strong></p>
-                        <ul class="face-shape-list">
-                            <li>Medium-length cuts with layers</li>
-                            <li>Side-parted styles</li>
-                            <li>Pixie cuts (women)</li>
-                            <li>Classic crew cuts (men)</li>
-                        </ul>
-                        <p><strong>Avoid:</strong> Heavy bangs, excessive volume</p>
-                    </div>
-
-                    <div class="face-shape-card">
-                        <h3>
-                            <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                            </svg> Round Face
-                        </h3>
-                        <p><strong>You have:</strong> Similar width/length, full cheeks, rounded chin</p>
-                        <p><strong>Try these:</strong></p>
-                        <ul class="face-shape-list">
-                            <li>Volume at the top</li>
-                            <li>Side-swept bangs</li>
-                            <li>Long bobs with layers</li>
-                            <li>Pompadour styles (men)</li>
-                        </ul>
-                        <p><strong>Avoid:</strong> One-length bobs, center parts</p>
-                    </div>
-
-                    <div class="face-shape-card">
-                        <h3>
-                            <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                            </svg> Square Face
-                        </h3>
-                        <p><strong>You have:</strong> Strong jawline, straight sides, angular features</p>
-                        <p><strong>Try these:</strong></p>
-                        <ul class="face-shape-list">
-                            <li>Soft, layered cuts</li>
-                            <li>Side-swept styles</li>
-                            <li>Textured bobs</li>
-                            <li>Volume at the crown</li>
-                        </ul>
-                        <p><strong>Avoid:</strong> Blunt cuts, center parts</p>
-                    </div>
-
-                    <div class="face-shape-card">
-                        <h3>
-                            <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="12 2 19 10 21 21 12 18 3 21 5 10 12 2"></polygon>
-                            </svg> Heart Face
-                        </h3>
-                        <p><strong>You have:</strong> Wide forehead/cheekbones, narrow chin</p>
-                        <p><strong>Try these:</strong></p>
-                        <ul class="face-shape-list">
-                            <li>Chin-length or longer</li>
-                            <li>Side-parted bangs</li>
-                            <li>Width at jaw level</li>
-                            <li>Layered chin-length bobs</li>
-                        </ul>
-                        <p><strong>Avoid:</strong> Top-heavy styles, blunt bangs</p>
-                    </div>
-
-                    <div class="face-shape-card">
-                        <h3>
-                            <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="12 2 4 12 12 22 20 12 12 2"></polygon>
-                            </svg> Diamond Face
-                        </h3>
-                        <p><strong>You have:</strong> Narrow forehead, wide cheekbones, narrow chin</p>
-                        <p><strong>Try these:</strong></p>
-                        <ul class="face-shape-list">
-                            <li>Volume at forehead and chin</li>
-                            <li>Side-swept bangs</li>
-                            <li>Chin-length layered cuts</li>
-                            <li>Forward-styled cuts</li>
-                        </ul>
-                        <p><strong>Avoid:</strong> Middle parts, slicked-back styles</p>
-                    </div>
-
-                    <div class="face-shape-card">
-                        <h3>
-                            <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            </svg> Rectangle Face
-                        </h3>
-                        <p><strong>You have:</strong> Longer face, similar width throughout</p>
-                        <p><strong>Try these:</strong></p>
-                        <ul class="face-shape-list">
-                            <li>Volume on the sides</li>
-                            <li>Layered cuts with fullness</li>
-                            <li>Bangs to shorten the face</li>
-                            <li>Textured, disheveled looks</li>
-                        </ul>
-                        <p><strong>Avoid:</strong> Long straight styles, vertical volume</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-divider"></div>
-
-            <h2>Quick Tips for Finding Your Hairstyle at the Salon</h2>
-
-            <div class="key-point">
-                <span class="tip-tag">PRO TIP</span> Show pictures of styles you like on someone with YOUR face shape!
-            </div>
-
-            <div class="step-container">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <p>Bring reference photos</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <p>Mention your face shape</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <p>Discuss styling time</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <p>Ask about products</p>
-                </div>
-            </div>
-
-            <p>Taking a visual reference to your appointment is crucial. With HairMe, you can save your personalized recommendations and show them directly to your stylist.</p>
-
-            <div class="section-divider"></div>
-
-            <h2>Find Your Perfect Hairstyle with AI Technology</h2>
-
-            <p>This guide offers the basics on how to find your hairstyle, but your face has unique proportions that general guidelines can't fully address.</p>
-
-            <p>The HairMe app analyzes YOUR specific features to recommend:</p>
-
-            <ul class="face-shape-list">
-                <li>Haircuts that enhance your best features</li>
-                <li>Styling techniques for your hair type</li>
-                <li>Products that work with your hair</li>
-                <li>Beard styles that complement your face</li>
-            </ul>
-
-            <div class="app-download-section">
-                <a href="https://apps.apple.com/app/id6741509156" class="app-store-button">
-                    <svg height="28" viewBox="0 0 24 24" width="28">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
-                    </svg> Download HairMe
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/hairme.png" alt="HairMe Logo"> HairMe
                 </a>
             </div>
+            <a href="https://apps.apple.com/app/id6741509156" class="button button-primary button-small nav-download-btn">
+                <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                </svg> Download
+            </a>
+        </nav>
+    </header>
 
-            <div class="related-articles">
-                <h3>More Guides on How to Find Your Hairstyle</h3>
-                <div class="related-links">
-                    <a href="hairstyles-for-different-hair-types.html">How to Find Your Hairstyle Based on Hair Type</a>
-                    <a href="trending-hairstyles.html">Latest Trending Hairstyles to Try in 2025</a>
-                    <a href="mens-hairstyles-guide.html">Men's Guide: How to Find Your Hairstyle</a>
-                    <a href="womens-hairstyles-guide.html">Women's Guide: How to Find Your Hairstyle</a>
+    <div class="container">
+        <h1>How to Find Your Perfect Hairstyle by Face Shape</h1>
+        <div class="article-meta">
+            <span class="article-read-time">3 min read</span>
+        </div>
+
+        <p class="article-intro">Struggling to find your hairstyle? Your face shape is the key to discovering haircuts that truly complement your features.</p>
+
+        <div class="key-point">
+            The right haircut works with your face shape to highlight your best features. It's not about trends—it's about what works for YOU.
+        </div>
+
+        <div class="approach-container">
+            <div class="approach-card manual">
+                <h3>DIY Method</h3>
+                <p>Use our quick guide to find your face shape and see what styles work best.</p>
+            </div>
+
+            <div class="approach-card ai">
+                <h3>AI Analysis</h3>
+                <p>Get precise, personalized recommendations based on your exact features.</p>
+                <a href="https://apps.apple.com/app/id6741509156" class="app-store-button subtle-button">Try HairMe App</a>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>How to Find Your Hairstyle: Start With Face Shape</h2>
+
+        <div class="step-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <p>Pull hair back from your face</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <p>Take a front-facing photo</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <p>Notice forehead, cheekbones, jawline</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <p>Match to face shapes below</p>
+            </div>
+        </div>
+
+        <p class="note">Finding your true face shape can be tricky. Many people have a combination of shapes!</p>
+
+        <img src="images/face-shapes-guide.jpg" alt="How to find your hairstyle using face shape guide" class="content-image" />
+        <p class="image-caption">Use this guide to identify your unique face shape and find your perfect hairstyle</p>
+
+        <div class="face-shape-container">
+            <h2>Find Your Hairstyle: Best Cuts by Face Shape</h2>
+
+            <div class="face-shape-grid">
+                <div class="face-shape-card">
+                    <h3>
+                        <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <ellipse cx="12" cy="12" rx="6" ry="10"></ellipse>
+                        </svg> Oval Face
+                    </h3>
+                    <p><strong>You have:</strong> Balanced proportions, forehead slightly wider than chin</p>
+                    <p><strong>Try these:</strong></p>
+                    <ul class="face-shape-list">
+                        <li>Medium-length cuts with layers</li>
+                        <li>Side-parted styles</li>
+                        <li>Pixie cuts (women)</li>
+                        <li>Classic crew cuts (men)</li>
+                    </ul>
+                    <p><strong>Avoid:</strong> Heavy bangs, excessive volume</p>
+                </div>
+
+                <div class="face-shape-card">
+                    <h3>
+                        <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg> Round Face
+                    </h3>
+                    <p><strong>You have:</strong> Similar width/length, full cheeks, rounded chin</p>
+                    <p><strong>Try these:</strong></p>
+                    <ul class="face-shape-list">
+                        <li>Volume at the top</li>
+                        <li>Side-swept bangs</li>
+                        <li>Long bobs with layers</li>
+                        <li>Pompadour styles (men)</li>
+                    </ul>
+                    <p><strong>Avoid:</strong> One-length bobs, center parts</p>
+                </div>
+
+                <div class="face-shape-card">
+                    <h3>
+                        <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                        </svg> Square Face
+                    </h3>
+                    <p><strong>You have:</strong> Strong jawline, straight sides, angular features</p>
+                    <p><strong>Try these:</strong></p>
+                    <ul class="face-shape-list">
+                        <li>Soft, layered cuts</li>
+                        <li>Side-swept styles</li>
+                        <li>Textured bobs</li>
+                        <li>Volume at the crown</li>
+                    </ul>
+                    <p><strong>Avoid:</strong> Blunt cuts, center parts</p>
+                </div>
+
+                <div class="face-shape-card">
+                    <h3>
+                        <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 19 10 21 21 12 18 3 21 5 10 12 2"></polygon>
+                        </svg> Heart Face
+                    </h3>
+                    <p><strong>You have:</strong> Wide forehead/cheekbones, narrow chin</p>
+                    <p><strong>Try these:</strong></p>
+                    <ul class="face-shape-list">
+                        <li>Chin-length or longer</li>
+                        <li>Side-parted bangs</li>
+                        <li>Width at jaw level</li>
+                        <li>Layered chin-length bobs</li>
+                    </ul>
+                    <p><strong>Avoid:</strong> Top-heavy styles, blunt bangs</p>
+                </div>
+
+                <div class="face-shape-card">
+                    <h3>
+                        <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 4 12 12 22 20 12 12 2"></polygon>
+                        </svg> Diamond Face
+                    </h3>
+                    <p><strong>You have:</strong> Narrow forehead, wide cheekbones, narrow chin</p>
+                    <p><strong>Try these:</strong></p>
+                    <ul class="face-shape-list">
+                        <li>Volume at forehead and chin</li>
+                        <li>Side-swept bangs</li>
+                        <li>Chin-length layered cuts</li>
+                        <li>Forward-styled cuts</li>
+                    </ul>
+                    <p><strong>Avoid:</strong> Middle parts, slicked-back styles</p>
+                </div>
+
+                <div class="face-shape-card">
+                    <h3>
+                        <svg class="face-shape-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00c2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        </svg> Rectangle Face
+                    </h3>
+                    <p><strong>You have:</strong> Longer face, similar width throughout</p>
+                    <p><strong>Try these:</strong></p>
+                    <ul class="face-shape-list">
+                        <li>Volume on the sides</li>
+                        <li>Layered cuts with fullness</li>
+                        <li>Bangs to shorten the face</li>
+                        <li>Textured, disheveled looks</li>
+                    </ul>
+                    <p><strong>Avoid:</strong> Long straight styles, vertical volume</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>Quick Tips for Finding Your Hairstyle at the Salon</h2>
+
+        <div class="key-point">
+            <span class="tip-tag">PRO TIP</span> Show pictures of styles you like on someone with YOUR face shape!
+        </div>
+
+        <div class="step-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <p>Bring reference photos</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <p>Mention your face shape</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <p>Discuss styling time</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <p>Ask about products</p>
+            </div>
+        </div>
+
+        <p>Taking a visual reference to your appointment is crucial. With HairMe, you can save your personalized recommendations and show them directly to your stylist.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>Find Your Perfect Hairstyle with AI Technology</h2>
+
+        <p>This guide offers the basics on how to find your hairstyle, but your face has unique proportions that general guidelines can't fully address.</p>
+
+        <p>The HairMe app analyzes YOUR specific features to recommend:</p>
+
+        <ul class="face-shape-list">
+            <li>Haircuts that enhance your best features</li>
+            <li>Styling techniques for your hair type</li>
+            <li>Products that work with your hair</li>
+            <li>Beard styles that complement your face</li>
+        </ul>
+
+        <div class="cta-section">
+            <h2>Get Personalized Hairstyle Recommendations</h2>
+            <p>Skip the manual measurements! The HairMe app uses advanced AI to analyze your face shape and recommend hairstyles that perfectly complement your features.</p>
+            <div class="cta-buttons">
+                <a href="https://apps.apple.com/app/id6741509156" class="button button-primary">
+                    <svg height="18" viewBox="0 0 24 24" width="18" style="margin-right: 8px;">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                    </svg> Download App
+                </a>
+            </div>
+        </div>
+
+        <div class="related-articles">
+            <h3>More Guides on How to Find Your Hairstyle</h3>
+            <div class="related-links">
+                <a href="hairstyles-for-different-hair-types.html">How to Find Your Hairstyle Based on Hair Type</a>
+                <a href="trending-hairstyles.html">Latest Trending Hairstyles to Try in 2025</a>
+                <a href="mens-hairstyles-guide.html">Men's Guide: How to Find Your Hairstyle</a>
+                <a href="womens-hairstyles-guide.html">Women's Guide: How to Find Your Hairstyle</a>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions: How to Find Your Hairstyle</h2>
+
+            <div class="faq-item">
+                <h3>How do I know what hairstyle suits me?</h3>
+                <div class="faq-answer">
+                    <p>To find what hairstyle suits you best, identify your face shape first, then consider your hair texture, maintenance preferences, and lifestyle. Your ideal hairstyle should complement your face shape while working with your natural
+                        hair type.</p>
                 </div>
             </div>
 
-            <div class="faq-section">
-                <h2>Frequently Asked Questions: How to Find Your Hairstyle</h2>
-
-                <div class="faq-item">
-                    <h3>How do I know what hairstyle suits me?</h3>
-                    <div class="faq-answer">
-                        <p>To find what hairstyle suits you best, identify your face shape first, then consider your hair texture, maintenance preferences, and lifestyle. Your ideal hairstyle should complement your face shape while working with your natural
-                            hair type.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <h3>How can I find the perfect hairstyle for my face shape?</h3>
-                    <div class="faq-answer">
-                        <p>To find the perfect hairstyle for your face shape: 1) Identify your face shape using our guide above, 2) Browse hairstyles recommended for your specific shape, 3) Consider your hair texture and density, and 4) Use the HairMe app
-                            for personalized recommendations based on AI analysis of your unique features.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <h3>What hairstyle should I get based on my face shape?</h3>
-                    <div class="faq-answer">
-                        <p>The best hairstyle for your face shape varies: oval faces suit most styles; round faces benefit from styles with height and angles; square faces look great with soft layers; heart-shaped faces work well with chin-length cuts; and
-                            rectangular faces benefit from volume on the sides.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Can an app help me find my perfect hairstyle?</h3>
-                    <div class="faq-answer">
-                        <p>Yes, the HairMe app uses AI technology to analyze your face shape and features, then recommends personalized hairstyles that will complement your unique characteristics. This approach is more accurate than general guidelines and
-                            helps you find styles that enhance your specific features.</p>
-                    </div>
+            <div class="faq-item">
+                <h3>How can I find the perfect hairstyle for my face shape?</h3>
+                <div class="faq-answer">
+                    <p>To find the perfect hairstyle for your face shape: 1) Identify your face shape using our guide above, 2) Browse hairstyles recommended for your specific shape, 3) Consider your hair texture and density, and 4) Use the HairMe app for
+                        personalized recommendations based on AI analysis of your unique features.</p>
                 </div>
             </div>
-        </article>
-    </main>
 
-    <style>
-        /* Add these styles to the existing CSS */
-        
-        .approach-container {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .approach-card {
-            flex: 1;
-            min-width: 250px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .approach-card.ai {
-            background: rgba(0, 102, 204, 0.1);
-            border: 1px solid rgba(0, 194, 255, 0.2);
-        }
-        
-        .approach-card h3 {
-            margin-top: 0;
-            color: var(--accent-color);
-        }
-        
-        .subtle-button {
-            background: rgba(0, 0, 0, 0.3);
-            margin-top: 1rem;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-        }
-        
-        .note {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            font-style: italic;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-        }
-        
-        .app-download-section {
-            text-align: center;
-            margin: 3rem 0;
-        }
-        
-        .related-articles {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 3rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .related-articles h3 {
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-        }
-        
-        .related-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .related-links a {
-            color: var(--accent-color);
-            text-decoration: none;
-            padding: 0.8rem;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .related-links a:hover {
-            background: rgba(0, 194, 255, 0.1);
-            transform: translateX(5px);
-        }
-        
-        @media (max-width: 768px) {
-            .approach-container {
-                flex-direction: column;
-            }
-        }
-        /* New styles for more visual and TikTok-like elements */
-        
-        .key-point {
-            background: rgba(0, 194, 255, 0.1);
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            font-size: 1.1rem;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .step-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        
-        .step-card {
-            flex: 1;
-            min-width: 200px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1.2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .step-number {
-            background: var(--accent-color);
-            color: #000;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, rgba(0, 194, 255, 0), rgba(0, 194, 255, 0.5), rgba(0, 194, 255, 0));
-            margin: 3rem 0;
-        }
-        
-        .tip-tag {
-            display: inline-block;
-            background: rgba(0, 194, 255, 0.2);
-            color: var(--accent-color);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            font-weight: bold;
-        }
-        
-        @media (max-width: 768px) {
-            .step-container {
-                flex-direction: column;
-            }
-            .step-card {
-                width: 100%;
-            }
-        }
-        
-        .faq-section {
-            margin: 4rem 0;
-        }
-        
-        .faq-item {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .faq-item:hover {
-            border-color: rgba(0, 194, 255, 0.3);
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        .faq-item h3 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-        
-        .faq-answer p {
-            margin-bottom: 0;
-        }
-    </style>
+            <div class="faq-item">
+                <h3>What hairstyle should I get based on my face shape?</h3>
+                <div class="faq-answer">
+                    <p>The best hairstyle for your face shape varies: oval faces suit most styles; round faces benefit from styles with height and angles; square faces look great with soft layers; heart-shaped faces work well with chin-length cuts; and rectangular
+                        faces benefit from volume on the sides.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can an app help me find my perfect hairstyle?</h3>
+                <div class="faq-answer">
+                    <p>Yes, the HairMe app uses AI technology to analyze your face shape and features, then recommends personalized hairstyles that will complement your unique characteristics. This approach is more accurate than general guidelines and helps
+                        you find styles that enhance your specific features.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-links">

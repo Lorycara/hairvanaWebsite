@@ -12,25 +12,37 @@
     <meta property="og:url" content="https://hairme.app/contact.html">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
          :root {
-            --primary-color: #0066cc;
-            --secondary-color: #0055aa;
-            --accent-color: #00c2ff;
-            --text-color: #ffffff;
-            --background-color: #000000;
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --secondary-color: #26C6DA;
+            --accent-color: #00BCD4;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #121212;
+            --background-alt: #1A2229;
+            --card-background: #1E252C;
+            --section-dark: #171E24;
+            --section-darker: #141B21;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         
         body {
-            background: #121212;
+            background: var(--background-color);
             min-height: 100vh;
             color: var(--text-color);
             -webkit-font-smoothing: antialiased;
@@ -56,8 +68,8 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: var(--text-color);
-            text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
@@ -98,9 +110,9 @@
         }
         
         .nav-links a:hover {
-            background: var(--accent-color);
+            background: var(--primary-color);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 194, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 188, 212, 0.4);
         }
         
         .nav-links a:active {
@@ -186,7 +198,7 @@
         .page-title {
             font-size: 3rem;
             margin-bottom: 1rem;
-            background: linear-gradient(to right, #ffffff, #a9a2ff);
+            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -210,16 +222,16 @@
         }
         
         .contact-form {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
             padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
         }
         
         .form-title {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
         
         .form-group {
@@ -229,7 +241,7 @@
         .form-label {
             display: block;
             margin-bottom: 0.5rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--text-light);
         }
         
         .form-control {
@@ -245,8 +257,8 @@
         
         .form-control:focus {
             outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 2px rgba(0, 194, 255, 0.2);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
         }
         
         textarea.form-control {
@@ -255,21 +267,58 @@
         }
         
         .submit-button {
-            background: var(--accent-color);
+            background: var(--primary-color);
             color: #000;
             font-weight: bold;
             padding: 0.8rem 1.5rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 1rem;
             display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .submit-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 194, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 188, 212, 0.4);
+        }
+        
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .button-primary {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+        }
+        
+        .button-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
+        }
+        
+        .button-small {
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+        }
+        
+        .nav-download-btn {
+            margin-left: auto;
         }
         
         .contact-info {
@@ -281,7 +330,7 @@
         .info-title {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
         
         .info-item {
@@ -294,7 +343,7 @@
         .info-icon {
             width: 24px;
             height: 24px;
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
         
         .info-text {
@@ -315,7 +364,7 @@
         }
         
         .info-text a:hover {
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
         
         .social-links {
@@ -336,7 +385,7 @@
         }
         
         .social-link:hover {
-            background: var(--accent-color);
+            background: var(--primary-color);
             transform: translateY(-3px);
         }
         
@@ -348,14 +397,14 @@
         
         .faq-section {
             padding: 4rem 2rem;
-            background: rgba(0, 0, 0, 0.2);
+            background: var(--section-dark);
             text-align: center;
         }
         
         .faq-title {
             font-size: 2.2rem;
             margin-bottom: 2.5rem;
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
         
         .faq-grid {
@@ -368,10 +417,10 @@
         }
         
         .faq-item {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
             padding: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
         }
         
         .faq-question {
@@ -381,15 +430,16 @@
         }
         
         .faq-answer {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-light);
             line-height: 1.6;
         }
         
         .footer {
-            background: rgba(0, 0, 0, 0.5);
+            background: var(--section-darker);
             padding: 3rem 2rem;
             text-align: center;
             margin-top: auto;
+            border-top: 1px solid var(--border-color);
         }
         
         .footer-content {
@@ -411,12 +461,16 @@
         }
         
         .footer-links a:hover {
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
         
         .copyright {
             color: rgba(255, 255, 255, 0.4);
             font-size: 0.9rem;
+        }
+        
+        h3[style*="color: var(--accent-color)"] {
+            color: var(--primary-color) !important;
         }
         
         @media (max-width: 768px) {
@@ -453,19 +507,9 @@
                     <img src="images/hairme.png" alt="HairMe Logo"> HairMe
                 </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="perfect-haircut-for-face-shape.html">Face Shapes <span class="dropdown-icon">▼</span></a>
-                    <div class="dropdown-content">
-                        <a href="women-oval-face-hairstyles.html">Oval Face</a>
-                        <a href="diamond-face-hairstyles.html">Diamond Face</a>
-                        <a href="men-round-face-haircuts.html">Round Face</a>
-                        <a href="perfect-haircut-for-face-shape.html">Find Yours</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a href="https://apps.apple.com/app/id6741509156" class="button button-primary button-small nav-download-btn">
+                Download App
+            </a>
         </nav>
     </header>
 
@@ -514,7 +558,7 @@
                 </div>
             </div>
 
-            <h3 style="margin-top: 2rem; color: var(--accent-color);">Follow Us</h3>
+            <h3 style="margin-top: 2rem; color: var(--primary-color);">Follow Us</h3>
             <div class="social-links">
                 <a href="#" class="social-link">
                     <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

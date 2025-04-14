@@ -5,32 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Hairstyles for Women with Oval Faces | HairMe</title>
-    <meta name="description" content="Discover the most flattering hairstyles for oval face shapes. Learn which cuts and styles enhance your naturally balanced features.">
-    <meta name="keywords" content="oval face hairstyles women, best haircuts oval face, oval face shape styling, women's hairstyles oval face">
+    <meta name="description" content="Discover the most flattering hairstyles for women with oval face shapes. Get personalized recommendations with the HairMe app.">
+    <meta name="keywords" content="oval face hairstyles women, best hairstyles oval face, women's haircuts oval face shape">
     <meta property="og:title" content="Best Hairstyles for Women with Oval Faces">
-    <meta property="og:description" content="Find the perfect hairstyle to complement your oval face shape with our comprehensive style guide.">
+    <meta property="og:description" content="Find the perfect hairstyles for oval face shapes with our comprehensive style guide.">
     <meta property="og:url" content="https://hairme.app/women-oval-face-hairstyles.html">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hairme.app/images/social-share.jpg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
          :root {
-            --primary-color: #0066cc;
-            --secondary-color: #0055aa;
-            --accent-color: #00c2ff;
-            --text-color: #ffffff;
-            --background-color: #000000;
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --primary-dark: #0097A7;
+            --secondary-color: #26C6DA;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #121212;
+            --background-alt: #1A2229;
+            --card-background: #1E252C;
+            --section-dark: #171E24;
+            --section-darker: #141B21;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --accent-color: #00BCD4;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         
         body {
-            background: #121212;
+            background: var(--background-color);
             min-height: 100vh;
             color: var(--text-color);
             -webkit-font-smoothing: antialiased;
@@ -57,7 +71,7 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--text-color);
-            text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
             letter-spacing: 0.5px;
             display: flex;
             align-items: center;
@@ -76,482 +90,181 @@
             align-items: center;
         }
         
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
             text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            position: relative;
-            padding: 0.5rem 1rem;
             transition: all 0.3s ease;
-            border-radius: 8px;
-            background: rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            display: block;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .nav-links a:hover {
-            background: var(--accent-color);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 194, 255, 0.4);
+        .button-primary {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
         }
         
-        .nav-links a:active {
-            transform: scale(0.98) translateY(0);
+        .button-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
         }
         
-        .dropdown {
-            position: relative;
+        .button-small {
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
         }
         
-        .dropdown::after {
-            content: "";
-            position: absolute;
-            height: 20px;
-            width: 100%;
-            bottom: -20px;
-            left: 0;
-            z-index: 100;
+        .nav-download-btn {
+            margin-left: auto;
         }
         
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: calc(100% - 10px);
-            left: 0;
-            min-width: 220px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 8px;
-            padding: 10px 0.5rem 0.5rem 0.5rem;
-            z-index: 101;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-            animation: fadeIn 0.3s;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .dropdown-content a {
-            padding: 0.7rem 1rem;
-            margin-bottom: 0.3rem;
-            border-radius: 6px;
-            display: block;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        
-        .dropdown-content a:last-child {
-            margin-bottom: 0;
-        }
-        
-        .dropdown-icon {
-            display: inline-block;
-            margin-left: 0.3rem;
-            transition: transform 0.3s;
-        }
-        
-        .dropdown:hover .dropdown-icon {
-            transform: rotate(180deg);
-        }
-        
-        .article-container {
+        .container {
             max-width: 1140px;
             margin: 2rem auto 4rem;
-            padding: 4rem;
+            padding: 2rem;
             line-height: 1.6;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
         h1 {
-            font-size: 3.5rem;
-            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             color: var(--text-color);
-            line-height: 1.2;
-            font-weight: 800;
-            background: linear-gradient(to right, #ffffff, #a9a2ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             text-align: center;
         }
         
-        .article-meta {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2.5rem;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        .article-intro {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem;
-            border-left: 4px solid var(--accent-color);
-            background: rgba(0, 194, 255, 0.05);
-            padding: 2rem;
-            border-radius: 12px;
-            line-height: 1.8;
-        }
-        
         h2 {
-            font-size: 2rem;
-            margin: 3rem 0 1.5rem;
-            color: var(--accent-color);
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-        
-        h2:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            background: var(--accent-color);
-            border-radius: 3px;
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
         
         h3 {
             font-size: 1.4rem;
-            margin: 2rem 0 1rem;
-            color: #ffffff;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-light);
         }
         
         p {
             margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-light);
         }
         
-        .key-point {
-            background: rgba(0, 194, 255, 0.1);
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem 1.5rem;
+        ul,
+        ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
             margin: 1.5rem 0;
-            font-size: 1.1rem;
-            border-radius: 0 8px 8px 0;
+            display: block;
         }
         
         .hairstyle-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
         
         .hairstyle-card {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .hairstyle-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 194, 255, 0.2);
-            border-color: rgba(0, 194, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hairstyle-card img {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            margin: 0;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        
+        .hairstyle-card-content {
+            padding: 1.5rem;
         }
         
         .hairstyle-card h3 {
             margin-top: 0;
-            color: var(--accent-color);
-            display: flex;
-            align-items: center;
+            font-size: 1.3rem;
         }
         
-        .hairstyle-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 0.8rem;
-        }
-        
-        .style-list {
-            list-style-type: none;
-            margin: 1rem 0;
-        }
-        
-        .style-list li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .style-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-        }
-        
-        .app-store-button {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1rem 2.5rem;
-            border-radius: 12px;
-            color: white;
-            text-decoration: none;
-            gap: 0.8rem;
-            width: fit-content;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-top: 1.5rem;
-        }
-        
-        .app-store-button:hover {
-            background: var(--accent-color);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 194, 255, 0.4);
-        }
-        
-        .app-store-button:active {
-            transform: scale(0.98) translateY(0);
-        }
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, rgba(0, 194, 255, 0), rgba(0, 194, 255, 0.5), rgba(0, 194, 255, 0));
-            margin: 3rem 0;
-        }
-        
-        .tip-tag {
-            display: inline-block;
-            background: rgba(0, 194, 255, 0.2);
-            color: var(--accent-color);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            font-weight: bold;
-        }
-        
-        .step-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        
-        .step-card {
-            flex: 1;
-            min-width: 200px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1.2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .step-number {
-            background: var(--accent-color);
-            color: #000;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .note {
+        .hairstyle-card p {
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            font-style: italic;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
+            margin-bottom: 0;
         }
         
-        .approach-container {
-            display: flex;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .approach-card {
-            flex: 1;
-            min-width: 250px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .approach-card.ai {
-            background: rgba(0, 102, 204, 0.1);
-            border: 1px solid rgba(0, 194, 255, 0.2);
-        }
-        
-        .approach-card h3 {
-            margin-top: 0;
-            color: var(--accent-color);
-        }
-        
-        .subtle-button {
-            background: rgba(0, 0, 0, 0.3);
-            margin-top: 1rem;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-        }
-        
-        .app-download-section {
+        .cta-section {
+            background: var(--section-dark);
+            padding: 3rem;
+            border-radius: var(--border-radius);
             text-align: center;
             margin: 3rem 0;
+            border: 1px solid var(--border-color);
         }
         
-        .related-links {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 3rem 0;
-        }
-        
-        .related-links h3 {
+        .cta-section h2 {
             margin-top: 0;
-            margin-bottom: 1rem;
         }
         
-        .related-links ul {
-            list-style-type: none;
-        }
-        
-        .related-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .related-links a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        
-        .related-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: auto;
-        }
-        
-        .footer-links {
+        .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        @media (max-width: 1200px) {
-            .article-container {
-                max-width: 90%;
-                padding: 3rem;
-            }
-            .best-hairstyles,
-            .styling-tips,
-            .what-to-consider {
-                grid-template-columns: 1fr 1fr;
-            }
-            .related-links {
-                justify-content: center;
-            }
-            .products {
-                grid-template-columns: 1fr 1fr;
-            }
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
         
         @media (max-width: 768px) {
-            .article-container {
-                padding: 2.5rem 1.5rem;
-                margin-top: 1rem;
-                border-radius: 12px;
-                max-width: 95%;
+            .container {
+                padding: 1.5rem;
+                margin: 1rem;
             }
             h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             h2 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
-            .article-intro {
-                font-size: 1.1rem;
-                padding: 1.5rem;
-            }
-            .best-hairstyles,
-            .styling-tips,
-            .what-to-consider {
+            .hairstyle-grid {
                 grid-template-columns: 1fr;
             }
-            .styling-tips h2,
-            .what-to-consider h2 {
-                grid-column: span 1;
-            }
-            .related-link-card {
-                min-width: 100%;
-            }
-            nav {
-                padding: 1rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .nav-links {
-                gap: 1rem;
-            }
-            .products {
-                grid-template-columns: 1fr;
+            .cta-section {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -562,7 +275,7 @@
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Best Hairstyles for Women with Oval Faces",
-            "description": "Discover the most flattering hairstyles for oval face shapes. Learn which cuts and styles enhance your naturally balanced features.",
+            "description": "Discover the most flattering hairstyles for women with oval face shapes. Get personalized recommendations with HairMe, the AI-powered hairstyle app.",
             "image": "https://hairme.app/images/social-share.jpg",
             "author": {
                 "@type": "Organization",
@@ -595,25 +308,17 @@
                     <img src="images/hairme.png" alt="HairMe Logo"> HairMe
                 </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="perfect-haircut-for-face-shape.html">Face Shapes <span class="dropdown-icon">▼</span></a>
-                    <div class="dropdown-content">
-                        <a href="women-oval-face-hairstyles.html">Oval Face</a>
-                        <a href="diamond-face-hairstyles.html">Diamond Face</a>
-                        <a href="men-round-face-haircuts.html">Round Face</a>
-                        <a href="perfect-haircut-for-face-shape.html">Find Yours</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a href="https://apps.apple.com/app/id6741509156" class="button button-primary button-small nav-download-btn">
+                <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                </svg> Download
+            </a>
         </nav>
     </header>
 
     <main>
-        <article class="article-container">
-            <h1>Best Hairstyles for Women with Oval Faces</h1>
+        <div class="container">
+            <h1>Best Hairstyles for Oval Face Shapes</h1>
 
             <section class="intro">
                 <p>Oval face shapes are often considered the most versatile when it comes to hairstyles. With balanced proportions and gentle contours, oval faces can pull off nearly any haircut or style. However, certain hairstyles particularly complement
@@ -765,14 +470,19 @@
                 </div>
             </section>
 
-            <div class="download-section">
-                <a href="https://apps.apple.com/app/id6741509156" class="app-store-button">
-                    <svg height="24" viewBox="0 0 24 24" width="24">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
-                    </svg> Download HairMe App
-                </a>
+            <div class="cta-section">
+                <h2>Get Personalized Hairstyle Recommendations</h2>
+                <p>Not sure which hairstyle suits you best? The HairMe app uses AI to analyze your face shape and recommend perfect hairstyles for you.</p>
+                <div class="cta-buttons">
+                    <a href="https://apps.apple.com/app/id6741509156" class="button button-primary">
+                        <svg height="18" viewBox="0 0 24 24" width="18" style="margin-right: 8px;">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                        </svg> Download App
+                    </a>
+                    <a href="perfect-haircut-for-face-shape.html" class="button button-primary">Learn About Face Shapes</a>
+                </div>
             </div>
-        </article>
+        </div>
     </main>
 
     <footer class="footer">
