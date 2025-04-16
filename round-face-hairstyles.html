@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Hairstyles for Round Face Shape | HairMe</title>
-    <meta name="description" content="Discover the most flattering hairstyles for round face shapes. Get personalized recommendations with the HairMe app.">
+    <meta name="description" content="Discover the most flattering hairstyles for round face shapes with HairMe's expert recommendations and AI-powered analysis.">
     <meta name="keywords" content="round face hairstyles, best haircuts round face, round face shape hairstyles">
     <meta property="og:title" content="Best Hairstyles for Round Face Shape">
     <meta property="og:description" content="Find the perfect hairstyles for round face shapes with our comprehensive style guide.">
     <meta property="og:url" content="https://hairme.app/round-face-hairstyles.html">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://hairme.app/images/social-share.jpg">
+    <link rel="canonical" href="https://hairvana.app/round-face-hairstyles.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +21,6 @@
          :root {
             --primary-color: #00BCD4;
             --primary-light: #4DD0E1;
-            --primary-dark: #0097A7;
             --secondary-color: #26C6DA;
             --text-color: #FFFFFF;
             --text-light: #CCCCCC;
@@ -30,6 +30,7 @@
             --section-dark: #171E24;
             --section-darker: #141B21;
             --border-color: rgba(255, 255, 255, 0.1);
+            --section-spacing: 5rem;
             --border-radius: 12px;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
@@ -43,256 +44,397 @@
         
         body {
             background: var(--background-color);
-            min-height: 100vh;
             color: var(--text-color);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            display: flex;
-            flex-direction: column;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid var(--border-color);
         }
         
         nav {
-            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--text-color);
-            text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
-            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
         }
         
         .logo img {
-            height: 40px;
-            margin-right: 10px;
+            height: 36px;
             border-radius: 8px;
         }
         
-        .logo a {
-            text-decoration: none;
-            color: var(--text-color);
+        .nav-download-btn {
             display: flex;
             align-items: center;
-        }
-        
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .button-primary {
             background: var(--primary-color);
             color: white;
-            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
         
-        .button-primary:hover {
+        .nav-download-btn:hover {
             background: var(--primary-light);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
-        }
-        
-        .button-small {
-            padding: 0.5rem 1.2rem;
-            font-size: 0.85rem;
-        }
-        
-        .nav-download-btn {
-            margin-left: auto;
+            transform: translateY(-2px);
         }
         
         .container {
-            max-width: 1140px;
-            margin: 2rem auto 4rem;
-            padding: 2rem;
-            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 8rem 2rem 5rem;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            font-weight: 800;
             margin-bottom: 1.5rem;
-            color: var(--text-color);
+            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--text-light);
+        }
+        
+        .face-info {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+        
+        .face-image {
+            flex: 1;
             text-align: center;
         }
         
-        h2 {
-            font-size: 1.8rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        h3 {
-            font-size: 1.4rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--primary-light);
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-        }
-        
-        ul,
-        ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-        }
-        
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        img {
+        .face-image img {
             max-width: 100%;
-            height: auto;
             border-radius: var(--border-radius);
-            margin: 1.5rem 0;
-            display: block;
+            box-shadow: var(--shadow);
         }
         
-        .hairstyle-grid {
+        .face-details {
+            flex: 1.5;
+        }
+        
+        .face-details h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .face-details p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .characteristics {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .characteristics h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .characteristics ul {
+            list-style-position: inside;
+            color: var(--text-light);
+            margin-left: 1rem;
+        }
+        
+        .characteristics li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .hairstyles-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .hairstyles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin: 2rem 0;
+            margin-bottom: 4rem;
         }
         
         .hairstyle-card {
             background: var(--card-background);
             border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: var(--shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
         }
         
         .hairstyle-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-light);
         }
         
         .hairstyle-card img {
             width: 100%;
-            aspect-ratio: 3/2;
+            height: 200px;
             object-fit: cover;
-            margin: 0;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
         }
         
-        .hairstyle-card-content {
+        .hairstyle-content {
             padding: 1.5rem;
         }
         
-        .hairstyle-card h3 {
-            margin-top: 0;
-            font-size: 1.3rem;
+        .hairstyle-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
         }
         
-        .hairstyle-card p {
-            font-size: 0.9rem;
+        .hairstyle-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
             margin-bottom: 0;
         }
         
-        .cta-section {
+        .tips-section {
             background: var(--section-dark);
-            padding: 3rem;
             border-radius: var(--border-radius);
-            text-align: center;
-            margin: 3rem 0;
-            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            margin-bottom: 4rem;
         }
         
-        .cta-section h2 {
-            margin-top: 0;
+        .tips-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
         }
         
-        .cta-buttons {
+        .tips-section ul {
+            list-style-position: inside;
+            color: var(--text-light);
+            margin-left: 1rem;
+        }
+        
+        .tips-section li {
+            margin-bottom: 1rem;
+        }
+        
+        .app-section {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            margin: 4rem 0;
+            gap: 3rem;
+        }
+        
+        .app-content {
+            flex: 1.5;
+        }
+        
+        .app-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .app-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+        }
+        
+        .app-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .app-content p {
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--primary-light);
+        }
+        
+        .gender-selector {
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+        
+        .gender-btn {
+            background: var(--card-background);
+            color: var(--text-color);
+            border: 2px solid var(--border-color);
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gender-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.2);
+        }
+        
+        .gender-btn:hover:not(.active) {
+            border-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 1.5rem;
-                margin: 1rem;
+                padding: 7rem 1.5rem 3rem;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
-            h2 {
-                font-size: 1.5rem;
+            .face-info {
+                flex-direction: column;
+                gap: 2rem;
             }
-            .hairstyle-grid {
-                grid-template-columns: 1fr;
+            .app-section {
+                flex-direction: column;
+                padding: 2rem;
             }
-            .cta-section {
-                padding: 2rem 1.5rem;
+            .app-content {
+                order: 2;
+            }
+            .app-image {
+                order: 1;
+                margin-bottom: 2rem;
             }
         }
     </style>
 
-    <!-- Structured data for SEO -->
+    <!-- Structured data for the guide -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Best Hairstyles for Round Face Shape",
-            "description": "Discover the most flattering hairstyles for round face shapes. Get personalized recommendations with HairMe, the AI-powered hairstyle app.",
-            "image": "https://hairme.app/images/social-share.jpg",
+            "description": "Discover the most flattering hairstyles for round face shapes with expert recommendations and styling tips.",
+            "image": "https://hairvana.app/images/faceshapes/round.png",
             "author": {
                 "@type": "Organization",
                 "name": "HairMe",
-                "url": "https://hairme.app"
+                "url": "https://hairvana.app/"
             },
             "publisher": {
                 "@type": "Organization",
                 "name": "HairMe",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://hairme.app/images/logo.png"
+                    "url": "https://hairvana.app/images/hairme.png"
                 }
             },
-            "datePublished": "2023-05-15",
-            "dateModified": "2023-05-15",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://hairme.app/round-face-hairstyles.html"
+                "@id": "https://hairvana.app/round-face-hairstyles.html"
             }
         }
     </script>
@@ -301,12 +443,10 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/hairme.png" alt="HairMe Logo"> HairMe
-                </a>
-            </div>
-            <a href="https://apps.apple.com/app/id6741509156" class="button button-primary button-small nav-download-btn">
+            <a href="index.html" class="logo">
+                <img src="images/hairme.png" alt="HairMe Logo - AI Hairstyle Analysis App"> HairMe
+            </a>
+            <a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">
                 <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
                 </svg> Download
@@ -315,141 +455,211 @@
     </header>
 
     <div class="container">
-        <h1>Best Hairstyles for Round Face Shape</h1>
+        <a href="perfect-haircut-for-face-shape.html" class="back-link">← Back to All Face Shapes</a>
 
-        <section class="article-intro">
-            <p>Round face shapes are characterized by soft curves and equal proportions. With full cheeks and a rounded jawline, this face shape has a naturally youthful appearance. The key to finding flattering hairstyles for round faces is to create angles,
-                length, and volume in the right places. This guide will help you discover the most complementary hairstyles that add definition and balance to your round face shape.</p>
-        </section>
+        <div class="hero">
+            <h1>Best Hairstyles for Round Face Shape</h1>
+            <p class="subtitle">Find flattering hairstyles that add structure and length to your round face shape with these expert recommendations</p>
+        </div>
 
-        <section class="face-shape-guide">
-            <h2>How to Identify a Round Face Shape</h2>
-            <p>You likely have a round face shape if:</p>
+        <div class="face-info">
+            <div class="face-image">
+                <img src="images/faceshapes/round.png" alt="Round face shape characteristics and proportions">
+            </div>
+            <div class="face-details">
+                <h2>Understanding Round Face Shape</h2>
+                <p>A round face shape is characterized by soft curves and similar width and length measurements. With full cheeks and a rounded chin, round faces have gentle contours without sharp angles.</p>
+                <p>The right hairstyle can add the appearance of length and definition to your face, enhancing your natural features while creating more structure and dimension.</p>
+            </div>
+        </div>
+
+        <div class="characteristics">
+            <h2>Characteristics of Round Face Shape</h2>
             <ul>
-                <li>Your face width and length are similar in measurement</li>
-                <li>You have full cheeks that are the widest part of your face</li>
-                <li>Your jawline is softly curved rather than angular</li>
-                <li>Your forehead and jawline are approximately the same width</li>
-                <li>Your chin is rounded without sharp angles</li>
+                <li>Face width and length are similar measurements</li>
+                <li>Full, curved cheeks that are the widest part of the face</li>
+                <li>Rounded jawline without sharp angles</li>
+                <li>Soft chin without pronounced points</li>
+                <li>Gentle curves throughout the face's contours</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="best-hairstyles">
-            <h2>Top Hairstyles for Round Face Shapes</h2>
+        <div class="hairstyles-section">
+            <h2>Recommended Hairstyles for Round Faces</h2>
 
-            <div class="hairstyle">
-                <h3>1. Long Layers with Side Parting</h3>
-                <p>Long, layered hairstyles that fall below the shoulders help elongate the face. A side part creates asymmetry that adds angles to a round face, while layers add dimension and movement that draw the eye vertically rather than horizontally.</p>
+            <div class="gender-selector">
+                <button class="gender-btn" data-gender="male">Men's Styles</button>
+                <button class="gender-btn active" data-gender="female">Women's Styles</button>
             </div>
 
-            <div class="hairstyle">
-                <h3>2. Textured Lob (Long Bob)</h3>
-                <p>A long bob that hits just below the chin helps create angles around a round face. Adding texture and choppy layers creates dimension while the length maintains a slimming effect on the face.</p>
+            <div class="gender-content" id="female-hairstyles">
+                <div class="hairstyles-grid">
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/womenHair/WavyLayersCaramel/35 Gorgeous Layered Wavy Hair Styles That Add Instant Volume and Movement.jpg" alt="Long layers hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Long Layers</h3>
+                            <p>Long, layered cuts that start below the chin help elongate the face while reducing width, creating a slimming effect.</p>
+                        </div>
+                    </div>
+
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/womenHair/SleekStraightHair/68+ Stunning Hairstyle Ideas For Women Over 40.jpg" alt="Side part hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Deep Side Part</h3>
+                            <p>A deep side part creates asymmetry that helps break up the roundness of the face, adding angular structure.</p>
+                        </div>
+                    </div>
+
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/womenHair/BluntLob/Unknown.jpg" alt="Angled bob hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Angled Bob</h3>
+                            <p>An angled bob that's longer in front and shorter in back creates vertical lines that elongate a round face.</p>
+                        </div>
+                    </div>
+
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/womenHair/CurlyBangs/Unknown.jpg" alt="Side-swept bangs for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Side-Swept Bangs</h3>
+                            <p>Side-swept bangs create diagonal lines across the face, adding angles that offset facial roundness.</p>
+                        </div>
+                    </div>
+
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/womenHair/ModernShag/Unknown.jpg" alt="Volume on top hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Volume on Top</h3>
+                            <p>Styles with volume at the crown create height that elongates the face, balancing round proportions.</p>
+                        </div>
+                    </div>
+
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/womenHair/WispyLayers/Enchanting Wispy Bangs_ 45 Soft and Feminine Hairstyle Ideas.jpg" alt="Textured pixie for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Textured Pixie</h3>
+                            <p>A pixie cut with longer, textured layers on top adds height and angles that complement a round face.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="hairstyle">
-                <h3>3. Side-Swept Bangs</h3>
-                <p>Side-swept bangs add diagonal lines to a round face, creating angles where there are naturally curves. This style helps draw attention to the eyes while visually elongating the face shape.</p>
-            </div>
+            <div class="gender-content" id="male-hairstyles" style="display: none;">
+                <div class="hairstyles-grid">
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/menHair/mod_cut3.jpg" alt="Textured quiff hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Textured Quiff</h3>
+                            <p>A quiff with height on top and shorter sides creates vertical lines that elongate a round face shape.</p>
+                        </div>
+                    </div>
 
-            <div class="hairstyle">
-                <h3>4. Pixie Cut with Height on Top</h3>
-                <p>A pixie cut with volume and height on top creates vertical lines that lengthen a round face. Keeping the sides short and the top longer adds angles that complement the soft curves of a round face shape.</p>
-            </div>
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/menHair/side_part1.jpg" alt="Side part hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Side Part</h3>
+                            <p>A classic side part adds angles and asymmetry that help balance the soft curves of a round face.</p>
+                        </div>
+                    </div>
 
-            <div class="hairstyle">
-                <h3>5. Asymmetrical Styles</h3>
-                <p>Asymmetrical haircuts create angles and visual interest that balance out the symmetry of a round face. These styles can range from an asymmetrical bob to a dramatic uneven cut.</p>
-            </div>
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/menHair/slickback1.jpg" alt="Pompadour hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Pompadour</h3>
+                            <p>The pompadour's height and vertical volume create the illusion of a longer face, offsetting roundness.</p>
+                        </div>
+                    </div>
 
-            <div class="hairstyle">
-                <h3>6. Face-Framing Layers</h3>
-                <p>Layers that start at or below the chin frame the face and create vertical lines that slim and lengthen a round face shape. This technique works with various lengths and helps define the jawline.</p>
-            </div>
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/menHair/taper_fringe2.jpg" alt="Angular fringe hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Angular Fringe</h3>
+                            <p>An angular fringe creates diagonals and sharp lines that contrast with and complement a round face shape.</p>
+                        </div>
+                    </div>
 
-            <div class="hairstyle">
-                <h3>7. Deep Side Part</h3>
-                <p>A deep side part immediately creates asymmetry and angles that complement a round face. This simple styling technique works with many different hair lengths and adds height and volume where needed.</p>
-            </div>
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/menHair/curly_head1.jpg" alt="Curly top fade hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Curly Top Fade</h3>
+                            <p>Keeping volume and height on top with faded sides adds length while minimizing width for round faces.</p>
+                        </div>
+                    </div>
 
-            <div class="hairstyle">
-                <h3>8. Voluminous Crown</h3>
-                <p>Styles with added height and volume at the crown create vertical length that balances the width of a round face. Teasing the hair at the crown or using volumizing products can help achieve this effect.</p>
+                    <div class="hairstyle-card">
+                        <img src="images/Hair/menHair/warrior_cut2.jpg" alt="Undercut hairstyle for round face shape">
+                        <div class="hairstyle-content">
+                            <h3>Textured Undercut</h3>
+                            <p>An undercut with textured length on top creates vertical dimension that elongates and balances a round face.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="hairstyle">
-                <h3>9. Shaggy, Layered Medium Cuts</h3>
-                <p>Medium-length shaggy cuts with lots of layers add texture and movement that draw attention away from the fullness of a round face. The varied lengths create vertical lines that visually slim the face.</p>
-            </div>
-
-            <div class="hairstyle">
-                <h3>10. Long, Straight Styles</h3>
-                <p>Long, sleek hairstyles with minimal layers create vertical lines that elongate a round face shape. The length draws the eye downward, creating the illusion of a longer, slimmer face.</p>
-            </div>
-        </section>
-
-        <section class="styling-tips">
-            <h2>Styling Tips for Round Faces</h2>
+        <div class="tips-section">
+            <h2>Styling Tips for Round Face Shape</h2>
             <ul>
-                <li>Create height and volume at the crown to elongate your face</li>
-                <li>Opt for side parts rather than center parts to create asymmetry</li>
-                <li>Choose styles that fall below the chin to create length</li>
-                <li>Use layering techniques to add angles and definition</li>
-                <li>Incorporate texturizing products to add dimension and movement</li>
-                <li>Consider angled bangs or side-swept fringe rather than straight-across bangs</li>
+                <li><strong>Create height:</strong> Styles with volume on top elongate the face and balance roundness</li>
+                <li><strong>Add angles:</strong> Choose cuts with angular elements to offset soft curves</li>
+                <li><strong>Try side parts:</strong> Asymmetrical styles help break up circular proportions</li>
+                <li><strong>Consider length:</strong> Hair that falls below the chin helps elongate the face</li>
+                <li><strong>Avoid full circular shapes:</strong> Full, round styles can emphasize facial roundness</li>
+                <li><strong>Frame strategically:</strong> Use layers that start at or below the cheekbones, not at the fullest part of the face</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="what-to-consider">
-            <h2>What to Consider</h2>
-            <p>While these recommendations highlight your best features, consider these factors when choosing a round face hairstyle:</p>
-            <ul>
-                <li>Very short haircuts without height on top can emphasize the roundness of your face</li>
-                <li>Chin-length bobs with no layers may accentuate the fullness of your cheeks</li>
-                <li>Straight-across bangs can make your face appear wider and shorter</li>
-                <li>Center parts can emphasize symmetry, which may accentuate roundness</li>
-                <li>Extremely curly styles with width at the cheeks may add horizontal volume</li>
-            </ul>
-            <p>Remember, these are guidelines rather than rules. Your personal style preferences and hair texture should also influence your choice of hairstyle.</p>
-        </section>
-
-        <section class="celebrity-inspiration">
-            <h2>Celebrity Inspiration</h2>
-            <p>These celebrities with round face shapes showcase flattering hairstyles to inspire you:</p>
-            <ul>
-                <li>Selena Gomez (long layers, side parts, textured waves)</li>
-                <li>Emma Stone (angled lobs, side-swept bangs)</li>
-                <li>Ginnifer Goodwin (pixie cuts with height on top)</li>
-                <li>Chrissy Teigen (face-framing layers, textured waves)</li>
-                <li>Kirsten Dunst (long bobs, side parts)</li>
-                <li>Drew Barrymore (long layers, volume at the crown)</li>
-            </ul>
-        </section>
-
-        <div class="cta-section">
-            <h2>Get Personalized Hairstyle Recommendations</h2>
-            <p>Not sure which hairstyle suits you best? The HairMe app uses AI to analyze your face shape and recommend perfect hairstyles for you.</p>
-            <div class="cta-buttons">
-                <a href="https://apps.apple.com/app/id6741509156" class="button button-primary">
+        <div class="app-section">
+            <div class="app-content">
+                <h2>Find Your Perfect Round Face Hairstyle</h2>
+                <p>HairMe's AI technology accurately analyzes your facial proportions and provides personalized hairstyle recommendations based on your specific features.</p>
+                <a href="https://apps.apple.com/app/id6741509156" class="download-button">
                     <svg height="18" viewBox="0 0 24 24" width="18" style="margin-right: 8px;">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#00BCD4"/>
                     </svg> Download App
                 </a>
-                <a href="perfect-haircut-for-face-shape.html" class="button button-primary">Learn About Face Shapes</a>
+            </div>
+            <div class="app-image">
+                <img src="images/hairme.png" alt="HairMe App - AI-powered face shape analysis for round faces">
             </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-                <a href="index.html">Home</a>
-            </div>
-            <p>&copy; 2025 HairMe. All rights reserved.</p>
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="perfect-haircut-for-face-shape.html">Face Shape Guide</a>
+            <a href="privacyNotice.html">Privacy Policy</a>
+            <a href="termsOfService.html">Terms of Service</a>
         </div>
+        <p>&copy; 2025 HairMe. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const genderBtns = document.querySelectorAll('.gender-btn');
+            const genderContents = document.querySelectorAll('.gender-content');
+
+            genderBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const gender = this.getAttribute('data-gender');
+
+                    // Update active button
+                    genderBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show relevant content
+                    genderContents.forEach(content => {
+                        if (content.id === `${gender}-hairstyles`) {
+                            content.style.display = 'block';
+                        } else {
+                            content.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
