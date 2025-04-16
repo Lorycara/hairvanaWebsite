@@ -96,6 +96,32 @@
             border-radius: 8px;
         }
         
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-discord-btn {
+            display: flex;
+            align-items: center;
+            background: #5865F2;
+            /* Discord brand color */
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+        }
+        
+        .nav-discord-btn:hover {
+            background: #7289DA;
+            /* Lighter Discord color */
+            transform: translateY(-2px);
+        }
+        
         .nav-download-btn {
             display: flex;
             align-items: center;
@@ -418,6 +444,91 @@
             border-color: var(--primary-light);
             transform: translateY(-2px);
         }
+        /* Add styles for the tier headings */
+        
+        .tier-heading {
+            margin: 2.5rem 0 1.5rem;
+            text-align: left;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .tier-heading h3 {
+            font-size: 1.6rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tier-heading p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+        
+        .tier-best {
+            border-left-color: #FFD700;
+            /* Gold color for best tier */
+        }
+        
+        .tier-good {
+            border-left-color: #C0C0C0;
+            /* Silver color for good tier */
+        }
+        
+        .tier-mid {
+            border-left-color: #CD7F32;
+            /* Bronze color for mid tier */
+        }
+        /* Add some spacing between tiers */
+        
+        .hairstyles-tier {
+            margin-bottom: 3rem;
+        }
+        /* First tier has no top margin */
+        
+        .hairstyles-tier:first-of-type .tier-heading {
+            margin-top: 0;
+        }
+        /* Image container styles for consistent display */
+        
+        .hairstyle-image-container {
+            width: 100%;
+            padding-top: 100%;
+            /* Square aspect ratio */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hairstyle-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            /* Focus slightly higher to capture faces better */
+        }
+        
+        .hairstyle-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .hairstyle-content {
+            flex: 0 0 auto;
+            /* Don't let it grow into the image area */
+            background: var(--card-background);
+            /* Ensure background covers any image spillover */
+            position: relative;
+            /* Create stacking context */
+            z-index: 2;
+            /* Ensure text is above the image */
+            border-top: 1px solid var(--border-color);
+            /* Visually separate image from content */
+        }
     </style>
 
     <!-- Structured data for the guide -->
@@ -455,11 +566,18 @@
             <a href="index.html" class="logo">
                 <img src="images/hairme.png" alt="HairMe Logo - AI Hairstyle Analysis App"> HairMe
             </a>
-            <a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">
-                <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
-                </svg> Download
-            </a>
+            <div class="nav-buttons">
+                <a href="https://discord.gg/hairme" class="nav-discord-btn">
+                    <svg width="16" height="16" viewBox="0 0 71 55" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 6px;">
+                        <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.038 50.6034 51.2554 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978ZM23.7259 37.3253C20.2276 37.3253 17.3451 34.1136 17.3451 30.1693C17.3451 26.225 20.1717 23.0133 23.7259 23.0133C27.308 23.0133 30.1626 26.2532 30.1066 30.1693C30.1066 34.1136 27.28 37.3253 23.7259 37.3253ZM47.3178 37.3253C43.8196 37.3253 40.9371 34.1136 40.9371 30.1693C40.9371 26.225 43.7636 23.0133 47.3178 23.0133C50.9 23.0133 53.7545 26.2532 53.6986 30.1693C53.6986 34.1136 50.9 37.3253 47.3178 37.3253Z" fill="#ffffff"/>
+                    </svg> Join Discord
+                </a>
+                <a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">
+                    <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
+                    </svg> Download
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -502,105 +620,179 @@
                 <button class="gender-btn active" data-gender="female">Women's Styles</button>
             </div>
 
-            <div class="gender-content" id="female-hairstyles">
-                <div class="hairstyles-grid">
-                    <div class="hairstyle-card">
-                        <img src="https://images.unsplash.com/photo-1614333276367-0bb71da6b58c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Side-swept bangs hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Side-Swept Bangs</h3>
-                            <p>Side-swept bangs create width at the forehead and break up the length of an oblong face, softening features and adding dimension.</p>
+            <div class="gender-content" id="female-hairstyles" style="display: none;">
+                <!-- Best of the Best tier -->
+                <div class="hairstyles-tier">
+                    <div class="tier-heading tier-best">
+                        <h3>Best of the Best</h3>
+                        <p>These elite styles are particularly flattering for oblong face shapes</p>
+                    </div>
+                    <div class="hairstyles-grid">
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/womenHair/BluntBobWithBangs/Unknown.jpg" alt="Blunt bob with bangs for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Blunt Bob with Bangs</h3>
+                                <p>A blunt bob with straight bangs creates horizontal lines that shorten the appearance of an oblong face.</p>
+                            </div>
+                        </div>
+
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/womenHair/FullBangs/Unknown.jpg" alt="Long layers with full bangs for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Long Layers with Full Bangs</h3>
+                                <p>Full, straight bangs visually shorten face length while long layers add width to balance oblong proportions.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="hairstyle-card">
-                        <img src="https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Layered mid-length cut for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Layered Mid-Length Cut</h3>
-                            <p>Medium-length cuts with layers around the cheeks and jaw add width to the face, balancing proportions and adding softness.</p>
+                <!-- Good tier -->
+                <div class="hairstyles-tier">
+                    <div class="tier-heading tier-good">
+                        <h3>Good Options</h3>
+                        <p>These styles work very well with oblong face shapes</p>
+                    </div>
+                    <div class="hairstyles-grid">
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/womenHair/WavyBob/Unknown.jpg" alt="Wavy bob for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Wavy Bob</h3>
+                                <p>A wavy bob with volume at the sides creates width that balances and shortens an oblong face shape.</p>
+                            </div>
+                        </div>
+
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/womenHair/CurlyBangs/Unknown.jpg" alt="Side-swept bangs for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Side-Swept Bangs</h3>
+                                <p>Side-swept bangs create diagonal lines across the forehead, breaking up the length of an oblong face.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="hairstyle-card">
-                        <img src="https://images.unsplash.com/photo-1565945887714-d5139f4eb0ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Wavy bob hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Wavy Bob</h3>
-                            <p>A wavy bob that hits at the chin or shoulders adds width and texture, creating the illusion of a shorter, more balanced face shape.</p>
-                        </div>
+                <!-- Mid tier -->
+                <div class="hairstyles-tier">
+                    <div class="tier-heading tier-mid">
+                        <h3>Decent Choices</h3>
+                        <p>These styles can work for oblong face shapes with the right styling</p>
                     </div>
-
-                    <div class="hairstyle-card">
-                        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Voluminous pixie cut for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Voluminous Pixie</h3>
-                            <p>A pixie cut with volume on top and longer sides creates width at the temples and cheekbones, helping to balance a longer face shape.</p>
+                    <div class="hairstyles-grid">
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/womenHair/ShaggyLayers/Unknown.jpg" alt="Shaggy layers for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Shaggy Layers</h3>
+                                <p>Shaggy, voluminous layers add width to the sides of the face, helping to balance face length.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="hairstyle-card">
-                        <img src="https://images.unsplash.com/photo-1554519934-e32b1629d9ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Textured shag hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Textured Shag</h3>
-                            <p>A shaggy cut with lots of layers throughout creates fullness at the sides of the face, minimizing length and adding youthful volume.</p>
-                        </div>
-                    </div>
-
-                    <div class="hairstyle-card">
-                        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Curtain bangs hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Curtain Bangs</h3>
-                            <p>Curtain bangs frame the face beautifully, shortening the appearance of an oblong face while drawing attention to the eyes and cheekbones.</p>
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/womenHair/CropWithVolume/Unknown.jpg" alt="Pixie with volume for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Pixie with Volume</h3>
+                                <p>A pixie cut with volume on top and sides can work for oblong faces when styled to add width rather than height.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="gender-content" id="male-hairstyles" style="display: none;">
-                <div class="hairstyles-grid">
-                    <div class="hairstyle-card">
-                        <img src="images/Hair/menHair/middle_part1.jpg" alt="Middle part hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Middle Part</h3>
-                            <p>A middle part with volume on the sides creates width that helps balance the length of an oblong face shape.</p>
+                <!-- Best of the Best tier -->
+                <div class="hairstyles-tier">
+                    <div class="tier-heading tier-best">
+                        <h3>Best of the Best</h3>
+                        <p>These elite styles are particularly flattering for oblong face shapes</p>
+                    </div>
+                    <div class="hairstyles-grid">
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/menHair/side_part1.jpg" alt="Classic side part for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Classic Side Part</h3>
+                                <p>A side part with volume at the sides creates width that balances the length of an oblong face.</p>
+                            </div>
+                        </div>
+
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/menHair/textured_fringe1.jpg" alt="Textured fringe for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Textured Fringe</h3>
+                                <p>A textured fringe creates a horizontal line across the forehead that visually shortens an oblong face.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="hairstyle-card">
-                        <img src="images/Hair/menHair/messy_fringe1.jpg" alt="Messy fringe hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Textured Fringe</h3>
-                            <p>A textured fringe that sits across the forehead shortens the face visually and adds width at the top.</p>
+                <!-- Good tier -->
+                <div class="hairstyles-tier">
+                    <div class="tier-heading tier-good">
+                        <h3>Good Options</h3>
+                        <p>These styles work very well with oblong face shapes</p>
+                    </div>
+                    <div class="hairstyles-grid">
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/menHair/waves1.jpg" alt="Wavy volume for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Wavy Volume</h3>
+                                <p>Wavy styles with volume at the sides add width to balance the vertical length of an oblong face.</p>
+                            </div>
+                        </div>
+
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/menHair/mod_cut2.jpg" alt="Crop with textured top for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Crop with Textured Top</h3>
+                                <p>A cropped style with textured volume on top works when styled outward to add width rather than height.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="hairstyle-card">
-                        <img src="images/Hair/menHair/curly_head1.jpg" alt="Curly volume hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Curly Volume</h3>
-                            <p>Natural curls or waves add width to the sides of the face, helping to create balance for an oblong face shape.</p>
-                        </div>
+                <!-- Mid tier -->
+                <div class="hairstyles-tier">
+                    <div class="tier-heading tier-mid">
+                        <h3>Decent Choices</h3>
+                        <p>These styles can work for oblong face shapes with the right styling</p>
                     </div>
-
-                    <div class="hairstyle-card">
-                        <img src="images/Hair/menHair/warrior_cut3.jpg" alt="Short sides with length on top for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Classic Crop</h3>
-                            <p>A cropped style with fuller sides helps add width while keeping a clean, classic look that flatters an oblong face.</p>
+                    <div class="hairstyles-grid">
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/menHair/buzz_cut1.jpg" alt="Buzz cut with beard for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Buzz Cut with Beard</h3>
+                                <p>A buzz cut paired with a fuller beard can balance an oblong face by adding width at the jawline.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="hairstyle-card">
-                        <img src="images/Hair/menHair/fluffy_fringe2.jpg" alt="Fluffy texture hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Textured Layers</h3>
-                            <p>Textured, layered styles with volume on the sides create width that balances longer face proportions.</p>
-                        </div>
-                    </div>
-
-                    <div class="hairstyle-card">
-                        <img src="images/Hair/menHair/mod_cut1.png" alt="Modern cut hairstyle for oblong face shape">
-                        <div class="hairstyle-content">
-                            <h3>Modern Cut</h3>
-                            <p>A modern cut with volume on top and fullness at the sides breaks up vertical lines and adds beneficial width.</p>
+                        <div class="hairstyle-card">
+                            <div class="hairstyle-image-container">
+                                <img src="images/Hair/menHair/the_flow1.jpg" alt="Medium length flow for oblong face shape">
+                            </div>
+                            <div class="hairstyle-content">
+                                <h3>Medium Length Flow</h3>
+                                <p>A medium-length flowing style can work for oblong faces when styled with width at the sides.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
