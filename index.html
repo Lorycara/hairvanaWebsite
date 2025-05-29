@@ -934,10 +934,16 @@
             }
             .discord-btn,
             .nav-download-btn {
-                padding: 0.6rem 0.8rem;
+                padding: 0.5rem 0.8rem;
+                /* Adjusted vertical padding */
                 font-size: 0.75rem;
+                /* Existing */
+                min-height: 34px;
+                /* Override inherited min-height */
+                line-height: normal;
+                /* Added for robustness */
                 gap: 0.3rem;
-                /* Smaller gap for icons */
+                /* Existing */
             }
             /* Hide text on very small screens and just show icons - Adjust if needed */
             .discord-btn span,
