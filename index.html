@@ -220,15 +220,21 @@
         }
         
         .nav-download-btn {
-            padding: 0.7rem 1.5rem;
-            font-size: 0.9rem;
-            margin-left: auto;
-            /* Keep it pushed right */
-            display: inline-flex;
-            /* Use flex for icon alignment */
+            display: flex;
             align-items: center;
-            gap: 0.5rem;
-            /* Space between icon and text */
+            background: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-download-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
         }
         /* Hero Section - New Design */
         
