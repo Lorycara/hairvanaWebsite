@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | HairMe</title>
     <meta name="description" content="Terms of Service for HairMe, the AI-powered hairstyle recommendation app. Learn about our terms and conditions.">
+    <link rel="canonical" href="https://hairme.app/termsOfService.html">
+
+    <!-- Italian SEO - Critical for ranking in Italian searches -->
+    <link rel="alternate" hreflang="it" href="https://hairme.app/termsOfService.html">
+    <link rel="alternate" hreflang="en" href="https://hairme.app/termsOfService.html">
+    <link rel="alternate" hreflang="x-default" href="https://hairme.app/termsOfService.html">
+
+    <!-- Italian Meta Tags (for SEO crawlers) -->
+    <meta name="description" lang="it" content="Termini di Servizio per HairMe, l'app di raccomandazione tagli di capelli alimentata dall'AI. Scopri i nostri termini e condizioni.">
+    <meta name="keywords" lang="it" content="termini servizio hairme, condizioni utilizzo hairme, termini contratto hairme, condizioni app tagli capelli">
+    <meta name="keywords" content="terms of service hairme, terms hairme, conditions hairme, terms of service hairme, terms hairme">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,13 +30,12 @@
             --secondary-color: #26C6DA;
             --text-color: #FFFFFF;
             --text-light: #CCCCCC;
-            --background-color: #121212;
-            --background-alt: #1A2229;
-            --card-background: #1E252C;
-            --section-dark: #171E24;
-            --section-darker: #141B21;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
             --border-color: rgba(255, 255, 255, 0.1);
-            --border-radius: 12px;
+            --border-radius: 16px;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             --accent-color: #00BCD4;
         }
@@ -46,41 +57,58 @@
             flex-direction: column;
         }
         
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
         nav {
-            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--text-color);
-            text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
-            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
         }
         
         .logo img {
             height: 40px;
-            margin-right: 10px;
             border-radius: 8px;
         }
         
-        .logo a {
-            text-decoration: none;
-            color: var(--text-color);
+        .nav-links {
             display: flex;
+            list-style: none;
+            gap: 2.5rem;
             align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
         }
         
         .button {
@@ -115,18 +143,31 @@
         }
         
         .nav-download-btn {
-            margin-left: auto;
+            background: var(--card-background);
+            color: var(--text-color);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .nav-download-btn:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
         }
         
         .container {
-            max-width: 1140px;
-            margin: 2rem auto 4rem;
+            max-width: 1400px;
+            margin: 8rem auto 4rem;
             padding: 4rem;
             line-height: 1.6;
-            background: rgba(0, 0, 0, 0.2);
+            background: var(--card-background);
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
         }
         
         h1 {
@@ -166,6 +207,57 @@
             text-decoration: underline;
         }
         
+        footer {
+            background: var(--section-dark);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 2rem;
@@ -177,24 +269,42 @@
             h2 {
                 font-size: 1.5rem;
             }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nav-links {
+                display: none;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="index.html">
+        <header>
+            <nav>
+                <a href="index.html" class="logo">
                     <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
                 </a>
-            </div>
-            <a href="https://apps.apple.com/app/id6741509156" class="button button-primary button-small nav-download-btn">
-                <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
-                </svg> Download
-            </a>
-        </nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                    <li><a href="contact.html">Support</a></li>
+                    <li><a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">Download</a></li>
+                </ul>
+            </nav>
+        </header>
     </header>
 
     <div class="container">
@@ -344,8 +454,45 @@
             form of these Legal Terms and the lack of signing by the parties hereto to execute these Legal Terms.</p>
 
         <h2>19. CONTACT US</h2>
-        <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at: contact@lucentia.xyz</p>
+        <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at: contact@lucentia.xyz </p>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="https://apps.apple.com/app/id6741509156">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="privacyNotice.html">Privacy Policy</a></li>
+                    <li><a href="termsOfService.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="perfect-haircut-for-face-shape.html">Face Shape Guide</a></li>
+                    <li><a href="best-haircuts-for-men.html">Men's Haircuts</a></li>
+                    <li><a href="best-haircuts-for-women.html">Women's Haircuts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 HairMe. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

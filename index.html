@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,15 @@
     <meta name="description" content="Discover the perfect hairstyle for your unique face shape with HairMe's AI-powered analysis. Get personalized recommendations for oval, round, square, heart, and diamond face shapes.">
     <meta name="keywords" content="hairstyles by face shape, best haircuts face shape, face shape analysis, AI hairstyle recommendations, hairstyle app, find your hairstyle">
     <link rel="canonical" href="https://hairme.app/">
+
+    <!-- Italian SEO - Critical for ranking in Italian searches -->
+    <link rel="alternate" hreflang="it" href="https://hairme.app/">
+    <link rel="alternate" hreflang="en" href="https://hairme.app/">
+    <link rel="alternate" hreflang="x-default" href="https://hairme.app/">
+
+    <!-- Italian Meta Tags (for SEO crawlers) -->
+    <meta name="description" lang="it" content="Scopri il taglio di capelli perfetto per la tua forma del viso unica con l'analisi AI di HairMe. Ricevi raccomandazioni personalizzate per forme del viso ovali, rotonde, quadrate, a cuore e a diamante. Trova il tuo taglio di capelli ideale.">
+    <meta name="keywords" lang="it" content="tagli di capelli per forma del viso, migliori tagli forma del viso, analisi forma del viso, raccomandazioni tagli di capelli AI, app tagli di capelli, trova il tuo taglio di capelli, come trovare taglio capelli, taglio capelli ideale, consigli taglio capelli, guida taglio capelli">
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="HairMe | Find Your Perfect Hairstyle with AI Face Shape Analysis">
@@ -28,9 +37,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 
     <style>
          :root {
@@ -39,15 +46,13 @@
             --secondary-color: #26C6DA;
             --text-color: #FFFFFF;
             --text-light: #CCCCCC;
-            --background-color: #121212;
-            --background-alt: #1A2229;
-            --card-background: #1E252C;
-            --section-dark: #171E24;
-            --section-darker: #141B21;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
             --border-color: rgba(255, 255, 255, 0.1);
-            --section-spacing: 5rem;
-            --border-radius: 12px;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --section-spacing: 6rem;
+            --border-radius: 16px;
         }
         
         * {
@@ -64,6 +69,7 @@
             -moz-osx-font-smoothing: grayscale;
             line-height: 1.6;
             font-size: 16px;
+            overflow-x: hidden;
         }
         
         h1,
@@ -73,7 +79,7 @@
         h5,
         h6 {
             font-weight: 700;
-            line-height: 1.3;
+            line-height: 1.2;
         }
         
         h1 {
@@ -84,20 +90,17 @@
         h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            text-align: center;
-            /* Center section titles */
         }
         
         h3 {
-            font-size: 1.5rem;
-            /* Consistent feature card heading size */
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: white;
         }
         
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--text-light);
+            font-size: 1.1rem;
         }
         
         section {
@@ -105,21 +108,20 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         /* Header Styles */
         
         header {
-            background-color: rgba(18, 18, 18, 0.95);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             border-bottom: 1px solid var(--border-color);
         }
         
@@ -127,7 +129,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         
@@ -142,26 +144,22 @@
         }
         
         .logo img {
-            height: 36px;
+            height: 40px;
             border-radius: 8px;
-        }
-        
-        .nav-buttons {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
         
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
         
@@ -169,210 +167,309 @@
             color: var(--primary-color);
         }
         
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 200px;
-            background: var(--card-background);
-            border-radius: var(--border-radius);
-            padding: 1rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-            animation: fadeIn 0.3s;
-        }
-        
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-        
-        .dropdown-content a {
-            padding: 0.5rem;
-            display: block;
-            border-radius: 6px;
-        }
-        
-        .dropdown-content a:hover {
-            background: var(--background-alt);
-        }
-        
-        .dropdown-icon {
-            display: inline-block;
-            margin-left: 0.3rem;
-            font-size: 0.8rem;
-        }
-        
         .nav-download-btn {
-            display: flex;
-            align-items: center;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
+            background: var(--card-background);
+            color: var(--text-color);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
             transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
         }
         
         .nav-download-btn:hover {
-            background: var(--primary-light);
+            background: var(--primary-color);
+            border-color: var(--primary-color);
             transform: translateY(-2px);
         }
-        /* Hero Section - New Design */
+        /* Hero Section - QUITTR Style */
         
         .hero {
-            padding: 10rem 2rem 6rem;
-            text-align: center;
-            background: linear-gradient(135deg, var(--section-darker) 0%, var(--background-color) 100%);
-            margin-top: 0;
-            /* Reset margin if header is fixed */
-            min-height: 100vh;
+            padding: 8rem 2rem 6rem;
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
             display: flex;
             align-items: center;
-            justify-content: center;
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
         
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 600px;
+        }
+        
+        .trusted-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .trusted-avatars {
+            display: flex;
+            gap: -0.5rem;
+        }
+        
+        .trusted-avatars span {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border: 2px solid var(--background-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-left: -8px;
+        }
+        
+        .trusted-avatars span:first-child {
+            margin-left: 0;
+        }
+        
+        .trusted-badge p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
         }
         
         .hero h1 {
             font-size: 4rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
+            color: var(--text-color);
+            line-height: 1.1;
         }
         
-        .hero p {
-            font-size: 1.4rem;
-            max-width: 700px;
-            margin: 0 auto 1rem;
-            /* Reduced bottom margin */
+        .hero .subtitle {
+            font-size: 1.3rem;
             color: var(--text-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
         }
         
-        .users-count {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-        }
-        
-        .users-count strong {
-            color: white;
-            font-weight: 600;
-        }
-        
-        .button-container {
+        .hero-buttons {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
         
-        .button {
+        .app-store-btn {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
+            gap: 0.5rem;
+            background: var(--card-background);
+            color: var(--text-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            gap: 0.6rem;
-            /* Space for icons in buttons */
+            border: 1px solid var(--border-color);
         }
         
-        .button-primary {
+        .app-store-btn:hover {
             background: var(--primary-color);
-            color: white;
-            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
         }
         
-        .button-primary:hover {
-            background: var(--primary-light);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: -2rem;
+            position: relative;
         }
         
-        .button-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
+        .phone-mockup {
+            width: 280px;
+            height: 580px;
+            background: var(--card-background);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transform: rotate(-5deg);
+            transition: transform 0.3s ease;
         }
         
-        .button-secondary:hover {
-            background: rgba(0, 188, 212, 0.1);
-            transform: translateY(-3px);
+        .phone-mockup:nth-child(2) {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 2;
         }
         
-        .button-small {
-            padding: 0.5rem 1.2rem;
-            font-size: 0.85rem;
+        .phone-mockup:nth-child(3) {
+            transform: rotate(5deg);
         }
-        /* Finally Find Section */
         
-        .finally-find-section {
-            padding: 5rem 2rem;
-            background: var(--section-dark);
+        .phone-mockup:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 3;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: var(--background-color);
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Statistics Section */
+        
+        .stats-section {
+            padding: 4rem 2rem;
+            background: var(--background-color);
+        }
+        
+        .stats-card {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(0, 188, 212, 0.15) 0%, rgba(77, 208, 225, 0.1) 100%);
+            border: 1px solid rgba(0, 188, 212, 0.2);
+            border-radius: var(--border-radius);
+            padding: 4rem 3rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
             text-align: center;
         }
         
-        .finally-find-section h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: white;
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
         
-        .finally-find-section p {
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+        /* How It Works Section */
+        
+        .how-it-works {
+            padding: var(--section-spacing) 2rem;
+            background: var(--background-color);
+        }
+        
+        .how-it-works-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .how-it-works-header .section-label {
+            display: inline-block;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .how-it-works-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .how-it-works-header p {
             font-size: 1.2rem;
             max-width: 700px;
-            margin: 0 auto 3rem;
+            margin: 0 auto;
+        }
+        
+        .feature-step {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        
+        .feature-step:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .feature-step:nth-child(even)>* {
+            direction: ltr;
+        }
+        
+        .feature-step-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .feature-step-content p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+        
+        .feature-step-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .feature-step-visual .phone-mockup {
+            width: 260px;
+            height: 540px;
         }
         /* Features Section */
         
         .features-section {
             padding: var(--section-spacing) 2rem;
-            background-color: var(--section-darker);
+            background: var(--section-dark);
         }
         
-        .features-section h2 {
-            /* Style section title */
-            font-size: 3rem;
+        .features-header {
+            text-align: center;
             margin-bottom: 4rem;
-            color: white;
+        }
+        
+        .features-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .features-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -381,304 +478,170 @@
             background: var(--card-background);
             border-radius: var(--border-radius);
             padding: 2.5rem;
-            text-align: left;
-            transition: all 0.3s ease;
             border: 1px solid var(--border-color);
-            display: flex;
-            /* Use flexbox */
-            flex-direction: column;
-            /* Stack elements vertically */
+            transition: all 0.3s ease;
+            text-align: center;
         }
         
         .feature-card:hover {
+            border-color: var(--primary-color);
             transform: translateY(-5px);
-            border-color: var(--primary-light);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .feature-header {
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
         }
         
         .feature-icon {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: rgba(0, 188, 212, 0.1);
-            border-radius: 12px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary-color);
-            flex-shrink: 0;
-            /* Prevent icon from shrinking */
-        }
-        
-        .feature-icon svg,
-        .feature-icon i {
-            /* Target both SVG and Font Awesome icons */
-            width: 28px;
-            height: 28px;
-            font-size: 28px;
-            /* Size for Font Awesome */
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
         }
         
         .feature-card h3 {
-            /* Styles already defined above */
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
         }
         
         .feature-card p {
+            font-size: 1rem;
             color: var(--text-light);
-            font-size: 1.05rem;
             line-height: 1.6;
-            flex-grow: 1;
-            /* Allow text to take remaining space */
-        }
-        /* How It Works Section */
-        
-        .how-it-works {
-            padding: var(--section-spacing) 2rem;
-            background-color: var(--section-darker);
-            /* Match features section */
-            text-align: center;
-        }
-        
-        .how-it-works h2 {
-            font-size: 3rem;
-            margin-bottom: 4rem;
-            color: white;
-        }
-        
-        .steps-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5rem;
-            text-align: left;
-        }
-        
-        .step:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
-        .step-content {
-            flex: 1;
-            padding: 2rem;
-        }
-        
-        .step-image {
-            flex: 1;
-            padding: 2rem;
-        }
-        
-        .step-image img {
-            max-width: 100%;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .step h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-        
-        .step p {
-            font-size: 1.1rem;
-            color: var(--text-light);
         }
         /* Testimonials Section */
         
         .testimonials-section {
             padding: var(--section-spacing) 2rem;
-            background-color: var(--section-dark);
-            /* Match finally find */
+            background: var(--background-color);
+        }
+        
+        .testimonials-header {
             text-align: center;
+            margin-bottom: 4rem;
         }
         
-        .testimonials-section h2 {
+        .testimonials-header .section-label {
+            display: inline-block;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonials-header h2 {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-        
-        .testimonials-section p.subtitle {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-            color: var(--text-light);
-            /* Ensure subtitle color */
+            margin-bottom: 1rem;
         }
         
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 3rem;
         }
         
         .testimonial-card {
             background: var(--card-background);
             border-radius: var(--border-radius);
-            padding: 3rem 2rem;
-            transition: all 0.3s ease;
-            height: 100%;
-            border: 1px solid var(--border-color);
-            text-align: left;
-        }
-        
-        .testimonial-card:hover {
-            border-color: var(--primary-light);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-            font-size: 1.1rem;
-            line-height: 1.7;
-            position: relative;
-        }
-        
-        .testimonial-text::before {
-            /* content: '"'; /* Use simple quote */
-            /* Let's remove the large quote for cleaner look */
-            content: "";
-            font-size: 4rem;
-            /* Keep size 0 if removing */
-            color: rgba(0, 188, 212, 0.2);
-            position: absolute;
-            top: -1.5rem;
-            left: -0.5rem;
-        }
-        
-        .testimonial-author {
-            font-weight: 700;
-            color: white;
-            margin-bottom: 0.25rem;
-            font-size: 1.2rem;
-        }
-        
-        .testimonial-role {
-            color: var(--primary-color);
-            font-size: 0.9rem;
-        }
-        /* Pricing Section */
-        
-        .pricing-section {
-            padding: var(--section-spacing) 2rem;
-            background-color: var(--section-darker);
-            /* Match features */
-        }
-        
-        .pricing-section h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: white;
-            text-align: center;
-        }
-        
-        .pricing-section .subtitle {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-            color: var(--text-light);
-            text-align: center;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 900px;
-            /* Slightly narrower grid */
-            margin: 0 auto;
-            align-items: stretch;
-            /* Make cards same height */
-        }
-        
-        .pricing-card {
-            background: var(--card-background);
-            border-radius: var(--border-radius);
             padding: 2.5rem;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
         }
         
-        .pricing-card.popular {
+        .testimonial-card:hover {
             border-color: var(--primary-color);
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.2);
+            transform: translateY(-5px);
         }
         
-        .pricing-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        
-        .pricing-card .price {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .pricing-card .price span {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-light);
-        }
-        
-        .pricing-card .description {
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
             color: var(--text-light);
             margin-bottom: 2rem;
-            min-height: 40px;
-            /* Ensure space even if no description */
         }
         
-        .pricing-card ul {
-            list-style: none;
-            margin-bottom: 2.5rem;
-            text-align: left;
-            flex-grow: 1;
-            /* Push button down */
-        }
-        
-        .pricing-card ul li {
-            margin-bottom: 0.8rem;
-            color: var(--text-light);
+        .testimonial-rating {
             display: flex;
-            align-items: center;
-            gap: 0.8rem;
+            gap: 0.3rem;
+            margin-bottom: 1.5rem;
         }
         
-        .pricing-card ul li i {
-            /* Style Font Awesome check icon */
-            color: var(--primary-color);
+        .testimonial-rating i {
+            color: #FFD700;
             font-size: 1.1rem;
         }
         
-        .pricing-card .button {
-            margin-top: auto;
-            /* Push button to bottom */
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            overflow: hidden;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 0.2rem;
+        }
+        
+        .testimonial-info p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        .testimonials-cta {
+            text-align: center;
+        }
+        
+        .download-btn-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn-large:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
         }
         /* CTA Section */
         
         .cta-section {
-            background: linear-gradient(135deg, #00BCD4 0%, #00E5FF 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
             padding: 6rem 2rem;
             text-align: center;
             color: white;
@@ -698,7 +661,7 @@
         .cta-section p {
             font-size: 1.25rem;
             margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
         }
         
         .cta-button {
@@ -706,44 +669,39 @@
             color: var(--primary-color);
             font-weight: 700;
             padding: 1.25rem 3rem;
-            border-radius: 50px;
+            border-radius: 12px;
             text-decoration: none;
             display: inline-flex;
-            /* Use flex for icon */
             align-items: center;
             justify-content: center;
             gap: 0.8rem;
-            /* Space for icon */
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-            text-transform: uppercase;
-            letter-spacing: 1px;
             font-size: 1.1rem;
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-        /* Footer Styles */
+        /* Footer */
         
         footer {
-            background: #111A20;
+            background: var(--section-dark);
             color: white;
             padding: 4rem 2rem 2rem;
             border-top: 1px solid var(--border-color);
         }
         
         .footer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 3rem;
         }
         
         .footer-column h4 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
             color: white;
         }
@@ -760,34 +718,18 @@
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
-            display: inline-flex;
-            /* For icon alignment */
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 0.95rem;
         }
         
         .footer-links a:hover {
-            color: white;
-        }
-        /* App Store Badge Style */
-        
-        .app-store-badge {
-            display: inline-block;
-            height: 40px;
-            /* Adjust size as needed */
-            margin-top: 0.5rem;
-        }
-        
-        .app-store-badge img {
-            height: 100%;
-            width: auto;
+            color: var(--primary-color);
         }
         
         .copyright {
             text-align: center;
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid var(--border-color);
             color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
         }
@@ -795,8 +737,8 @@
         
         .scroll-animate {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
         
         .scroll-animate.visible {
@@ -805,255 +747,113 @@
         }
         /* Mobile Responsive */
         
-        @media (max-width: 768px) {
-            /* Header and navbar improvements */
-            header {
-                background-color: rgba(18, 18, 18, 0.98);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                padding: 0.8rem 1.2rem;
-                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-            }
-            .nav-buttons {
-                gap: 0.6rem;
-            }
-            .nav-download-btn {
-                border-radius: 8px;
-                padding: 0.6rem 1rem;
-                min-height: 40px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .nav-download-btn {
-                background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
-            }
-            /* Keep other essential mobile styles */
-            h1 {
-                font-size: 2.5rem;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-            .hero {
-                padding: 8rem 1.5rem 4rem;
-                min-height: auto;
-            }
-            section {
-                padding: 3rem 1.5rem;
-            }
-            .button-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .button {
-                width: 100%;
-                max-width: 300px;
-                min-height: 50px;
-                display: flex;
-                /* Ensure flex works */
-                align-items: center;
-                justify-content: center;
-            }
-            .step,
-            .step:nth-child(even) {
-                flex-direction: column;
-            }
-            .step-image,
-            .step-content {
-                width: 100%;
-                padding: 1rem 0;
-            }
-            .step-image img {
-                width: 100%;
-            }
-            .finally-find-section h2,
-            /* .benefits-section h2, removed */
-            .how-it-works h2,
-            .testimonials-section h2,
-            .pricing-section h2,
-            /* Added */
-            .cta-section h2 {
-                font-size: 2.2rem;
-            }
-            .testimonials-grid,
-            .pricing-grid {
-                /* Added pricing grid */
+        @media (max-width: 1024px) {
+            .hero-container {
                 grid-template-columns: 1fr;
+                gap: 3rem;
             }
-            .pricing-card.popular {
-                transform: scale(1);
-                /* Disable scaling on mobile */
+            .hero-visual {
+                order: -1;
             }
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
+            .phone-mockup {
+                width: 240px;
+                height: 500px;
+            }
+            .stats-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 3rem 2rem;
+            }
+            .feature-step {
+                grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            .hero h1 {
-                font-size: 2.8rem;
+            .feature-step:nth-child(even) {
+                direction: ltr;
             }
-            .hero p {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+            .nav-download-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+            .hero {
+                padding: 6rem 1.5rem 4rem;
+                margin-top: 70px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero .subtitle {
                 font-size: 1.1rem;
             }
-            .feature-card {
-                padding: 2rem;
+            .phone-mockup {
+                width: 200px;
+                height: 420px;
+            }
+            .hero-visual {
+                gap: -1rem;
+            }
+            section {
+                padding: 4rem 1.5rem;
+            }
+            .how-it-works-header h2,
+            .features-header h2,
+            .testimonials-header h2 {
+                font-size: 2rem;
+            }
+            .stat-number {
+                font-size: 3rem;
+            }
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
             }
         }
         
         @media (max-width: 480px) {
-            header {
-                padding: 0.7rem 1rem;
-            }
-            .logo {
-                font-size: 1.2rem;
-            }
-            .logo img {
-                height: 32px;
-                margin-right: 4px;
-                /* Adjusted margin */
-            }
-            .nav-buttons {
-                gap: 0.4rem;
-            }
-            .nav-download-btn {
-                padding: 0.5rem 0.8rem;
-                /* Adjusted vertical padding */
-                font-size: 0.75rem;
-                /* Existing */
-                min-height: 34px;
-                /* Override inherited min-height */
-                line-height: normal;
-                /* Added for robustness */
-                gap: 0.3rem;
-                /* Existing */
-            }
-            /* Hide text on very small screens and just show icons - Adjust if needed */
-            .nav-download-btn span:not(.sr-only) {
-                /* Keep screen reader text */
-                /* display: none; */
-                /* Keep text for clarity? Test this */
-            }
-            .nav-download-btn svg,
-            .nav-download-btn i {
-                margin-right: 0 !important;
-                /* Remove forced margin */
-                width: 16px;
-                /* Smaller icon */
-                height: 16px;
-                font-size: 16px;
-            }
-            /* Keep other small phone optimizations */
-            .hero {
-                padding-top: 7rem;
+            .nav-links {
+                display: none;
             }
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 2rem;
+            .hero-buttons {
+                flex-direction: column;
             }
-            .users-count {
-                font-size: 1rem;
+            .app-store-btn {
+                width: 100%;
+                justify-content: center;
             }
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            .feature-card {
-                padding: 1.5rem;
-            }
-            .pricing-card {
-                padding: 1.5rem;
-                /* Smaller padding */
-            }
-            .cta-section h2 {
-                font-size: 1.8rem;
-            }
-            .cta-section p {
-                font-size: 1rem;
+            .phone-mockup {
+                width: 180px;
+                height: 380px;
             }
             .footer-content {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
-            .footer-column {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                /* Center links */
-            }
-            .container {
-                /* Remove padding override if needed */
-                /* padding: 0 1rem; */
-            }
-            .button {
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-            }
-            .step h3 {
-                font-size: 1.6rem;
-            }
-            section {
-                padding: 2.5rem 1rem;
-            }
-            .copyright {
-                margin-top: 2rem;
-                padding-top: 1.5rem;
-            }
-        }
-        /* Landscape orientation fixes */
-        
-        @media (max-height: 480px) and (orientation: landscape) {
-            .hero {
-                min-height: auto;
-                padding: 6rem 2rem 3rem;
-            }
-            .button-container {
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-        }
-        /* Additional touch-friendly adjustments */
-        
-        @media (hover: none) {
-            /* Enhance tap targets on touch devices */
-            .feature-card,
-            .testimonial-card,
-            .pricing-card,
-            /* Added */
-            .button,
-            .footer-links a {
-                transition: none;
-            }
-            .footer-links a {
-                display: block;
-                padding: 0.5rem 0;
-            }
-            .nav-download-btn,
-            .button-primary,
-            .button-secondary,
-            .cta-button {
-                padding-top: 0.8rem;
-                padding-bottom: 0.8rem;
-            }
-        }
-        /* Screen reader only text */
-        
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
         }
     </style>
 
-    <!-- Structured Data for Organization -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -1068,7 +868,6 @@
         }
     </script>
 
-    <!-- Structured Data for SoftwareApplication -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -1090,7 +889,6 @@
         }
     </script>
 
-    <!-- Structured Data for Website -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -1110,220 +908,250 @@
     <header>
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo - AI Hairstyle App"> HairMe
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
             </a>
-            <div class="nav-buttons">
-                <a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">
-                    <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
-                    </svg> Download
-                </a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                <li><a href="contact.html">Support</a></li>
+                <li><a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">Download</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section (Updated) -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content scroll-animate">
-            <h1>Find Your Perfect Hairstyle with AI</h1>
-            <p>Stop guessing. Get personalized hairstyle recommendations based on your unique face shape analysis.</p>
-            <p class="users-count">Trusted by <strong>100,000+</strong> users on the App Store</p>
-            <div class="button-container">
-                <a href="https://apps.apple.com/app/id6741509156" class="button button-primary">
-                    <i class="fab fa-apple"></i> Download App
-                </a>
-                <a href="#features" class="button button-secondary">
-                    Explore Features
-                </a>
+        <div class="hero-container">
+            <div class="hero-content scroll-animate">
+                <div class="trusted-badge">
+                    <div class="trusted-avatars">
+                        <span>H</span>
+                        <span>M</span>
+                        <span>+</span>
+                    </div>
+                    <p>Trusted by <strong>100,000+</strong> users</p>
+                </div>
+                <h1>Find Your Perfect Hairstyle with AI</h1>
+                <p class="subtitle">Stop guessing. Get personalized hairstyle recommendations based on your unique face shape analysis.</p>
+                <div class="hero-buttons">
+                    <a href="https://apps.apple.com/app/id6741509156" class="app-store-btn">
+                        <i class="fab fa-apple"></i> Download on App Store
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual scroll-animate">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="images/scan_results/scan_results.png" alt="HairMe App - Scan Results">
+                    </div>
+                </div>
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="images/products_screen/products_screen.png" alt="HairMe App - Products Screen">
+                    </div>
+                </div>
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <img src="images/hairstyle_suggested/hairstyle_suggested.png" alt="HairMe App - Hairstyle Suggested">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Finally Find Section (Kept) -->
-    <section class="finally-find-section">
-        <div class="container">
-            <h2 class="scroll-animate">Finally Find Your Style.</h2>
-            <p class="scroll-animate">We create personalized hairstyle recommendations tailored to your unique face shape and features, giving you exactly what you need to look your best</p>
-        </div>
-    </section>
-
-    <!-- Features Section (Updated with new features inspired by ratebyfresh) -->
-    <section id="features" class="features-section">
-        <h2 class="scroll-animate">Unlock Your Best Look with AI</h2>
-        <div class="features-grid">
-            <!-- Feature 1: AI Face Shape Analysis -->
-            <div class="feature-card scroll-animate">
-                <div class="feature-header">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-check"></i>
-                        <!-- Face Check Icon -->
-                    </div>
-                </div>
-                <h3>AI Face Shape Analysis</h3>
-                <p>Our advanced AI analyzes your facial proportions in seconds, accurately determining your face shape (oval, round, square, etc.) to find hairstyles that flatter you most.</p>
+    <!-- Statistics Section -->
+    <section class="stats-section scroll-animate">
+        <div class="stats-card">
+            <div class="stat-item">
+                <div class="stat-number">84%</div>
+                <p class="stat-label">Reported improvement in confidence</p>
             </div>
-
-            <!-- Feature 2: Personalized Hairstyle Recommendations -->
-            <div class="feature-card scroll-animate">
-                <div class="feature-header">
-                    <div class="feature-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                        <!-- List Icon -->
-                    </div>
-                </div>
-                <h3>Personalized Hairstyle Recommendations</h3>
-                <p>Receive custom hairstyle suggestions matched to your face shape, hair type, and preferences. Discover looks that enhance your natural features.</p>
+            <div class="stat-item">
+                <div class="stat-number">100K+</div>
+                <p class="stat-label">Users have found their perfect style</p>
             </div>
-
-            <!-- Feature 3: Virtual Hairstyle Try-On -->
-            <!-- Removed Virtual Try-On Feature Card -->
-
-            <!-- Feature 4: Hair Color Analysis -->
-            <div class="feature-card scroll-animate">
-                <div class="feature-header">
-                    <div class="feature-icon">
-                        <i class="fas fa-palette"></i>
-                        <!-- Palette Icon -->
-                    </div>
-                </div>
-                <h3>Hair Color Analysis</h3>
-                <p>Find the perfect hair color that complements your skin tone and features. Our AI suggests shades to enhance your overall appearance.</p>
-            </div>
-
-            <!-- Feature 5: Progress Tracking -->
-            <div class="feature-card scroll-animate">
-                <div class="feature-header">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                        <!-- Chart Line Icon -->
-                    </div>
-                </div>
-                <h3>Progress & Style Tracking</h3>
-                <p>Keep track of your favorite styles and see how your look evolves. Save consultations and notes for future reference.</p>
-            </div>
-
-            <!-- Feature 6: Expert Guidance -->
-            <div class="feature-card scroll-animate">
-                <div class="feature-header">
-                    <div class="feature-icon">
-                        <i class="fas fa-book-open"></i>
-                        <!-- Book Icon -->
-                    </div>
-                </div>
-                <h3>Expert Style Guidance</h3>
-                <p>Understand why certain hairstyles work best for you with detailed explanations. Communicate confidently with your stylist.</p>
+            <div class="stat-item">
+                <div class="stat-number">4.8</div>
+                <p class="stat-label">Average App Store rating</p>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section (Kept) -->
+    <!-- How It Works Section -->
     <section class="how-it-works">
         <div class="container">
-            <h2 class="scroll-animate">How HairMe Helps You Find Your Perfect Hairstyle</h2>
+            <div class="how-it-works-header scroll-animate">
+                <span class="section-label">How It Works</span>
+                <h2>How HairMe Helps You Find Your Perfect Hairstyle</h2>
+                <p>Discover the perfect look for your unique face shape in three simple steps</p>
+            </div>
 
-            <div class="steps-container">
-                <div class="step scroll-animate">
-                    <div class="step-content">
-                        <h3>1. Analyze Your Face Shape</h3>
-                        <p>Take a selfie or upload a photo, and our AI will analyze your facial proportions to determine your face shape—oval, round, square, heart, or diamond—with precise accuracy.</p>
-                    </div>
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="AI analyzing face shape for perfect hairstyle recommendations">
+            <div class="feature-step scroll-animate">
+                <div class="feature-step-content">
+                    <h3>Analyze Your Face Shape</h3>
+                    <p>Take a selfie or upload a photo, and our AI will analyze your facial proportions to determine your face shape—oval, round, square, heart, or diamond—with precise accuracy.</p>
+                </div>
+                <div class="feature-step-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <img src="images/features/ai_face_analysis.png" alt="AI analyzing face shape">
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="step scroll-animate">
-                    <div class="step-content">
-                        <h3>2. Get Personalized Recommendations</h3>
-                        <p>Receive tailored hairstyle suggestions that complement your unique facial features. Our app considers your face shape, hair texture, and personal preferences to suggest styles that will truly enhance your appearance.</p>
-                    </div>
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1549236177-f9b0031756eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Personalized hairstyle recommendations based on face shape analysis">
+            <div class="feature-step scroll-animate">
+                <div class="feature-step-content">
+                    <h3>Get Personalized Recommendations</h3>
+                    <p>Receive tailored hairstyle suggestions that complement your unique facial features. Our app considers your face shape, hair texture, and personal preferences to suggest styles that will truly enhance your appearance.</p>
+                </div>
+                <div class="feature-step-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <img src="images/features/personalized_recommendations.png" alt="Personalized hairstyle recommendations">
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="step scroll-animate">
-                    <div class="step-content">
-                        <h3>3. Review and Save Recommendations</h3>
-                        <p>Browse through your personalized hairstyle recommendations, save your favorites, and take them to your stylist. Get the perfect haircut with confidence knowing it's tailored to your unique features.</p>
-                    </div>
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Save and share personalized hairstyle recommendations from HairMe">
+            <div class="feature-step scroll-animate">
+                <div class="feature-step-content">
+                    <h3>Review and Save Recommendations</h3>
+                    <p>Browse through your personalized hairstyle recommendations, save your favorites, and take them to your stylist. Get the perfect haircut with confidence knowing it's tailored to your unique features.</p>
+                </div>
+                <div class="feature-step-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <img src="images/features/save_recommendations.png" alt="Save and share recommendations">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section (Updated) -->
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="features-header scroll-animate">
+                <h2>Explore The Features</h2>
+                <p>Everything you need to find your perfect hairstyle, maintain healthy hair, and boost your confidence</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+                    <h3>Hairstyle Recommendations</h3>
+                    <p>Get personalized hairstyle suggestions tailored to your face shape, hair type, and personal style. Discover looks that enhance your natural features.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Product Recommendations</h3>
+                    <p>Receive curated product suggestions for hair care, styling, and maintenance. Find the best products for your specific hair type and needs.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Daily Hair Routine</h3>
+                    <p>Get personalized daily routines for better hair health and to prevent balding. Follow expert-backed steps to maintain strong, healthy hair.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Hair Scans</h3>
+                    <p>Advanced AI-powered hair analysis scans your hair condition, identifies issues, and provides detailed insights about your hair health.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Attractiveness Scores</h3>
+                    <p>Get AI-powered scores on how attractive you and your hairstyle are. Understand what works best for you and track improvements over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
     <section class="testimonials-section">
         <div class="container">
-            <h2 class="scroll-animate">What Our Users Say</h2>
-            <p class="subtitle scroll-animate">Thousands have transformed their look with HairMe.</p>
-
+            <div class="testimonials-header scroll-animate">
+                <span class="section-label">Reviews</span>
+                <h2>What People Say About HairMe</h2>
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card scroll-animate">
-                    <p class="testimonial-text">The face shape analysis was spot on! Finally found a hairstyle that complements my features after years of trying different styles. The detailed explanations helped me feel confident before going to the salon.</p>
-                    <p class="testimonial-author">Sarah T.</p>
-                    <p class="testimonial-role">User</p>
+                    <p class="testimonial-text">The face shape analysis was spot on! Finally found a hairstyle that complements my features after years of trying different styles.</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="images/testimonials/sarah_t.png" alt="Sarah T.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Sarah T.</h4>
+                            <p>User</p>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="testimonial-card scroll-animate">
-                    <p class="testimonial-text">As someone who struggles to communicate what I want to barbers, this app was a game-changer. I showed my barber the recommendations from HairMe, and he was impressed with how well-suited they were to my face.</p>
-                    <p class="testimonial-author">Michael R.</p>
-                    <p class="testimonial-role">User</p>
+                    <p class="testimonial-text">As someone who struggles to communicate what I want to barbers, this app was a game-changer. I showed my barber the recommendations and he was impressed.</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="images/testimonials/michael_r.png" alt="Michael R.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Michael R.</h4>
+                            <p>User</p>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="testimonial-card scroll-animate">
-                    <p class="testimonial-text">The app is intuitive and fun to use. I love how it explains why certain styles work with my face shape. It's like having a personal stylist in my pocket, and the results speak for themselves!</p>
-                    <p class="testimonial-author">Jessica M.</p>
-                    <p class="testimonial-role">User</p>
+                    <p class="testimonial-text">The app is intuitive and fun to use. I love how it explains why certain styles work with my face shape. It's like having a personal stylist in my pocket!</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="images/testimonials/jessica_m.png" alt="Jessica M.">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Jessica M.</h4>
+                            <p>User</p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="testimonials-cta">
+                <a href="https://apps.apple.com/app/id6741509156" class="download-btn-large">
+                    <i class="fab fa-apple"></i> Download HairMe
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section (New) -->
-    <section id="pricing" class="pricing-section">
-        <h2 class="scroll-animate">Affordable Plans for Everyone</h2>
-        <p class="subtitle scroll-animate">Choose a plan that fits your needs and unlock your perfect look.</p>
-        <div class="pricing-grid">
-            <!-- Free Plan -->
-            <div class="pricing-card scroll-animate">
-                <h3>Free</h3>
-                <div class="price">$0<span class="period"></span></div>
-                <p class="description">Get started with basic analysis.</p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Basic Face Shape Analysis</li>
-                    <li><i class="fas fa-check"></i> Limited Hairstyle Recommendations</li>
-                    <li><i class="fas fa-times"></i> Virtual Try-On</li>
-                    <li><i class="fas fa-times"></i> Hair Color Analysis</li>
-                    <li><i class="fas fa-times"></i> Save Favorites</li>
-                </ul>
-                <a href="https://apps.apple.com/app/id6741509156" class="button button-secondary">Download App</a>
-            </div>
-
-            <!-- Premium Plan -->
-            <div class="pricing-card popular scroll-animate">
-                <h3>Premium</h3>
-                <div class="price">$4<span>.99 / month</span></div>
-                <!-- Example Price -->
-                <p class="description">Full access to all features & recommendations.</p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Advanced Face Shape Analysis</li>
-                    <li><i class="fas fa-check"></i> Unlimited Hairstyle Recommendations</li>
-                    <li><i class="fas fa-check"></i> Virtual Try-On</li>
-                    <li><i class="fas fa-check"></i> Hair Color Analysis</li>
-                    <li><i class="fas fa-check"></i> Save Unlimited Favorites</li>
-                    <li><i class="fas fa-check"></i> Progress & Style Tracking</li>
-                    <li><i class="fas fa-check"></i> Priority Support</li>
-                </ul>
-                <a href="https://apps.apple.com/app/id6741509156" class="button button-primary">Get Premium</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section (Updated) -->
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content scroll-animate">
             <h2>Ready to find your perfect style?</h2>
@@ -1338,29 +1166,32 @@
     <footer>
         <div class="footer-content">
             <div class="footer-column">
-                <h4>Legal</h4>
+                <h4>About</h4>
                 <ul class="footer-links">
-                    <li><a href="privacyNotice.html">Privacy Policy</a></li>
-                    <li><a href="termsOfService.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>HairMe App</h4>
+                <h4>Product</h4>
                 <ul class="footer-links">
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li>
-                        <a href="https://apps.apple.com/app/id6741509156" class="app-store-badge" aria-label="Download on the App Store">
-                            <img src="images/app-store-badge.svg" alt="Download on the App Store">
-                        </a>
-                    </li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="https://apps.apple.com/app/id6741509156">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="privacyNotice.html">Privacy Policy</a></li>
+                    <li><a href="termsOfService.html">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Explore</h4>
                 <ul class="footer-links">
-                    <li><a href="#features">Features</a></li>
                     <li><a href="perfect-haircut-for-face-shape.html">Face Shape Guide</a></li>
                     <li><a href="best-haircuts-for-men.html">Men's Haircuts</a></li>
+                    <li><a href="best-haircuts-for-women.html">Women's Haircuts</a></li>
                 </ul>
             </div>
         </div>
@@ -1369,42 +1200,429 @@
         </div>
     </footer>
 
-    <!-- FAQ Structured Data -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [{
-                "@type": "Question",
-                "name": "How do I find the best hairstyle for my face shape?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The HairMe app analyzes your facial features using AI to determine your face shape and provide personalized hairstyle recommendations that flatter your unique features."
-                }
-            }, {
-                "@type": "Question",
-                "name": "What face shapes does HairMe analyze?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "HairMe can analyze and provide recommendations for oval, round, square, heart, diamond, and oblong face shapes, giving you customized hairstyle suggestions."
-                }
-            }, {
-                "@type": "Question",
-                "name": "How accurate is the face shape analysis?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "HairMe's AI technology provides highly accurate face shape analysis by measuring facial proportions and analyzing key points on your face to determine your unique face shape."
-                }
-            }]
-        }
-    </script>
-
     <script>
+        // Localization System
+        const translations = {
+            it: {
+                meta: {
+                    title: "HairMe | Trova il Tuo Taglio di Capelli Perfetto con l'Analisi AI della Forma del Viso",
+                    description: "Scopri il taglio di capelli perfetto per la tua forma del viso unica con l'analisi AI di HairMe. Ricevi raccomandazioni personalizzate per forme del viso ovali, rotonde, quadrate, a cuore e a diamante.",
+                    keywords: "tagli di capelli per forma del viso, migliori tagli forma del viso, analisi forma del viso, raccomandazioni tagli di capelli AI, app tagli di capelli, trova il tuo taglio di capelli",
+                    ogTitle: "HairMe | Trova il Tuo Taglio di Capelli Perfetto con l'Analisi AI della Forma del Viso",
+                    ogDescription: "Scopri il taglio di capelli perfetto per la tua forma del viso unica con la nostra analisi AI e raccomandazioni personalizzate.",
+                    twitterTitle: "HairMe | Trova il Tuo Taglio di Capelli Perfetto con l'AI",
+                    twitterDescription: "Analisi della forma del viso alimentata dall'AI e raccomandazioni personalizzate di tagli di capelli."
+                },
+                images: {
+                    logo: "Logo HairMe",
+                    screenshot1: "Screenshot App HairMe",
+                    screenshot2: "Screenshot App HairMe",
+                    screenshot3: "Screenshot App HairMe",
+                    aiAnalysis: "AI che analizza la forma del viso",
+                    recommendations: "Raccomandazioni personalizzate di tagli di capelli",
+                    saveShare: "Salva e condividi raccomandazioni"
+                },
+                nav: {
+                    features: "Funzionalità",
+                    howItWorks: "Come Funziona",
+                    support: "Supporto",
+                    download: "Scarica"
+                },
+                hero: {
+                    trustedBy: "Fidato da <strong>100.000+</strong> utenti",
+                    title: "Trova il Tuo Taglio di Capelli Perfetto con l'AI",
+                    subtitle: "Basta indovinare. Ricevi raccomandazioni personalizzate di tagli di capelli basate sull'analisi unica della forma del tuo viso.",
+                    downloadAppStore: "Scarica su App Store"
+                },
+                stats: {
+                    confidence: "Miglioramento della fiducia riportato",
+                    users: "Utenti hanno trovato il loro stile perfetto",
+                    rating: "Valutazione media App Store"
+                },
+                howItWorks: {
+                    label: "Come Funziona",
+                    title: "Come HairMe Ti Aiuta a Trovare il Tuo Taglio di Capelli Perfetto",
+                    subtitle: "Scopri il look perfetto per la tua forma del viso unica in tre semplici passaggi",
+                    step1Title: "Analizza la Forma del Tuo Viso",
+                    step1Text: "Scatta un selfie o carica una foto, e la nostra AI analizzerà le proporzioni del tuo viso per determinare la forma del viso—ovale, rotondo, quadrato, cuore o diamante—con precisione.",
+                    step2Title: "Ricevi Raccomandazioni Personalizzate",
+                    step2Text: "Ricevi suggerimenti di tagli di capelli su misura che completano le tue caratteristiche facciali uniche. La nostra app considera la forma del viso, la texture dei capelli e le preferenze personali per suggerire stili che miglioreranno davvero il tuo aspetto.",
+                    step3Title: "Rivedi e Salva le Raccomandazioni",
+                    step3Text: "Sfoglia le tue raccomandazioni di tagli di capelli personalizzate, salva i tuoi preferiti e portali dal tuo parrucchiere. Ottieni il taglio perfetto con la sicurezza di sapere che è su misura per le tue caratteristiche uniche."
+                },
+                features: {
+                    title: "Esplora le Funzionalità",
+                    subtitle: "Tutto ciò di cui hai bisogno per trovare il tuo taglio di capelli perfetto, mantenere capelli sani e aumentare la tua fiducia",
+                    feature1Title: "Raccomandazioni di Tagli di Capelli",
+                    feature1Text: "Ricevi suggerimenti personalizzati di tagli di capelli su misura per la forma del viso, il tipo di capelli e lo stile personale. Scopri look che valorizzano le tue caratteristiche naturali.",
+                    feature2Title: "Raccomandazioni di Prodotti",
+                    feature2Text: "Ricevi suggerimenti di prodotti curati per la cura dei capelli, lo styling e la manutenzione. Trova i migliori prodotti per il tuo tipo di capelli e le tue esigenze specifiche.",
+                    feature3Title: "Routine Giornaliera per i Capelli",
+                    feature3Text: "Ricevi routine giornaliere personalizzate per una migliore salute dei capelli e per prevenire la calvizie. Segui passaggi supportati da esperti per mantenere capelli forti e sani.",
+                    feature4Title: "Scansioni dei Capelli",
+                    feature4Text: "L'analisi avanzata dei capelli alimentata dall'AI scansiona le condizioni dei tuoi capelli, identifica i problemi e fornisce approfondimenti dettagliati sulla salute dei tuoi capelli.",
+                    feature5Title: "Punteggi di Attrattività",
+                    feature5Text: "Ricevi punteggi alimentati dall'AI su quanto sei attraente tu e il tuo taglio di capelli. Comprendi cosa funziona meglio per te e monitora i miglioramenti nel tempo."
+                },
+                testimonials: {
+                    label: "Recensioni",
+                    title: "Cosa Dicono le Persone di HairMe",
+                    testimonial1: "L'analisi della forma del viso è stata perfetta! Finalmente ho trovato un taglio di capelli che completa le mie caratteristiche dopo anni di tentativi con stili diversi.",
+                    testimonial2: "Come qualcuno che fatica a comunicare cosa voglio ai parrucchieri, questa app è stata rivoluzionaria. Ho mostrato al mio parrucchiere le raccomandazioni e ne è rimasto impressionato.",
+                    testimonial3: "L'app è intuitiva e divertente da usare. Adoro come spiega perché certi stili funzionano con la forma del mio viso. È come avere un parrucchiere personale in tasca!",
+                    user: "Utente",
+                    downloadHairMe: "Scarica HairMe"
+                },
+                cta: {
+                    title: "Pronto a trovare il tuo stile perfetto?",
+                    subtitle: "Scarica l'app HairMe oggi e scopri tagli di capelli che valorizzano davvero le tue caratteristiche uniche.",
+                    downloadNow: "Scarica Ora"
+                },
+                footer: {
+                    about: "Chi Siamo",
+                    contactUs: "Contattaci",
+                    howItWorks: "Come Funziona",
+                    product: "Prodotto",
+                    features: "Funzionalità",
+                    download: "Scarica",
+                    company: "Azienda",
+                    privacyPolicy: "Privacy Policy",
+                    termsConditions: "Termini e Condizioni",
+                    explore: "Esplora",
+                    faceShapeGuide: "Guida alle Forme del Viso",
+                    mensHaircuts: "Tagli di Capelli da Uomo",
+                    womensHaircuts: "Tagli di Capelli da Donna",
+                    copyright: "© 2025 HairMe. Tutti i diritti riservati."
+                }
+            }
+        };
+
+        // Language Detection
+        function detectLanguage() {
+            // Check localStorage first (user preference)
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                return savedLang;
+            }
+
+            // Check browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('it')) {
+                return 'it';
+            }
+
+            // Check geolocation (optional, requires user permission)
+            // For now, we'll use browser language as primary method
+            return 'en';
+        }
+
+        // Update image paths based on language with fallback
+        function updateImagePaths(lang) {
+            const imageFolder = lang === 'it' ? 'italiano' : 'inglese';
+            const fallbackFolder = 'inglese';
+
+            // Folder name mapping for different languages
+            const folderMapping = {
+                'inglese': {
+                    'screenshots': 'products_screen',
+                    'hairstyle_suggested': 'hairstyle_suggested',
+                    'scan_results': 'scan_results',
+                    'features': 'features',
+                    'testimonials': 'testimonials'
+                },
+                'italiano': {
+                    'screenshots': 'products_screen',
+                    'hairstyle_suggested': 'taglio_suggerito',
+                    'scan_results': 'risultati_scansione',
+                    'features': 'features',
+                    'testimonials': 'testimonials'
+                }
+            };
+
+            // File name mapping for different languages
+            const fileNameMapping = {
+                'inglese': {
+                    'hairstyle_suggested.png': 'hairstyle_suggested.png',
+                    'scan_results.png': 'scan_results.png',
+                    'products_screen.png': 'products_screen.png',
+                    'ai_face_analysis.png': 'ai_face_analysis.png',
+                    'personalized_recommendations.png': 'personalized_recommendations.png',
+                    'save_recommendations.png': 'save_recommendations.png',
+                    'sarah_t.png': 'sarah_t.png',
+                    'michael_r.png': 'michael_r.png',
+                    'jessica_m.png': 'jessica_m.png'
+                },
+                'italiano': {
+                    'hairstyle_suggested.png': 'taglio_suggerito.png',
+                    'scan_results.png': 'risultati_scansione.png',
+                    'products_screen.png': 'products_screen.png',
+                    'ai_face_analysis.png': 'analisi_volto_ai.png',
+                    'personalized_recommendations.png': 'raccomandazioni_personalizzate.png',
+                    'save_recommendations.png': 'salva_raccomandazioni.png',
+                    'sarah_t.png': 'sarah_t.png',
+                    'michael_r.png': 'michael_r.png',
+                    'jessica_m.png': 'jessica_m.png'
+                }
+            };
+
+            // Get all images that start with "images/"
+            const images = document.querySelectorAll('img[src^="images/"]');
+
+            images.forEach(img => {
+                const originalSrc = img.getAttribute('src');
+                if (!originalSrc) return;
+
+                // Skip if already in a language folder
+                if (originalSrc.includes('/italiano/') || originalSrc.includes('/inglese/')) {
+                    return;
+                }
+
+                // Create new path with language folder and mapping
+                const pathParts = originalSrc.split('/');
+                pathParts[0] = 'images';
+
+                // Apply folder name mapping if needed
+                const currentFolder = pathParts[1];
+                const mapping = folderMapping[imageFolder];
+                if (mapping && mapping[currentFolder]) {
+                    pathParts[1] = mapping[currentFolder];
+                }
+
+                // Apply file name mapping if needed
+                const fileName = pathParts[pathParts.length - 1];
+                const fileMapping = fileNameMapping[imageFolder];
+                if (fileMapping && fileMapping[fileName]) {
+                    pathParts[pathParts.length - 1] = fileMapping[fileName];
+                }
+
+                // Insert language folder after 'images'
+                pathParts.splice(1, 0, imageFolder);
+                const newSrc = pathParts.join('/');
+
+                // Store original path for fallback
+                const originalPath = originalSrc;
+
+                // Set new src
+                img.src = newSrc;
+
+                // Add error handler for fallback
+                img.onerror = function() {
+                    // If current image failed and we're not already using fallback, try fallback
+                    if (imageFolder !== fallbackFolder) {
+                        const fallbackPathParts = originalPath.split('/');
+                        fallbackPathParts[0] = 'images';
+
+                        // Apply English folder mapping for fallback
+                        const fallbackMapping = folderMapping[fallbackFolder];
+                        const currentFolder = fallbackPathParts[1];
+                        if (fallbackMapping && fallbackMapping[currentFolder]) {
+                            fallbackPathParts[1] = fallbackMapping[currentFolder];
+                        }
+
+                        // Apply English file name mapping for fallback
+                        const fallbackFileName = fallbackPathParts[fallbackPathParts.length - 1];
+                        const fallbackFileMapping = fileNameMapping[fallbackFolder];
+                        if (fallbackFileMapping && fallbackFileMapping[fallbackFileName]) {
+                            fallbackPathParts[fallbackPathParts.length - 1] = fallbackFileMapping[fallbackFileName];
+                        } else {
+                            // Try to map Italian filename back to English
+                            const reverseMapping = {
+                                'taglio_suggerito.png': 'hairstyle_suggested.png',
+                                'risultati_scansione.png': 'scan_results.png',
+                                'products_screen.png': 'products_screen.png'
+                            };
+                            if (reverseMapping[fallbackFileName]) {
+                                fallbackPathParts[fallbackPathParts.length - 1] = reverseMapping[fallbackFileName];
+                            }
+                        }
+
+                        fallbackPathParts.splice(1, 0, fallbackFolder);
+                        this.src = fallbackPathParts.join('/');
+                        // Remove error handler to prevent infinite loop
+                        this.onerror = null;
+                    }
+                };
+            });
+        }
+
+        // Apply translations
+        function applyTranslations(lang) {
+            const htmlRoot = document.getElementById('html-root') || document.documentElement;
+
+            if (lang === 'it') {
+                const t = translations.it;
+                htmlRoot.lang = 'it';
+
+                // Update meta tags
+                document.title = t.meta.title;
+                const metaDescription = document.querySelector('meta[name="description"]');
+                if (metaDescription) metaDescription.content = t.meta.description;
+                const metaKeywords = document.querySelector('meta[name="keywords"]');
+                if (metaKeywords) metaKeywords.content = t.meta.keywords;
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                if (ogTitle) ogTitle.content = t.meta.ogTitle;
+                const ogDescription = document.querySelector('meta[property="og:description"]');
+                if (ogDescription) ogDescription.content = t.meta.ogDescription;
+                const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+                if (twitterTitle) twitterTitle.content = t.meta.twitterTitle;
+                const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+                if (twitterDescription) twitterDescription.content = t.meta.twitterDescription;
+
+                // Update image alt texts
+                const logoImg = document.querySelector('.logo img');
+                if (logoImg) logoImg.alt = t.images.logo;
+                const screenshots = document.querySelectorAll('.hero-visual img');
+                if (screenshots[0]) screenshots[0].alt = t.images.screenshot1;
+                if (screenshots[1]) screenshots[1].alt = t.images.screenshot2;
+                if (screenshots[2]) screenshots[2].alt = t.images.screenshot3;
+                const stepImages = document.querySelectorAll('.feature-step-visual img');
+                if (stepImages[0]) stepImages[0].alt = t.images.aiAnalysis;
+                if (stepImages[1]) stepImages[1].alt = t.images.recommendations;
+                if (stepImages[2]) stepImages[2].alt = t.images.saveShare;
+
+                // Navigation
+                const navLinks = document.querySelectorAll('.nav-links a');
+                if (navLinks[0]) navLinks[0].textContent = t.nav.features;
+                if (navLinks[1]) navLinks[1].textContent = t.nav.howItWorks;
+                if (navLinks[2]) navLinks[2].textContent = t.nav.support;
+                if (navLinks[3]) navLinks[3].textContent = t.nav.download;
+
+                // Hero Section
+                const trustedBadge = document.querySelector('.trusted-badge p');
+                if (trustedBadge) trustedBadge.innerHTML = t.hero.trustedBy;
+
+                const heroTitle = document.querySelector('.hero h1');
+                if (heroTitle) heroTitle.textContent = t.hero.title;
+
+                const heroSubtitle = document.querySelector('.hero .subtitle');
+                if (heroSubtitle) heroSubtitle.textContent = t.hero.subtitle;
+
+                const appStoreBtn = document.querySelector('.app-store-btn');
+                if (appStoreBtn) appStoreBtn.innerHTML = `<i class="fab fa-apple"></i> ${t.hero.downloadAppStore}`;
+
+                // Statistics
+                const statLabels = document.querySelectorAll('.stat-label');
+                if (statLabels[0]) statLabels[0].textContent = t.stats.confidence;
+                if (statLabels[1]) statLabels[1].textContent = t.stats.users;
+                if (statLabels[2]) statLabels[2].textContent = t.stats.rating;
+
+                // How It Works
+                const howItWorksLabel = document.querySelector('.how-it-works-header .section-label');
+                if (howItWorksLabel) howItWorksLabel.textContent = t.howItWorks.label;
+
+                const howItWorksTitle = document.querySelector('.how-it-works-header h2');
+                if (howItWorksTitle) howItWorksTitle.textContent = t.howItWorks.title;
+
+                const howItWorksSubtitle = document.querySelector('.how-it-works-header p');
+                if (howItWorksSubtitle) howItWorksSubtitle.textContent = t.howItWorks.subtitle;
+
+                const stepTitles = document.querySelectorAll('.feature-step-content h3');
+                if (stepTitles[0]) stepTitles[0].textContent = t.howItWorks.step1Title;
+                if (stepTitles[1]) stepTitles[1].textContent = t.howItWorks.step2Title;
+                if (stepTitles[2]) stepTitles[2].textContent = t.howItWorks.step3Title;
+
+                const stepTexts = document.querySelectorAll('.feature-step-content p');
+                if (stepTexts[0]) stepTexts[0].textContent = t.howItWorks.step1Text;
+                if (stepTexts[1]) stepTexts[1].textContent = t.howItWorks.step2Text;
+                if (stepTexts[2]) stepTexts[2].textContent = t.howItWorks.step3Text;
+
+                // Features
+                const featuresTitle = document.querySelector('.features-header h2');
+                if (featuresTitle) featuresTitle.textContent = t.features.title;
+
+                const featuresSubtitle = document.querySelector('.features-header p');
+                if (featuresSubtitle) featuresSubtitle.textContent = t.features.subtitle;
+
+                const featureCards = document.querySelectorAll('.feature-card');
+                if (featureCards[0]) {
+                    featureCards[0].querySelector('h3').textContent = t.features.feature1Title;
+                    featureCards[0].querySelector('p').textContent = t.features.feature1Text;
+                }
+                if (featureCards[1]) {
+                    featureCards[1].querySelector('h3').textContent = t.features.feature2Title;
+                    featureCards[1].querySelector('p').textContent = t.features.feature2Text;
+                }
+                if (featureCards[2]) {
+                    featureCards[2].querySelector('h3').textContent = t.features.feature3Title;
+                    featureCards[2].querySelector('p').textContent = t.features.feature3Text;
+                }
+                if (featureCards[3]) {
+                    featureCards[3].querySelector('h3').textContent = t.features.feature4Title;
+                    featureCards[3].querySelector('p').textContent = t.features.feature4Text;
+                }
+                if (featureCards[4]) {
+                    featureCards[4].querySelector('h3').textContent = t.features.feature5Title;
+                    featureCards[4].querySelector('p').textContent = t.features.feature5Text;
+                }
+
+                // Testimonials
+                const testimonialsLabel = document.querySelector('.testimonials-header .section-label');
+                if (testimonialsLabel) testimonialsLabel.textContent = t.testimonials.label;
+
+                const testimonialsTitle = document.querySelector('.testimonials-header h2');
+                if (testimonialsTitle) testimonialsTitle.textContent = t.testimonials.title;
+
+                const testimonialTexts = document.querySelectorAll('.testimonial-text');
+                if (testimonialTexts[0]) testimonialTexts[0].textContent = t.testimonials.testimonial1;
+                if (testimonialTexts[1]) testimonialTexts[1].textContent = t.testimonials.testimonial2;
+                if (testimonialTexts[2]) testimonialTexts[2].textContent = t.testimonials.testimonial3;
+
+                const userLabels = document.querySelectorAll('.testimonial-info p');
+                userLabels.forEach(label => {
+                    if (label.textContent === 'User') label.textContent = t.testimonials.user;
+                });
+
+                const downloadHairMeBtn = document.querySelector('.download-btn-large');
+                if (downloadHairMeBtn) downloadHairMeBtn.innerHTML = `<i class="fab fa-apple"></i> ${t.testimonials.downloadHairMe}`;
+
+                // CTA Section
+                const ctaTitle = document.querySelector('.cta-section h2');
+                if (ctaTitle) ctaTitle.textContent = t.cta.title;
+
+                const ctaSubtitle = document.querySelector('.cta-section p');
+                if (ctaSubtitle) ctaSubtitle.textContent = t.cta.subtitle;
+
+                const ctaButton = document.querySelector('.cta-button');
+                if (ctaButton) ctaButton.innerHTML = `<i class="fab fa-apple"></i> ${t.cta.downloadNow}`;
+
+                // Footer
+                const footerColumns = document.querySelectorAll('.footer-column h4');
+                if (footerColumns[0]) footerColumns[0].textContent = t.footer.about;
+                if (footerColumns[1]) footerColumns[1].textContent = t.footer.product;
+                if (footerColumns[2]) footerColumns[2].textContent = t.footer.company;
+                if (footerColumns[3]) footerColumns[3].textContent = t.footer.explore;
+
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(link => {
+                    const text = link.textContent.trim();
+                    if (text === 'Contact Us') link.textContent = t.footer.contactUs;
+                    if (text === 'How It Works') link.textContent = t.footer.howItWorks;
+                    if (text === 'Features') link.textContent = t.footer.features;
+                    if (text === 'Download') link.textContent = t.footer.download;
+                    if (text === 'Privacy Policy') link.textContent = t.footer.privacyPolicy;
+                    if (text === 'Terms & Conditions') link.textContent = t.footer.termsConditions;
+                    if (text === 'Face Shape Guide') link.textContent = t.footer.faceShapeGuide;
+                    if (text === "Men's Haircuts") link.textContent = t.footer.mensHaircuts;
+                    if (text === "Women's Haircuts") link.textContent = t.footer.womensHaircuts;
+                });
+
+                const copyright = document.querySelector('.copyright p');
+                if (copyright) copyright.textContent = t.footer.copyright;
+            } else {
+                htmlRoot.lang = 'en';
+            }
+        }
+
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Elements that will animate on scroll
+            const lang = detectLanguage();
+            updateImagePaths(lang);
+            applyTranslations(lang);
+            localStorage.setItem('preferredLanguage', lang);
+
+            // Scroll animations
             const animatedElements = document.querySelectorAll('.scroll-animate');
 
-            // Function to check if element is in viewport
             const isInViewport = (element) => {
                 const rect = element.getBoundingClientRect();
                 return (
@@ -1413,7 +1631,6 @@
                 );
             };
 
-            // Function to handle scroll animation
             const handleScrollAnimation = () => {
                 animatedElements.forEach(element => {
                     if (isInViewport(element)) {
@@ -1422,10 +1639,7 @@
                 });
             };
 
-            // Add scroll event listener
             window.addEventListener('scroll', handleScrollAnimation);
-
-            // Initial check on page load
             handleScrollAnimation();
         });
     </script>

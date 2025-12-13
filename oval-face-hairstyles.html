@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,17 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://hairme.app/images/social-share.jpg">
     <link rel="canonical" href="https://hairvana.app/oval-face-hairstyles.html">
+
+    <!-- Italian SEO - Critical for ranking in Italian searches -->
+    <link rel="alternate" hreflang="it" href="https://hairvana.app/oval-face-hairstyles.html">
+    <link rel="alternate" hreflang="en" href="https://hairvana.app/oval-face-hairstyles.html">
+    <link rel="alternate" hreflang="x-default" href="https://hairvana.app/oval-face-hairstyles.html">
+
+    <!-- Italian Meta Tags (for SEO crawlers) -->
+    <meta name="description" lang="it" content="Scopri i tagli di capelli più adatti per le forme del viso ovali con le raccomandazioni degli esperti HairMe e l'analisi AI. Guida completa ai migliori tagli per viso ovale.">
+    <meta name="keywords" lang="it" content="tagli viso ovale, migliori tagli viso ovale, tagli capelli viso ovale, viso ovale taglio, taglio perfetto viso ovale, stili viso ovale, capelli viso ovale, taglio ideale ovale">
+    <meta name="keywords" content="oval face hairstyles, best haircuts oval face, oval face shape hairstyles, tagli viso ovale, migliori tagli viso ovale">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,14 +35,13 @@
             --secondary-color: #26C6DA;
             --text-color: #FFFFFF;
             --text-light: #CCCCCC;
-            --background-color: #121212;
-            --background-alt: #1A2229;
-            --card-background: #1E252C;
-            --section-dark: #171E24;
-            --section-darker: #141B21;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
             --border-color: rgba(255, 255, 255, 0.1);
             --section-spacing: 5rem;
-            --border-radius: 12px;
+            --border-radius: 16px;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
@@ -52,15 +62,14 @@
         }
         
         header {
-            background-color: rgba(18, 18, 18, 0.95);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 1rem 2rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             border-bottom: 1px solid var(--border-color);
         }
         
@@ -68,7 +77,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
         
@@ -83,57 +92,49 @@
         }
         
         .logo img {
-            height: 36px;
+            height: 40px;
             border-radius: 8px;
         }
         
-        .nav-buttons {
+        .nav-links {
             display: flex;
+            list-style: none;
+            gap: 2.5rem;
             align-items: center;
-            gap: 1rem;
         }
         
-        .nav-discord-btn {
-            display: flex;
-            align-items: center;
-            background: #5865F2;
-            /* Discord brand color */
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
+        .nav-links a {
+            color: var(--text-color);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            margin-right: 1rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
         
-        .nav-discord-btn:hover {
-            background: #7289DA;
-            /* Lighter Discord color */
-            transform: translateY(-2px);
+        .nav-links a:hover {
+            color: var(--primary-color);
         }
         
         .nav-download-btn {
-            display: flex;
-            align-items: center;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
+            background: var(--card-background);
+            color: var(--text-color);
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
             transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
         }
         
         .nav-download-btn:hover {
-            background: var(--primary-light);
+            background: var(--primary-color);
+            border-color: var(--primary-color);
             transform: translateY(-2px);
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 8rem 2rem 5rem;
         }
@@ -144,18 +145,15 @@
         }
         
         h1 {
-            font-size: 2.8rem;
+            font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text-color);
             line-height: 1.2;
         }
         
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 700px;
             margin: 0 auto 2rem;
             color: var(--text-light);
@@ -415,28 +413,52 @@
         }
         
         footer {
-            text-align: center;
-            padding: 3rem 0;
-            margin-top: 3rem;
-            color: var(--text-light);
+            background: var(--section-dark);
+            color: white;
+            padding: 4rem 2rem 2rem;
             border-top: 1px solid var(--border-color);
         }
         
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
         }
         
         .footer-links a {
-            color: var(--text-light);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 0.95rem;
         }
         
         .footer-links a:hover {
             color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
@@ -444,7 +466,7 @@
                 padding: 7rem 1.5rem 3rem;
             }
             h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             .face-info {
                 flex-direction: column;
@@ -464,16 +486,28 @@
             .hairstyle-content {
                 padding: 1.2rem;
             }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
         }
         
         @media (max-width: 480px) {
             .hairstyle-grid {
                 grid-template-columns: 1fr;
-                /* Single column on small screens */
             }
             .hairstyle-image-container {
                 padding-top: 75%;
-                /* 4:3 aspect ratio on mobile for better visibility */
+            }
+            .nav-links {
+                display: none;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -572,15 +606,14 @@
     <header>
         <nav>
             <a href="index.html" class="logo">
-                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo - AI Hairstyle Analysis App"> HairMe
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
             </a>
-            <div class="nav-buttons">
-                <a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">
-                    <svg height="16" viewBox="0 0 24 24" width="16" style="margin-right: 6px;">
-                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#ffffff"/>
-                    </svg> Download
-                </a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                <li><a href="contact.html">Support</a></li>
+                <li><a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn">Download</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -835,17 +868,503 @@
     </div>
 
     <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="perfect-haircut-for-face-shape.html">Face Shape Guide</a>
-            <a href="privacyNotice.html">Privacy Policy</a>
-            <a href="termsOfService.html">Terms of Service</a>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Product</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="https://apps.apple.com/app/id6741509156">Download</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="privacyNotice.html">Privacy Policy</a></li>
+                    <li><a href="termsOfService.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="perfect-haircut-for-face-shape.html">Face Shape Guide</a></li>
+                    <li><a href="best-haircuts-for-men.html">Men's Haircuts</a></li>
+                    <li><a href="best-haircuts-for-women.html">Women's Haircuts</a></li>
+                </ul>
+            </div>
         </div>
-        <p>&copy; 2025 HairMe. All rights reserved.</p>
+        <div class="copyright">
+            <p>&copy; 2025 HairMe. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
+        // Localization System
+        const translations = {
+            it: {
+                nav: {
+                    features: "Funzionalità",
+                    howItWorks: "Come Funziona",
+                    support: "Supporto",
+                    download: "Scarica"
+                },
+                page: {
+                    backLink: "← Torna a Tutte le Forme del Viso",
+                    title: "Migliori Tagli di Capelli per Viso Ovale",
+                    subtitle: "Trova tagli di capelli adatti che valorizzano la tua versatile forma del viso ovale con queste raccomandazioni degli esperti"
+                },
+                faceInfo: {
+                    title: "Comprendere la Forma del Viso Ovale",
+                    desc1: "Una forma del viso ovale è caratterizzata da proporzioni bilanciate con la fronte leggermente più larga del mento e curve dolci ai lati. È spesso considerata la forma del viso \"ideale\" perché è naturalmente bilanciata e può supportare un'ampia varietà di tagli di capelli.",
+                    desc2: "Con un viso ovale, hai la flessibilità di sperimentare con stili diversi mantenendo un look adatto. Il tuo viso ha un equilibrio naturale, ma il taglio di capelli giusto può valorizzare ulteriormente i tuoi tratti migliori."
+                },
+                characteristics: {
+                    title: "Caratteristiche della Forma del Viso Ovale",
+                    item1: "Fronte leggermente più larga del mento",
+                    item2: "Proporzioni facciali bilanciate e armoniose",
+                    item3: "Lunghezza del viso circa 1,5 volte la larghezza",
+                    item4: "Linea della mascella dolcemente curva",
+                    item5: "Nessun tratto facciale particolarmente dominante"
+                },
+                hairstyles: {
+                    title: "Tagli di Capelli Raccomandati per Visi Ovali",
+                    genderSelector: {
+                        male: "Stili Uomo",
+                        female: "Stili Donna"
+                    },
+                    selectPrompt: "Seleziona stili uomo o donna per visualizzare i tagli di capelli raccomandati",
+                    tiers: {
+                        best: "I Migliori",
+                        bestDesc: "Questi stili d'élite sono particolarmente adatti per le forme del viso ovali",
+                        good: "Buone Opzioni",
+                        goodDesc: "Questi stili funzionano molto bene con le forme del viso ovali",
+                        decent: "Scelte Decenti",
+                        decentDesc: "Questi stili possono funzionare per le forme del viso ovali con lo styling giusto"
+                    },
+                    women: {
+                        longLayers: "Strati Lunghi",
+                        longLayersDesc: "Gli strati lunghi valorizzano le forme del viso ovali aggiungendo morbidezza e movimento intorno al viso mantenendo una lunghezza adatta.",
+                        classicBob: "Bob Classico",
+                        classicBobDesc: "Un bob che arriva tra il mento e le spalle incornicia perfettamente un viso ovale, evidenziando zigomi e linea della mascella.",
+                        modernShag: "Shag Moderno",
+                        modernShagDesc: "Uno shag moderno testurizzato mette in mostra le caratteristiche bilanciate dei visi ovali aggiungendo un tocco contemporaneo al tuo look.",
+                        sideSweptBangs: "Frange Laterali",
+                        sideSweptBangsDesc: "Le frange laterali aggiungono dimensione ai visi ovali, creando una cornice morbida che valorizza gli occhi e gli zigomi.",
+                        bluntCut: "Taglio Netto",
+                        bluntCutDesc: "Tagli netti e lisci a qualsiasi lunghezza funzionano benissimo con i visi ovali, creando un look moderno e sofisticato.",
+                        faceFramingLayers: "Strati che Incorniciano il Viso",
+                        faceFramingLayersDesc: "Gli strati che iniziano al mento o agli zigomi valorizzano magnificamente l'equilibrio naturale di una forma del viso ovale."
+                    },
+                    men: {
+                        classicSidePart: "Riga Laterale Classica",
+                        classicSidePartDesc: "Una riga laterale senza tempo mette in mostra le proporzioni bilanciate di un viso ovale mantenendo un look raffinato e mascolino.",
+                        texturedCrop: "Textured Crop",
+                        texturedCropDesc: "Un textured crop con un po' di lunghezza in alto funziona meravigliosamente per i visi ovali, aggiungendo dimensione mantenendo l'equilibrio.",
+                        mediumLengthFlow: "Flow Media Lunghezza",
+                        mediumLengthFlowDesc: "Stili più lunghi con flow naturale completano perfettamente le forme del viso ovali, aggiungendo carattere senza sopraffare.",
+                        slickBack: "Slick Back",
+                        slickBackDesc: "Uno stile liscio e all'indietro evidenzia la simmetria naturale di una forma del viso ovale per un look sicuro e lucido.",
+                        texturedFringe: "Frange Testurizzate",
+                        texturedFringeDesc: "Frange testurizzate aggiungono carattere e dimensione a una forma del viso ovale mantenendo il suo equilibrio naturale.",
+                        shortSidesLongTop: "Lati Corti, Alto Lungo",
+                        shortSidesLongTopDesc: "Questo stile versatile mette in mostra le proporzioni bilanciate di un viso ovale offrendo opzioni di styling moderne e personalizzabili."
+                    }
+                },
+                tips: {
+                    title: "Consigli di Styling per la Forma del Viso Ovale",
+                    tip1: "Sperimenta liberamente: I visi ovali possono supportare praticamente qualsiasi taglio di capelli, quindi non aver paura di provare nuovi look",
+                    tip2: "Considera la texture dei capelli: Scegli stili che funzionano con la tua texture naturale dei capelli per una manutenzione facile",
+                    tip3: "Incornicia le tue caratteristiche: Usa strati che incorniciano il viso per evidenziare i tuoi tratti migliori",
+                    tip4: "Gioca con le proporzioni: La tua forma del viso bilanciata ti permette di sperimentare sia con il volume che con la lunghezza",
+                    tip5: "Prova righe diverse: Righe centrali, laterali o laterali profonde funzionano tutte bene con le forme del viso ovali",
+                    tip6: "Flessibilità delle frange: Tutti gli stili di frange completano i visi ovali—dalle frange nette a quelle laterali a quelle a tendina"
+                },
+                app: {
+                    title: "Trova il Tuo Taglio di Capelli Perfetto per Viso Ovale",
+                    description: "La tecnologia AI di HairMe analizza accuratamente le proporzioni del tuo viso e fornisce raccomandazioni personalizzate di tagli di capelli basate sulle tue caratteristiche specifiche.",
+                    downloadButton: "Scarica l'App"
+                },
+                footer: {
+                    about: "Chi Siamo",
+                    contactUs: "Contattaci",
+                    howItWorks: "Come Funziona",
+                    product: "Prodotto",
+                    features: "Funzionalità",
+                    download: "Scarica",
+                    company: "Azienda",
+                    privacyPolicy: "Privacy Policy",
+                    termsConditions: "Termini e Condizioni",
+                    explore: "Esplora",
+                    faceShapeGuide: "Guida alle Forme del Viso",
+                    mensHaircuts: "Tagli di Capelli da Uomo",
+                    womensHaircuts: "Tagli di Capelli da Donna",
+                    copyright: "© 2025 HairMe. Tutti i diritti riservati."
+                },
+                images: {
+                    logo: "Logo HairMe",
+                    faceShape: "Caratteristiche e proporzioni forma del viso ovale",
+                    appAlt: "App HairMe - analisi AI della forma del viso per visi ovali"
+                }
+            }
+        };
+
+        // Language Detection
+        function detectLanguage() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                return savedLang;
+            }
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('it')) {
+                return 'it';
+            }
+            return 'en';
+        }        // Update image paths based on language with fallback
+        function updateImagePaths(lang) {
+            const imageFolder = lang === 'it' ? 'italiano' : 'inglese';
+            const fallbackFolder = 'inglese';
+            
+            // Folder name mapping for different languages
+            const folderMapping = {
+                'inglese': {
+                    'screenshots': 'products_screen',
+                    'hairstyle_suggested': 'hairstyle_suggested',
+                    'scan_results': 'scan_results'
+                },
+                'italiano': {
+                    'screenshots': 'products_screen',
+                    'hairstyle_suggested': 'taglio_suggerito',
+                    'scan_results': 'risultati_scansione'
+                }
+            };
+            
+            // File name mapping for different languages
+            const fileNameMapping = {
+                'inglese': {
+                    'hairstyle_suggested.png': 'hairstyle_suggested.png',
+                    'scan_results.png': 'scan_results.png',
+                    'products_screen.png': 'products_screen.png'
+                },
+                'italiano': {
+                    'hairstyle_suggested.png': 'taglio_suggerito.png',
+                    'scan_results.png': 'risultati_scansione.png',
+                    'products_screen.png': 'products_screen.png'
+                }
+            };
+            
+            // Get all images that start with "images/"
+            const images = document.querySelectorAll('img[src^="images/"]');
+            
+            images.forEach(img => {
+                const originalSrc = img.getAttribute('src');
+                if (!originalSrc) return;
+                
+                // Skip if already in a language folder
+                if (originalSrc.includes('/italiano/') || originalSrc.includes('/inglese/')) {
+                    return;
+                }
+                
+                // Create new path with language folder and mapping
+                const pathParts = originalSrc.split('/');
+                pathParts[0] = 'images';
+                
+                // Apply folder name mapping if needed
+                const currentFolder = pathParts[1];
+                const mapping = folderMapping[imageFolder];
+                if (mapping && mapping[currentFolder]) {
+                    pathParts[1] = mapping[currentFolder];
+                }
+                
+                // Apply file name mapping if needed
+                const fileName = pathParts[pathParts.length - 1];
+                const fileMapping = fileNameMapping[imageFolder];
+                if (fileMapping && fileMapping[fileName]) {
+                    pathParts[pathParts.length - 1] = fileMapping[fileName];
+                }
+                
+                // Insert language folder after 'images'
+                pathParts.splice(1, 0, imageFolder);
+                const newSrc = pathParts.join('/');
+                
+                // Store original path for fallback
+                const originalPath = originalSrc;
+                
+                // Set new src
+                img.src = newSrc;
+                
+                // Add error handler for fallback
+                img.onerror = function() {
+                    // If current image failed and we're not already using fallback, try fallback
+                    if (imageFolder !== fallbackFolder) {
+                        const fallbackPathParts = originalPath.split('/');
+                        fallbackPathParts[0] = 'images';
+                        
+                        // Apply English folder mapping for fallback
+                        const fallbackMapping = folderMapping[fallbackFolder];
+                        const currentFolder = fallbackPathParts[1];
+                        if (fallbackMapping && fallbackMapping[currentFolder]) {
+                            fallbackPathParts[1] = fallbackMapping[currentFolder];
+                        }
+                        
+                        // Apply English file name mapping for fallback
+                        const fallbackFileName = fallbackPathParts[fallbackPathParts.length - 1];
+                        const fallbackFileMapping = fileNameMapping[fallbackFolder];
+                        if (fallbackFileMapping && fallbackFileMapping[fallbackFileName]) {
+                            fallbackPathParts[fallbackPathParts.length - 1] = fallbackFileMapping[fallbackFileName];
+                        } else {
+                            // Try to map Italian filename back to English
+                            const reverseMapping = {
+                                'taglio_suggerito.png': 'hairstyle_suggested.png',
+                                'risultati_scansione.png': 'scan_results.png',
+                                'products_screen.png': 'products_screen.png'
+                            };
+                            if (reverseMapping[fallbackFileName]) {
+                                fallbackPathParts[fallbackPathParts.length - 1] = reverseMapping[fallbackFileName];
+                            }
+                        }
+                        
+                        fallbackPathParts.splice(1, 0, fallbackFolder);
+                        this.src = fallbackPathParts.join('/');
+                        // Remove error handler to prevent infinite loop
+                        this.onerror = null;
+                    }
+                };
+            });
+        }
+            
+            // Get all images that start with "images/"
+            const images = document.querySelectorAll('img[src^="images/"]');
+            
+            images.forEach(img => {
+                const originalSrc = img.getAttribute('src');
+                if (!originalSrc) return;
+                
+                // Skip if already in a language folder
+                if (originalSrc.includes('/italiano/') || originalSrc.includes('/inglese/')) {
+                    return;
+                }
+                
+                // Create new path with language folder and mapping
+                const pathParts = originalSrc.split('/');
+                pathParts[0] = 'images';
+                
+                // Apply folder name mapping if needed
+                const currentFolder = pathParts[1];
+                const mapping = folderMapping[imageFolder];
+                if (mapping && mapping[currentFolder]) {
+                    pathParts[1] = mapping[currentFolder];
+                }
+                
+                // Insert language folder after 'images'
+                pathParts.splice(1, 0, imageFolder);
+                const newSrc = pathParts.join('/');
+                
+                // Store original path for fallback
+                const originalPath = originalSrc;
+                
+                // Set new src
+                img.src = newSrc;
+                
+                // Add error handler for fallback
+                img.onerror = function() {
+                    // If current image failed and we're not already using fallback, try fallback
+                    if (imageFolder !== fallbackFolder) {
+                        const fallbackPathParts = originalPath.split('/');
+                        fallbackPathParts[0] = 'images';
+                        
+                        // Apply English folder mapping for fallback
+                        const fallbackMapping = folderMapping[fallbackFolder];
+                        const currentFolder = fallbackPathParts[1];
+                        if (fallbackMapping && fallbackMapping[currentFolder]) {
+                            fallbackPathParts[1] = fallbackMapping[currentFolder];
+                        }
+                        
+                        fallbackPathParts.splice(1, 0, fallbackFolder);
+                        this.src = fallbackPathParts.join('/');
+                        // Remove error handler to prevent infinite loop
+                        this.onerror = null;
+                    }
+                };
+            });
+        }
+            });
+        }
+
+
+
+        // Apply translations
+        function applyTranslations(lang) {
+            const htmlRoot = document.getElementById('html-root') || document.documentElement;
+
+            if (lang === 'it') {
+                const t = translations.it;
+                htmlRoot.lang = 'it';
+
+                // Update image alt texts
+                const logoImg = document.querySelector('.logo img');
+                if (logoImg) logoImg.alt = t.images.logo;
+                const faceImg = document.querySelector('.face-image img');
+                if (faceImg) faceImg.alt = t.images.faceShape;
+                const appImg = document.querySelector('.app-image img');
+                if (appImg) appImg.alt = t.images.appAlt;
+
+                // Navigation
+                const navLinks = document.querySelectorAll('.nav-links a');
+                if (navLinks[0]) navLinks[0].textContent = t.nav.features;
+                if (navLinks[1]) navLinks[1].textContent = t.nav.howItWorks;
+                if (navLinks[2]) navLinks[2].textContent = t.nav.support;
+                if (navLinks[3]) navLinks[3].textContent = t.nav.download;
+
+                // Back link
+                const backLink = document.querySelector('.back-link');
+                if (backLink) backLink.textContent = t.page.backLink;
+
+                // Hero section
+                const heroTitle = document.querySelector('.hero h1');
+                if (heroTitle) heroTitle.textContent = t.page.title;
+                const heroSubtitle = document.querySelector('.hero .subtitle');
+                if (heroSubtitle) heroSubtitle.textContent = t.page.subtitle;
+
+                // Face info
+                const faceInfoTitle = document.querySelector('.face-details h2');
+                if (faceInfoTitle) faceInfoTitle.textContent = t.faceInfo.title;
+                const faceInfoParagraphs = document.querySelectorAll('.face-details p');
+                if (faceInfoParagraphs[0]) faceInfoParagraphs[0].textContent = t.faceInfo.desc1;
+                if (faceInfoParagraphs[1]) faceInfoParagraphs[1].textContent = t.faceInfo.desc2;
+
+                // Characteristics
+                const characteristicsTitle = document.querySelector('.characteristics h2');
+                if (characteristicsTitle) characteristicsTitle.textContent = t.characteristics.title;
+                const characteristicsList = document.querySelectorAll('.characteristics li');
+                if (characteristicsList[0]) characteristicsList[0].innerHTML = `<strong>${t.characteristics.item1.split(':')[0]}:</strong> ${t.characteristics.item1.split(':')[1] || ''}`;
+                if (characteristicsList[1]) characteristicsList[1].textContent = t.characteristics.item2;
+                if (characteristicsList[2]) characteristicsList[2].textContent = t.characteristics.item3;
+                if (characteristicsList[3]) characteristicsList[3].textContent = t.characteristics.item4;
+                if (characteristicsList[4]) characteristicsList[4].textContent = t.characteristics.item5;
+
+                // Hairstyles section
+                const hairstylesTitle = document.querySelector('.hairstyles-section h2');
+                if (hairstylesTitle) hairstylesTitle.textContent = t.hairstyles.title;
+                const genderBtns = document.querySelectorAll('.gender-btn');
+                if (genderBtns[0]) genderBtns[0].textContent = t.hairstyles.genderSelector.male;
+                if (genderBtns[1]) genderBtns[1].textContent = t.hairstyles.genderSelector.female;
+                const selectPrompt = document.getElementById('select-prompt');
+                if (selectPrompt) selectPrompt.querySelector('p').textContent = t.hairstyles.selectPrompt;
+
+                // Tier headings
+                const tierHeadings = document.querySelectorAll('.tier-heading h3');
+                const tierDescriptions = document.querySelectorAll('.tier-heading p');
+                tierHeadings.forEach((heading, idx) => {
+                    if (idx % 3 === 0) {
+                        heading.textContent = t.hairstyles.tiers.best;
+                        tierDescriptions[idx].textContent = t.hairstyles.tiers.bestDesc;
+                    } else if (idx % 3 === 1) {
+                        heading.textContent = t.hairstyles.tiers.good;
+                        tierDescriptions[idx].textContent = t.hairstyles.tiers.goodDesc;
+                    } else {
+                        heading.textContent = t.hairstyles.tiers.decent;
+                        tierDescriptions[idx].textContent = t.hairstyles.tiers.decentDesc;
+                    }
+                });
+
+                // Women's hairstyles
+                const womenCards = document.querySelectorAll('#female-hairstyles .hairstyle-card');
+                if (womenCards[0]) {
+                    womenCards[0].querySelector('h3').textContent = t.hairstyles.women.longLayers;
+                    womenCards[0].querySelector('p').textContent = t.hairstyles.women.longLayersDesc;
+                    womenCards[1].querySelector('h3').textContent = t.hairstyles.women.classicBob;
+                    womenCards[1].querySelector('p').textContent = t.hairstyles.women.classicBobDesc;
+                    womenCards[2].querySelector('h3').textContent = t.hairstyles.women.modernShag;
+                    womenCards[2].querySelector('p').textContent = t.hairstyles.women.modernShagDesc;
+                    womenCards[3].querySelector('h3').textContent = t.hairstyles.women.sideSweptBangs;
+                    womenCards[3].querySelector('p').textContent = t.hairstyles.women.sideSweptBangsDesc;
+                    womenCards[4].querySelector('h3').textContent = t.hairstyles.women.bluntCut;
+                    womenCards[4].querySelector('p').textContent = t.hairstyles.women.bluntCutDesc;
+                    womenCards[5].querySelector('h3').textContent = t.hairstyles.women.faceFramingLayers;
+                    womenCards[5].querySelector('p').textContent = t.hairstyles.women.faceFramingLayersDesc;
+                }
+
+                // Men's hairstyles
+                const menCards = document.querySelectorAll('#male-hairstyles .hairstyle-card');
+                if (menCards[0]) {
+                    menCards[0].querySelector('h3').textContent = t.hairstyles.men.classicSidePart;
+                    menCards[0].querySelector('p').textContent = t.hairstyles.men.classicSidePartDesc;
+                    menCards[1].querySelector('h3').textContent = t.hairstyles.men.texturedCrop;
+                    menCards[1].querySelector('p').textContent = t.hairstyles.men.texturedCropDesc;
+                    menCards[2].querySelector('h3').textContent = t.hairstyles.men.mediumLengthFlow;
+                    menCards[2].querySelector('p').textContent = t.hairstyles.men.mediumLengthFlowDesc;
+                    menCards[3].querySelector('h3').textContent = t.hairstyles.men.slickBack;
+                    menCards[3].querySelector('p').textContent = t.hairstyles.men.slickBackDesc;
+                    menCards[4].querySelector('h3').textContent = t.hairstyles.men.texturedFringe;
+                    menCards[4].querySelector('p').textContent = t.hairstyles.men.texturedFringeDesc;
+                    menCards[5].querySelector('h3').textContent = t.hairstyles.men.shortSidesLongTop;
+                    menCards[5].querySelector('p').textContent = t.hairstyles.men.shortSidesLongTopDesc;
+                }
+
+                // Tips section
+                const tipsTitle = document.querySelector('.tips-section h2');
+                if (tipsTitle) tipsTitle.textContent = t.tips.title;
+                const tipsList = document.querySelectorAll('.tips-section li');
+                if (tipsList[0]) tipsList[0].innerHTML = `<strong>Sperimenta liberamente:</strong> I visi ovali possono supportare praticamente qualsiasi taglio di capelli, quindi non aver paura di provare nuovi look`;
+                if (tipsList[1]) tipsList[1].innerHTML = `<strong>Considera la texture dei capelli:</strong> Scegli stili che funzionano con la tua texture naturale dei capelli per una manutenzione facile`;
+                if (tipsList[2]) tipsList[2].innerHTML = `<strong>Incornicia le tue caratteristiche:</strong> Usa strati che incorniciano il viso per evidenziare i tuoi tratti migliori`;
+                if (tipsList[3]) tipsList[3].innerHTML = `<strong>Gioca con le proporzioni:</strong> La tua forma del viso bilanciata ti permette di sperimentare sia con il volume che con la lunghezza`;
+                if (tipsList[4]) tipsList[4].innerHTML = `<strong>Prova righe diverse:</strong> Righe centrali, laterali o laterali profonde funzionano tutte bene con le forme del viso ovali`;
+                if (tipsList[5]) tipsList[5].innerHTML = `<strong>Flessibilità delle frange:</strong> Tutti gli stili di frange completano i visi ovali—dalle frange nette a quelle laterali a quelle a tendina`;
+
+                // App section
+                const appTitle = document.querySelector('.app-content h2');
+                if (appTitle) appTitle.textContent = t.app.title;
+                const appDescription = document.querySelector('.app-content p');
+                if (appDescription) appDescription.textContent = t.app.description;
+                const downloadButton = document.querySelector('.download-button');
+                if (downloadButton) {
+                    const svg = downloadButton.querySelector('svg');
+                    downloadButton.innerHTML = svg ? svg.outerHTML + ' ' + t.app.downloadButton : t.app.downloadButton;
+                }
+
+                // Footer
+                const footerColumns = document.querySelectorAll('.footer-column h4');
+                if (footerColumns[0]) footerColumns[0].textContent = t.footer.about;
+                if (footerColumns[1]) footerColumns[1].textContent = t.footer.product;
+                if (footerColumns[2]) footerColumns[2].textContent = t.footer.company;
+                if (footerColumns[3]) footerColumns[3].textContent = t.footer.explore;
+
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(link => {
+                    const text = link.textContent.trim();
+                    if (text === 'Contact Us') link.textContent = t.footer.contactUs;
+                    if (text === 'How It Works') link.textContent = t.footer.howItWorks;
+                    if (text === 'Features') link.textContent = t.footer.features;
+                    if (text === 'Download') link.textContent = t.footer.download;
+                    if (text === 'Privacy Policy') link.textContent = t.footer.privacyPolicy;
+                    if (text === 'Terms & Conditions') link.textContent = t.footer.termsConditions;
+                    if (text === 'Face Shape Guide') link.textContent = t.footer.faceShapeGuide;
+                    if (text === "Men's Haircuts") link.textContent = t.footer.mensHaircuts;
+                    if (text === "Women's Haircuts") link.textContent = t.footer.womensHaircuts;
+                });
+
+                const copyright = document.querySelector('.copyright p');
+                if (copyright) copyright.textContent = t.footer.copyright;
+            } else {
+                htmlRoot.lang = 'en';
+            }
+        }
+
+        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
+            const lang = detectLanguage();
+            updateImagePaths(lang);
+            applyTranslations(lang);
+            localStorage.setItem('preferredLanguage', lang);
+
+            // Gender selector functionality
             const genderBtns = document.querySelectorAll('.gender-btn');
             const genderContents = document.querySelectorAll('.gender-content');
             const selectPrompt = document.getElementById('select-prompt');
@@ -859,7 +1378,7 @@
                     this.classList.add('active');
 
                     // Hide the prompt
-                    selectPrompt.style.display = 'none';
+                    if (selectPrompt) selectPrompt.style.display = 'none';
 
                     // Show relevant content
                     genderContents.forEach(content => {
