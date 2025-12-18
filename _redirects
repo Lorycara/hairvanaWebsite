@@ -1,0 +1,6 @@
+# Netlify redirects file
+# Redirect old URL patterns to correct file names
+
+/privacy-policy.html /privacyNotice.html 301
+/terms-of-service.html /termsOfService.html 301
+
