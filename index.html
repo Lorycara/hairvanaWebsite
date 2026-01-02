@@ -274,22 +274,23 @@
             align-items: center;
             gap: 0.75rem;
             margin-bottom: 1.75rem;
-            padding: 0.5rem 1.25rem 0.5rem 0.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.25rem;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .trusted-avatars {
             display: flex;
+            align-items: center;
         }
         
         .trusted-avatars img {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            border: 2px solid var(--background-color);
-            margin-left: -8px;
+            border: 2px solid rgba(100, 100, 150, 0.3);
+            margin-left: -10px;
             object-fit: cover;
         }
         
@@ -298,18 +299,18 @@
         }
         
         .trusted-avatars span {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-            border: 2px solid var(--background-color);
+            border: 2px solid rgba(100, 100, 150, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 700;
-            font-size: 0.65rem;
-            margin-left: -8px;
+            font-size: 0.7rem;
+            margin-left: -10px;
         }
         
         .trusted-avatars span:first-child {
@@ -317,10 +318,11 @@
         }
         
         .trusted-badge p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.9rem;
+            color: #ffffff;
+            font-size: 0.95rem;
             margin: 0;
             font-weight: 500;
+            white-space: nowrap;
         }
         
         .hero h1 {
@@ -806,7 +808,7 @@
         /* CTA Section */
         
         .cta-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            background: var(--background-color);
             padding: 8rem 2rem;
             text-align: center;
             color: white;
@@ -817,43 +819,52 @@
         .cta-section::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 1000px;
+            height: 80%;
+            background: radial-gradient(ellipse at center, rgba(0, 188, 212, 0.15) 0%, rgba(0, 188, 212, 0.08) 40%, transparent 70%);
             pointer-events: none;
+            z-index: 0;
+            filter: blur(60px);
         }
         
         .cta-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            padding: 5rem 4rem;
         }
         
         .cta-section h2 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 1.5rem;
             color: white;
-            font-weight: 800;
+            font-weight: 700;
             letter-spacing: -0.02em;
+            line-height: 1.2;
         }
         
         .cta-section p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             margin-bottom: 3rem;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
             font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .cta-button {
             background: white;
-            color: var(--primary-color);
+            color: var(--background-color);
             font-weight: 700;
             padding: 1.3rem 3.5rem;
-            border-radius: 14px;
+            border-radius: 12px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -861,12 +872,18 @@
             gap: 0.8rem;
             transition: all 0.3s ease;
             font-size: 1.1rem;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+            border: none;
         }
         
         .cta-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(255, 255, 255, 0.25);
+        }
+        
+        .cta-button i {
+            color: var(--background-color);
         }
         /* Footer */
         
@@ -945,6 +962,11 @@
         
         .footer-links a:hover {
             color: var(--primary-color);
+        }
+        
+        .footer-links a i {
+            margin-right: 0.5rem;
+            font-size: 0.95rem;
         }
         
         .footer-logo {
@@ -1385,11 +1407,14 @@
                 width: 36px;
                 height: 36px;
             }
+            .cta-content {
+                padding: 3.5rem 2rem;
+            }
             .cta-section h2 {
-                font-size: 2.5rem;
+                font-size: 2.75rem;
             }
             .cta-section p {
-                font-size: 1.15rem;
+                font-size: 1rem;
             }
             footer {
                 padding: 3rem 1.5rem 2rem;
@@ -1431,12 +1456,13 @@
                 margin-bottom: 2.5rem;
             }
             .trusted-badge p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
+            .trusted-avatars img,
             .trusted-avatars span {
-                width: 32px;
-                height: 32px;
-                font-size: 0.7rem;
+                width: 28px;
+                height: 28px;
+                font-size: 0.65rem;
             }
         }
         
@@ -1466,15 +1492,21 @@
                 justify-content: center;
             }
             .trusted-badge {
-                padding: 0.4rem 0.8rem;
+                padding: 0.6rem 1rem;
             }
             .trusted-badge p {
                 font-size: 0.8rem;
             }
+            .trusted-avatars img,
             .trusted-avatars span {
-                width: 24px;
-                height: 24px;
-                font-size: 0.55rem;
+                width: 26px;
+                height: 26px;
+                font-size: 0.6rem;
+                margin-left: -8px;
+            }
+            .trusted-avatars img:first-child,
+            .trusted-avatars span:first-child {
+                margin-left: 0;
             }
             .phone-mockup {
                 width: 160px;
@@ -1577,14 +1609,22 @@
             .logo img {
                 height: 36px;
             }
+            .cta-content {
+                padding: 3rem 1.5rem;
+            }
             .cta-section h2 {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
             .cta-section p {
-                font-size: 1.05rem;
+                font-size: 0.95rem;
             }
             .cta-section {
                 padding: 5rem 1.5rem;
+            }
+            .cta-section::before {
+                width: 90%;
+                height: 70%;
+                filter: blur(40px);
             }
         }
     </style>
@@ -1728,18 +1768,18 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="stats-section scroll-animate">
+    <section class="stats-section scroll-animate" id="statsSection">
         <div class="stats-card">
             <div class="stat-item">
-                <div class="stat-number">84%</div>
+                <div class="stat-number" data-target="84" data-suffix="%">0%</div>
                 <p class="stat-label">Reported improvement in confidence</p>
             </div>
             <div class="stat-item">
-                <div class="stat-number">100K+</div>
+                <div class="stat-number" data-target="100" data-suffix="K+">0K+</div>
                 <p class="stat-label">Users have found their perfect style</p>
             </div>
             <div class="stat-item">
-                <div class="stat-number">4.8</div>
+                <div class="stat-number" data-target="4.8" data-suffix="">0</div>
                 <p class="stat-label">Average App Store rating</p>
             </div>
         </div>
@@ -1872,6 +1912,17 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Find Your Perfect Hairstyle Today</h2>
+            <p>Start your journey with our AI-powered hairstyle app and discover the perfect look for your unique face shape. The confidence boost feels great, trust us – The HairMe Team</p>
+            <a href="https://apps.apple.com/app/id6741509156" class="cta-button">
+                <i class="fab fa-apple"></i> Download
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-container">
@@ -1903,11 +1954,10 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Explore</h4>
+                        <h4>Social</h4>
                         <ul class="footer-links">
-                            <li><a href="perfect-haircut-for-face-shape.html">Face Shape Guide</a></li>
-                            <li><a href="best-haircuts-for-men.html">Men's Haircuts</a></li>
-                            <li><a href="best-haircuts-for-women.html">Women's Haircuts</a></li>
+                            <li><a href="https://www.instagram.com/hairme.ai" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@hairme.app" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i> TikTok</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1995,9 +2045,9 @@
                     downloadHairMe: "Scarica HairMe"
                 },
                 cta: {
-                    title: "Pronto a trovare il tuo stile perfetto?",
-                    subtitle: "Scarica l'app HairMe oggi e scopri tagli di capelli che valorizzano davvero le tue caratteristiche uniche.",
-                    downloadNow: "Scarica Ora"
+                    title: "Trova il Tuo Taglio di Capelli Perfetto Oggi",
+                    subtitle: "Inizia il tuo percorso con la nostra app di tagli di capelli alimentata dall'AI e scopri il look perfetto per la tua forma del viso unica. L'aumento di fiducia è fantastico, fidati di noi – Il Team HairMe",
+                    downloadNow: "Scarica"
                 },
                 footer: {
                     heading: "L'App di Riferimento per Trovare il Tuo Taglio di Capelli Perfetto.",
@@ -2011,10 +2061,9 @@
                     company: "Azienda",
                     privacyPolicy: "Privacy Policy",
                     termsConditions: "Termini e Condizioni",
-                    explore: "Esplora",
-                    faceShapeGuide: "Guida alle Forme del Viso",
-                    mensHaircuts: "Tagli di Capelli da Uomo",
-                    womensHaircuts: "Tagli di Capelli da Donna",
+                    social: "Social",
+                    instagram: "Instagram",
+                    tiktok: "TikTok",
                     copyright: "© 2025 HairMe. Tutti i diritti riservati."
                 }
             }
@@ -2325,7 +2374,7 @@
                 const footerColumns = document.querySelectorAll('.footer-column h4');
                 if (footerColumns[0]) footerColumns[0].textContent = t.footer.about;
                 if (footerColumns[1]) footerColumns[1].textContent = t.footer.company;
-                if (footerColumns[2]) footerColumns[2].textContent = t.footer.explore;
+                if (footerColumns[2]) footerColumns[2].textContent = t.footer.social;
 
                 const footerLinks = document.querySelectorAll('.footer-links a');
                 footerLinks.forEach(link => {
@@ -2337,9 +2386,8 @@
                     if (text === 'Support') link.textContent = t.footer.support;
                     if (text === 'Privacy Policy') link.textContent = t.footer.privacyPolicy;
                     if (text === 'Terms & Conditions') link.textContent = t.footer.termsConditions;
-                    if (text === 'Face Shape Guide') link.textContent = t.footer.faceShapeGuide;
-                    if (text === "Men's Haircuts") link.textContent = t.footer.mensHaircuts;
-                    if (text === "Women's Haircuts") link.textContent = t.footer.womensHaircuts;
+                    if (text.includes('Instagram')) link.innerHTML = `<i class="fab fa-instagram"></i> ${t.footer.instagram}`;
+                    if (text.includes('TikTok')) link.innerHTML = `<i class="fab fa-tiktok"></i> ${t.footer.tiktok}`;
                 });
             } else {
                 htmlRoot.lang = 'en';
@@ -2457,8 +2505,67 @@
                 handleScrollReveal(); // Run once on load
             }
 
-            window.addEventListener('scroll', handleScrollAnimation);
+            // Counter animation for statistics
+            const statsSection = document.getElementById('statsSection');
+            const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+            let hasAnimated = false;
+
+            const animateCounter = (element) => {
+                const target = parseFloat(element.getAttribute('data-target'));
+                const suffix = element.getAttribute('data-suffix') || '';
+                const duration = 800; // Fast animation - 800ms
+                const startTime = performance.now();
+                const isDecimal = target % 1 !== 0;
+
+                const updateCounter = (currentTime) => {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+
+                    // Easing function for smooth animation
+                    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                    const current = target * easeOutQuart;
+
+                    if (isDecimal) {
+                        element.textContent = current.toFixed(1) + suffix;
+                    } else {
+                        element.textContent = Math.floor(current) + suffix;
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        // Ensure final value is exact
+                        if (isDecimal) {
+                            element.textContent = target.toFixed(1) + suffix;
+                        } else {
+                            element.textContent = target + suffix;
+                        }
+                    }
+                };
+
+                requestAnimationFrame(updateCounter);
+            };
+
+            const handleStatsAnimation = () => {
+                if (hasAnimated) return;
+
+                if (statsSection && isInViewport(statsSection)) {
+                    hasAnimated = true;
+                    statNumbers.forEach((stat, index) => {
+                        // Stagger the animations slightly for visual effect
+                        setTimeout(() => {
+                            animateCounter(stat);
+                        }, index * 100);
+                    });
+                }
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+                handleStatsAnimation();
+            });
             handleScrollAnimation();
+            handleStatsAnimation(); // Run once on load
         });
     </script>
 </body>

@@ -1074,64 +1074,6 @@
             });
         }
 
-        // Get all images that start with "images/"
-        const images = document.querySelectorAll('img[src^="images/"]');
-
-        images.forEach(img => {
-        const originalSrc = img.getAttribute('src');
-        if (!originalSrc) return;
-
-        // Skip if already in a language folder
-        if (originalSrc.includes('/italiano/') || originalSrc.includes('/inglese/')) {
-            return;
-        }
-
-        // Create new path with language folder and mapping
-        const pathParts = originalSrc.split('/');
-        pathParts[0] = 'images';
-
-        // Apply folder name mapping if needed
-        const currentFolder = pathParts[1];
-        const mapping = folderMapping[imageFolder];
-        if (mapping && mapping[currentFolder]) {
-            pathParts[1] = mapping[currentFolder];
-        }
-
-        // Insert language folder after 'images'
-        pathParts.splice(1, 0, imageFolder);
-        const newSrc = pathParts.join('/');
-
-        // Store original path for fallback
-        const originalPath = originalSrc;
-
-        // Set new src
-        img.src = newSrc;
-
-        // Add error handler for fallback
-        img.onerror = function() {
-            // If current image failed and we're not already using fallback, try fallback
-            if (imageFolder !== fallbackFolder) {
-                const fallbackPathParts = originalPath.split('/');
-                fallbackPathParts[0] = 'images';
-
-                // Apply English folder mapping for fallback
-                const fallbackMapping = folderMapping[fallbackFolder];
-                const currentFolder = fallbackPathParts[1];
-                if (fallbackMapping && fallbackMapping[currentFolder]) {
-                    fallbackPathParts[1] = fallbackMapping[currentFolder];
-                }
-
-                fallbackPathParts.splice(1, 0, fallbackFolder);
-                this.src = fallbackPathParts.join('/');
-                // Remove error handler to prevent infinite loop
-                this.onerror = null;
-            }
-        };
-        });
-        }
-        });
-        }
-
 
 
         // Apply translations
