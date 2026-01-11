@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Hooks and Structures | HairMe UGC</title>
+    <meta name="description" content="Example hooks and content structures for HairMe UGC creators.">
+    <link rel="icon" href="images/HairMeLogoNuovo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+         :root {
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --section-spacing: 2rem;
+            --border-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        p {
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        section {
+            padding: var(--section-spacing) 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 1.5rem 3rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        
+        .logo img {
+            height: 36px;
+            border-radius: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .nav-download-btn {
+            background: white;
+            color: #000000 !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--text-color);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.6rem;
+            min-width: 48px;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Hero Section */
+        
+        .hero {
+            padding: 6rem 3rem 1.5rem;
+            background: var(--background-color);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .info-box {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .info-box .icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        
+        .info-box p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        /* Hooks Section */
+        
+        .hooks-section {
+            padding: 0.5rem 0;
+        }
+        
+        .hook-category {
+            margin-bottom: 1.5rem;
+        }
+        
+        .hook-category h3 {
+            margin-bottom: 0.75rem;
+        }
+        
+        .hook-item {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hook-item .pain {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+        }
+        
+        .hook-item .arrow {
+            color: var(--primary-color);
+            margin: 0.3rem 0;
+            font-size: 1rem;
+        }
+        
+        .hook-item .outcome {
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1rem;
+            }
+            .mobile-menu-btn {
+                display: flex;
+            }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .nav-links a {
+                display: block;
+                padding: 1rem 2rem;
+            }
+            .hero {
+                padding: 5rem 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="ugc-features.html">Features</a></li>
+                <li><a href="ugc-pain-points.html">Pain Points</a></li>
+                <li><a href="ugc-examples.html">Examples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Example Hooks and Structures</h1>
+            <div class="info-box">
+                <div class="icon">💡</div>
+                <p>These are purely ideas… you do not have to use any of these, but please take some inspiration!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hooks-section">
+        <div class="container">
+            <div class="hook-category">
+                <h3>🎯 The Confidence Struggle</h3>
+                <div class="hook-item">
+                    <div class="pain">"I never know what hairstyle actually suits me"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to find my perfect look and feel confident"</div>
+                </div>
+                <div class="hook-item">
+                    <div class="pain">"I've tried so many bad haircuts"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to finally get it right"</div>
+                </div>
+            </div>
+
+            <div class="hook-category">
+                <h3>😔 The Self-Image Issue</h3>
+                <div class="hook-item">
+                    <div class="pain">"I don't feel attractive with my current hairstyle"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to look and feel my best"</div>
+                </div>
+                <div class="hook-item">
+                    <div class="pain">"I can't even look at myself in photos"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to love how I look"</div>
+                </div>
+            </div>
+
+            <div class="hook-category">
+                <h3>🤷 The Confusion</h3>
+                <div class="hook-item">
+                    <div class="pain">"I have no idea what face shape I have"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to understand what works for me"</div>
+                </div>
+                <div class="hook-item">
+                    <div class="pain">"Every barber gives me a different cut"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want personalized recommendations I can trust"</div>
+                </div>
+            </div>
+
+            <div class="hook-category">
+                <h3>💼 The Social Impact</h3>
+                <div class="hook-item">
+                    <div class="pain">"I lack confidence in social situations"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to feel confident meeting new people"</div>
+                </div>
+                <div class="hook-item">
+                    <div class="pain">"I avoid photos and social events"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to feel good about being seen"</div>
+                </div>
+            </div>
+
+            <div class="hook-category">
+                <h3>⏰ The Time Waste</h3>
+                <div class="hook-item">
+                    <div class="pain">"I spend hours researching hairstyles online"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want instant, personalized recommendations"</div>
+                </div>
+                <div class="hook-item">
+                    <div class="pain">"I've wasted money on bad haircuts"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to make the right choice the first time"</div>
+                </div>
+            </div>
+
+            <div class="hook-category">
+                <h3>🎨 The Style Frustration</h3>
+                <div class="hook-item">
+                    <div class="pain">"I can't communicate what I want to my barber"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want clear recommendations I can show them"</div>
+                </div>
+                <div class="hook-item">
+                    <div class="pain">"I'm stuck with the same boring hairstyle"</div>
+                    <div class="arrow">→</div>
+                    <div class="outcome">"I want to discover new styles that actually work"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

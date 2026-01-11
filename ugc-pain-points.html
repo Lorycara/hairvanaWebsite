@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Pain-Points And Dream Outcomes | HairMe UGC</title>
+    <meta name="description" content="Understanding HairMe users' pain points and desired outcomes for UGC content creation.">
+    <link rel="icon" href="images/HairMeLogoNuovo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --section-spacing: 3rem;
+            --border-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+        
+        section {
+            padding: var(--section-spacing) 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 1.5rem 3rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        
+        .logo img {
+            height: 36px;
+            border-radius: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .nav-download-btn {
+            background: white;
+            color: #000000 !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--text-color);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.6rem;
+            min-width: 48px;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 7rem 3rem 2rem;
+            background: var(--background-color);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Pain Points Section */
+        .pain-points-section {
+            padding: 1rem 0;
+        }
+        
+        .category {
+            margin-bottom: 2rem;
+        }
+        
+        .category h3 {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .category ul {
+            list-style: none;
+        }
+        
+        .category ul li {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .pain-point-item {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .pain-point-text {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+        }
+        
+        .hook-text {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-style: italic;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* Dream Outcomes Section */
+        .outcomes-section {
+            background: var(--section-dark);
+            padding: 2rem 2rem;
+        }
+        
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .outcome-item {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--border-color);
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1rem 2rem;
+            }
+            
+            .hero {
+                padding: 6rem 1.5rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="ugc-hooks.html">Hooks</a></li>
+                <li><a href="ugc-features.html">Features</a></li>
+                <li><a href="ugc-examples.html">Examples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>User Pain-Points And Dream Outcomes</h1>
+            <p>These are examples to give you a well-rounded understanding of our app's users. Feel free to use your own experiences and/or those that you have an understanding of for your content!</p>
+        </div>
+    </section>
+
+    <section class="pain-points-section">
+        <div class="container">
+            <h2>Pain Points ⤵️</h2>
+            
+            <div class="category">
+                <h3>😔 Confidence & Self-Image</h3>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Lack of confidence due to not knowing what hairstyle suits them</div>
+                    <div class="hook-text">"I had zero confidence because I never knew what hairstyle actually suited me..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Feeling unattractive with their current hairstyle</div>
+                    <div class="hook-text">"I used to hate how I looked in photos because of my hair..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Avoiding photos and social situations because of their hair</div>
+                    <div class="hook-text">"I avoided social events because I was embarrassed about my hair..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Negative self-image due to bad haircut experiences</div>
+                    <div class="hook-text">"I've had so many bad haircuts that I lost all confidence..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Feeling stuck with the same boring hairstyle</div>
+                    <div class="hook-text">"I was stuck with the same boring hairstyle for years because I was too scared to try something new..."</div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>🤷 Confusion & Uncertainty</h3>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Not knowing their face shape or what works for them</div>
+                    <div class="hook-text">"I had no idea what face shape I had or what hairstyles would actually work for me..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Difficulty communicating what they want to barbers/stylists</div>
+                    <div class="hook-text">"I could never explain what I wanted to my barber, and always left disappointed..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Overwhelmed by too many hairstyle options online</div>
+                    <div class="hook-text">"There are thousands of hairstyle options online and I had no idea which one to choose..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Getting different recommendations from different sources</div>
+                    <div class="hook-text">"Everyone gave me different advice and I was more confused than ever..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Not understanding why certain styles don't work</div>
+                    <div class="hook-text">"I never understood why certain hairstyles looked great on others but terrible on me..."</div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>⏰ Time & Money Waste</h3>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Spending hours researching hairstyles with no clear direction</div>
+                    <div class="hook-text">"I spent hours researching hairstyles online but had no idea which one would actually work for me..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Wasting money on bad haircuts that don't suit them</div>
+                    <div class="hook-text">"I wasted so much money on bad haircuts that didn't suit my face shape..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Having to fix or grow out unsuccessful haircuts</div>
+                    <div class="hook-text">"I had to wait months for my hair to grow out after another failed haircut..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Feeling like they're constantly trying new things that fail</div>
+                    <div class="hook-text">"I kept trying new hairstyles but nothing ever worked out..."</div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>💼 Social Impact</h3>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Lack of confidence in professional settings</div>
+                    <div class="hook-text">"I lacked confidence at work because I didn't feel good about how I looked..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Feeling self-conscious in social situations</div>
+                    <div class="hook-text">"I felt so self-conscious in social situations because of my hair..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Difficulty making a good first impression</div>
+                    <div class="hook-text">"I couldn't make a good first impression because I didn't feel confident about my appearance..."</div>
+                </div>
+                
+                <div class="pain-point-item">
+                    <div class="pain-point-text">Feeling like their appearance holds them back</div>
+                    <div class="hook-text">"My appearance was holding me back from being my best self..."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="outcomes-section">
+        <div class="container">
+            <h2>Dream Outcomes ⤵️</h2>
+            <div class="outcomes-grid">
+                <div class="outcome-item">Extreme confidence in their appearance</div>
+                <div class="outcome-item">A hairstyle that truly suits their face shape</div>
+                <div class="outcome-item">Feeling attractive and looking their best</div>
+                <div class="outcome-item">Clear understanding of what works for them</div>
+                <div class="outcome-item">Ability to communicate their style preferences</div>
+                <div class="outcome-item">Saving time and money on haircuts</div>
+                <div class="outcome-item">Confidence in social and professional settings</div>
+                <div class="outcome-item">Loving how they look in photos</div>
+                <div class="outcome-item">Feeling like their best self</div>
+                <div class="outcome-item">Making great first impressions</div>
+                <div class="outcome-item">Discovering new styles that actually work</div>
+                <div class="outcome-item">No more bad haircut regrets</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features to Show | HairMe UGC</title>
+    <meta name="description" content="Key HairMe features to showcase in your UGC content.">
+    <link rel="icon" href="images/HairMeLogoNuovo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --section-spacing: 3rem;
+            --border-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+        
+        section {
+            padding: var(--section-spacing) 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 1.5rem 3rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        
+        .logo img {
+            height: 36px;
+            border-radius: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .nav-download-btn {
+            background: white;
+            color: #000000 !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--text-color);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.6rem;
+            min-width: 48px;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 7rem 3rem 2rem;
+            background: var(--background-color);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 1rem 0;
+        }
+        
+        .feature-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: start;
+        }
+        
+        .feature-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .feature-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .feature-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+        
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+        
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-tip {
+            background: var(--card-background);
+            border-left: 3px solid var(--primary-color);
+            padding: 0.75rem 1rem;
+            margin-top: 0.75rem;
+            border-radius: 4px;
+        }
+        
+        .feature-tip strong {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1rem;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--border-color);
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 1rem 2rem;
+            }
+            
+            .hero {
+                padding: 6rem 1.5rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .feature-item {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .feature-item:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="ugc-hooks.html">Hooks</a></li>
+                <li><a href="ugc-pain-points.html">Pain Points</a></li>
+                <li><a href="ugc-examples.html">Examples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Features to Show</h1>
+            <p>Here are the key HairMe features to showcase in your videos. Each feature includes tips on how to best present it.</p>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="feature-item">
+                <img src="images/features/ai_face_analysis.png" alt="AI Face Analysis" class="feature-image">
+                <div class="feature-content">
+                    <h3>1) AI Face Shape Analysis</h3>
+                    <p>This is the core feature of HairMe. The AI analyzes your face shape in seconds to determine your unique facial proportions and features. This is the first step users take when opening the app.</p>
+                    <p><strong>Tip:</strong> Show the analysis process in action - capture the moment when the AI scans the face and reveals the face shape result. This creates excitement and demonstrates the technology.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="images/features/personalized_recommendations.png" alt="Personalized Recommendations" class="feature-image">
+                <div class="feature-content">
+                    <h3>2) Personalized Hairstyle Recommendations</h3>
+                    <p>After analyzing the face shape, HairMe provides tailored hairstyle recommendations that match the user's unique features. This is where users discover their perfect look.</p>
+                    <p><strong>Tip:</strong> Show the variety of recommendations available. Scroll through different options to demonstrate the personalized nature of the suggestions.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="images/features/attraction.png" alt="Attractiveness Score" class="feature-image">
+                <div class="feature-content">
+                    <h3>3) Attractiveness Score</h3>
+                    <p>HairMe provides AI-powered beauty scores that analyze how different hairstyles impact your overall attractiveness. This helps users understand what works best for them.</p>
+                    <p><strong>Tip:</strong> Show the before and after scores when trying different hairstyles. This visual comparison is powerful and shows the value of choosing the right style.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="images/features/progress.png" alt="Progress Tracking" class="feature-image">
+                <div class="feature-content">
+                    <h3>4) Progress Tracking</h3>
+                    <p>Users can save their favorite looks, compare before and after photos, and track their hairstyle journey over time. This feature helps users see their transformation.</p>
+                    <p><strong>Tip:</strong> Show the progress timeline or before/after comparison feature. This demonstrates the long-term value and helps users see their improvement.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="images/features/hairHealth.png" alt="Hair Health Analysis" class="feature-image">
+                <div class="feature-content">
+                    <h3>5) Hair Health Analysis</h3>
+                    <p>HairMe's advanced AI scans your hair condition, identifies problems, and provides detailed insights about your hair health. This helps users maintain healthy, strong hair.</p>
+                    <p><strong>Tip:</strong> Show the hair scan results screen. Highlight the detailed insights and recommendations provided, as this adds significant value beyond just hairstyle suggestions.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <img src="images/initialScreenshot/InitialScreenshot.png" alt="App Store Page" class="feature-image">
+                <div class="feature-content">
+                    <h3>6) App Store Page</h3>
+                    <p>Although showing the app store page is not always required, it's a great way to visually show the first step to finding your perfect hairstyle, as it's the first thing users see after tapping the download button!</p>
+                    <p><strong>Tip:</strong> Show the app icon and name clearly. This creates brand recognition and makes it easy for viewers to find the app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

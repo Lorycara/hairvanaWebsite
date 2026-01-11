@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairMe UGC Creator Application</title>
+    <meta name="description" content="Become a UGC creator for HairMe. Create authentic content for TikTok, Instagram Reels, and YouTube Shorts.">
+    <link rel="icon" href="images/HairMeLogoNuovo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+         :root {
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --section-spacing: 3rem;
+            --border-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+        
+        section {
+            padding: var(--section-spacing) 2rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 1.5rem 3rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        
+        .logo img {
+            height: 36px;
+            border-radius: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .nav-download-btn {
+            background: white;
+            color: #000000 !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-download-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--text-color);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.6rem;
+            min-width: 48px;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        /* Hero Section */
+        
+        .hero {
+            padding: 7rem 3rem 2rem;
+            margin-top: 0;
+            min-height: auto;
+            background: var(--background-color);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .intro-box {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+        
+        .intro-box img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        
+        .intro-box p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .intro-box strong {
+            color: var(--primary-color);
+        }
+        /* Content Sections */
+        
+        .content-section {
+            padding: 2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .content-section ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .content-section ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+        
+        .content-section ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        /* Guidelines Section */
+        
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .guidelines-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+        }
+        
+        .guidelines-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .guidelines-card ul {
+            list-style: none;
+        }
+        
+        .guidelines-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .guidelines-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .guidelines-card.donts ul li:before {
+            content: "✗";
+            color: #f44336;
+        }
+        /* Resources Section */
+        
+        .resources-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .resources-list li {
+            margin: 0.75rem 0;
+        }
+        
+        .resources-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .resources-list a:hover {
+            color: var(--primary-light);
+        }
+        /* Submit Section */
+        
+        .submit-section {
+            background: var(--section-dark);
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+        
+        .submit-section h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .submit-section p {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .submit-button {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .submit-button:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+        }
+        /* Footer */
+        
+        footer {
+            background: var(--background-color);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            border-top: none;
+        }
+        
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        .footer-main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 6rem;
+            margin-bottom: 4rem;
+        }
+        
+        .footer-left h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            max-width: 300px;
+        }
+        
+        .footer-right {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        
+        .footer-column h4 {
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1rem;
+            }
+            .mobile-menu-btn {
+                display: flex;
+            }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .nav-links a {
+                display: block;
+                padding: 1rem 2rem;
+            }
+            .hero {
+                padding: 6rem 1.5rem 2rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .guidelines-grid {
+                grid-template-columns: 1fr;
+            }
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                <li><a href="contact.html">Support</a></li>
+                <li><a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn"><i class="fab fa-apple"></i> Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="intro-box">
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe App Icon">
+                <div>
+                    <p><strong>Hey, Thank you for showing your interest in becoming a UGC creator for HairMe!</strong> We are a leading hairstyle app with AI-powered face shape analysis, helping people find their perfect look. We're looking for authentic
+                        creators to join our team!</p>
+                    <p style="margin-top: 1rem;"><strong>Please carefully read through this document for instructions on how to apply. We need you to create 1 piece of content, following our guidelines and using previous content as inspiration.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We're Looking For -->
+    <section class="content-section">
+        <div class="container">
+            <h2>What We're Looking For</h2>
+            <p>UGC creators who can connect with our audience through genuine, relatable content. If you enjoy our product and think it will help people, we'd be happy to have you join with us!</p>
+            <p>Your videos should:</p>
+            <ul>
+                <li>Feel personal and conversational (not overly polished or scripted)</li>
+                <li>Share real experiences, transformations, or testimonials</li>
+                <li>Highlight specific HairMe features that made a difference</li>
+                <li>Inspire action and confidence</li>
+                <li>Be between 15-60 seconds long</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Content Guidelines -->
+    <section class="content-section" style="background: var(--section-dark);">
+        <div class="container">
+            <h2>Content Guidelines</h2>
+            <div class="guidelines-grid">
+                <div class="guidelines-card">
+                    <h3>✅ Do:</h3>
+                    <ul>
+                        <li>Speak directly to camera in a quiet, well-lit space (if talking head)</li>
+                        <li>Be authentic and genuine</li>
+                        <li>Use natural language (avoid corporate speak)</li>
+                        <li>Show your face when comfortable</li>
+                        <li>Mention specific HairMe features</li>
+                        <li>Keep energy positive but genuine</li>
+                    </ul>
+                </div>
+                <div class="guidelines-card donts">
+                    <h3>❌ Don't:</h3>
+                    <ul>
+                        <li>Make false or exaggerated claims</li>
+                        <li>Use misleading before/after comparisons</li>
+                        <li>Share others' personal information</li>
+                        <li>Over-edit or use excessive effects</li>
+                        <li>Make guarantees about specific results</li>
+                        <li>Use copyrighted music without permission</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>(Important) Resources</h2>
+            <p>We've provided comprehensive resources to help you create amazing content. Please review all of these before creating your submission:</p>
+            <ul class="resources-list">
+                <li><a href="ugc-hooks.html">Example hooks and structures</a></li>
+                <li><a href="ugc-features.html">Features to show</a></li>
+                <li><a href="ugc-pain-points.html">User Pain-Points And Dream Outcomes</a></li>
+                <li><a href="ugc-examples.html">High-performing Content</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- What to Submit -->
+    <section class="content-section" style="background: var(--section-dark);">
+        <div class="container">
+            <h2>What to Submit</h2>
+            <p>After viewing the user pain points and dream outcomes & reviewing the high-performing content, we want you to create a 15-60 second video ad for HairMe that you believe would perform well on all platforms (TikTok, Instagram Reels, YouTube
+                Shorts). Use the examples above as inspiration, but make it your own.</p>
+            <p><strong>Your submission should include:</strong></p>
+            <ul>
+                <li>A strong hook in the first 3-5 seconds</li>
+                <li>Authentic storytelling or testimonial</li>
+                <li>At least one mention of HairMe within the first <strong>10 seconds</strong></li>
+                <li>A <strong>clear</strong> call-to-action</li>
+            </ul>
+            <p style="margin-top: 2rem;">We need UGC creators that have <strong>agency</strong>, can <strong>think for themselves</strong> and <strong>care about our brand/product</strong>.</p>
+            <p>We have provided a lot of resources for you in here, and we expect you to use your initiative in creating your creative!</p>
+            <p>We look forward to seeing your submission!</p>
+        </div>
+    </section>
+
+    <!-- Submit Section -->
+    <section class="submit-section">
+        <div class="container">
+            <h2>Ready to Submit?</h2>
+            <p>Once you've reviewed all the resources and created your video, please submit through the form below:</p>
+            <a href="#" class="submit-button">Submit Your Application</a>
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.5);">(Form link will be added here)</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-left">
+                    <h3>The Flagship Hairstyle App to Find Your Perfect Look.</h3>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-column">
+                        <h4>About</h4>
+                        <ul class="footer-links">
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                            <li><a href="index.html#features">Features</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://apps.apple.com/app/id6741509156">Download</a></li>
+                            <li><a href="contact.html">Support</a></li>
+                            <li><a href="privacyNotice.html">Privacy Policy</a></li>
+                            <li><a href="termsOfService.html">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <ul class="footer-links">
+                            <li><a href="https://www.instagram.com/hairme.ai" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://www.tiktok.com/@hairme.app" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+
+                // Close menu when clicking on a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

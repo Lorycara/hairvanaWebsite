@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Guide | HairMe UGC</title>
+    <meta name="description" content="Complete guide for HairMe UGC creators and influencers to create amazing content.">
+    <link rel="icon" href="images/HairMeLogoNuovo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+         :root {
+            --primary-color: #00BCD4;
+            --primary-light: #4DD0E1;
+            --text-color: #FFFFFF;
+            --text-light: #CCCCCC;
+            --background-color: #000000;
+            --background-alt: #0A0A0A;
+            --card-background: #1A1A1A;
+            --section-dark: #0F0F0F;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --section-spacing: 2rem;
+            --border-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        section {
+            padding: var(--section-spacing) 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: transparent;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 1.5rem 3rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: none;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        
+        .logo img {
+            height: 36px;
+            border-radius: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .nav-download-btn {
+            background: white;
+            color: #000000 !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--text-color);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.6rem;
+            min-width: 48px;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Hero Section */
+        
+        .hero {
+            padding: 6rem 3rem 1.5rem;
+            background: var(--background-color);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .welcome-box {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .welcome-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        /* Content Sections */
+        
+        .content-section {
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+        
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .content-section p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+        
+        .content-section ul,
+        .content-section ol {
+            margin: 0.75rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .content-section ul li,
+        .content-section ol li {
+            padding: 0.3rem 0;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        /* Guidelines Grid */
+        
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 0.75rem 0;
+        }
+        
+        .guidelines-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+        }
+        
+        .guidelines-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+        }
+        
+        .guidelines-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .guidelines-card ul li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        .guidelines-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .guidelines-card.donts ul li:before {
+            content: "✗";
+            color: #f44336;
+        }
+        /* Feature Cards */
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 0.75rem 0;
+        }
+        
+        .feature-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+        }
+        
+        .feature-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        /* Info Boxes */
+        
+        .info-box {
+            background: var(--card-background);
+            border-left: 3px solid var(--primary-color);
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            border-radius: 4px;
+        }
+        
+        .info-box h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        .info-box p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-box ul {
+            font-size: 0.9rem;
+        }
+        
+        .info-box strong {
+            color: var(--primary-color);
+        }
+        
+        .warning-box {
+            background: rgba(244, 67, 54, 0.1);
+            border-left: 3px solid #f44336;
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box strong {
+            color: #f44336;
+        }
+        /* Feature with Image Layout */
+        
+        .feature-with-image {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: start;
+        }
+        
+        .feature-with-image:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .feature-with-image:nth-child(even)>* {
+            direction: ltr;
+        }
+        
+        .feature-image-side {
+            width: 100%;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            pointer-events: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-image-side:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        /* Image Modal/Lightbox */
+        
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .image-modal.active {
+            display: flex;
+        }
+        
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .image-modal-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .image-modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+        /* Accordion Styles */
+        
+        .accordion-header {
+            cursor: pointer;
+            user-select: none;
+            pointer-events: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .accordion-header:hover {
+            opacity: 0.8;
+        }
+        
+        .accordion-header h4 {
+            pointer-events: none;
+        }
+        
+        .accordion-icon {
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .accordion-icon.rotated {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+            opacity: 0;
+            padding: 0;
+            pointer-events: none;
+        }
+        
+        .accordion-content.expanded {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 0;
+            transition: max-height 0.3s ease-in, opacity 0.3s ease-in, padding 0.3s ease-in;
+            pointer-events: auto;
+        }
+        
+        .accordion-content.expanded .secondary-feature-image {
+            pointer-events: auto;
+        }
+        
+        .secondary-feature-with-image {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            align-items: start;
+        }
+        
+        .secondary-feature-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            pointer-events: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .secondary-feature-image:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        
+        .secondary-feature-text h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            color: var(--text-color);
+        }
+        
+        .secondary-feature-text p {
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .feature-text-side h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .feature-text-side p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-text-side ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .feature-text-side ul li {
+            font-size: 0.9rem;
+            padding: 0.3rem 0;
+        }
+        /* Resources List */
+        
+        .resources-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0;
+        }
+        
+        .resources-list li {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resources-list a {
+            font-size: 0.95rem;
+        }
+        
+        .resources-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .resources-list a:hover {
+            color: var(--primary-light);
+        }
+        /* Contact Section */
+        
+        .contact-section {
+            background: var(--section-dark);
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            margin-bottom: 0.75rem;
+        }
+        
+        .contact-section p {
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-button {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .contact-button:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem 1rem;
+            }
+            .mobile-menu-btn {
+                display: flex;
+            }
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .nav-links a {
+                display: block;
+                padding: 1rem 2rem;
+            }
+            .hero {
+                padding: 6rem 1.5rem 1.5rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .guidelines-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-with-image {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            .feature-with-image:nth-child(even) {
+                direction: ltr;
+            }
+            .secondary-feature-with-image {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .image-modal-close {
+                top: 1rem;
+                right: 1rem;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+            .image-modal-content {
+                max-width: 95%;
+                max-height: 85%;
+            }
+            .content-section {
+                padding: 1.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/HairMeLogoNuovo.png" alt="HairMe Logo"> HairMe
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="how-to-find-your-hairstyle.html">How It Works</a></li>
+                <li><a href="contact.html">Support</a></li>
+                <li><a href="https://apps.apple.com/app/id6741509156" class="nav-download-btn"><i class="fab fa-apple"></i> Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Creator Guide</h1>
+            <div class="welcome-box">
+                <h2>Welcome to the HairMe Creator Team! 🎉</h2>
+                <p>This guide contains everything you need to create amazing content for HairMe. Bookmark this page and refer to it whenever you need guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Formats -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Content Formats That Work</h2>
+            <p><strong>People are looking for something that suggests them a hairstyle.</strong> If your video shows this, it will do well.</p>
+
+            <p>The best ways to show this are:</p>
+
+            <div class="info-box">
+                <h4>1. Problem → Solution</h4>
+                <p>Example: "Must go to the barber and don't know what haircut to get? Use this app."</p>
+                <p style="margin-top: 0.5rem; margin-bottom: 0;"><a href="ugc-pain-points.html" style="color: var(--primary-color); text-decoration: underline;">See common user pain points</a></p>
+            </div>
+
+            <div class="info-box">
+                <h4>2. Before & After</h4>
+                <p>Example: "Now that I found this app and got my suggestion I finally don't have problem anymore."</p>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+                <p style="margin-bottom: 0.75rem;">Want to see what works? Check out our <a href="ugc-examples.html" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">best performing content examples</a> for inspiration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Best Practices</h2>
+
+            <h3>Hook (First 3-5 seconds)</h3>
+            <ul>
+                <li>Start with a question or bold statement</li>
+                <li>Address a pain point immediately</li>
+                <li>Create curiosity or urgency</li>
+                <li>Examples: "I finally found my perfect hairstyle" or "This app changed how I look"</li>
+            </ul>
+
+            <h3>Mention HairMe Early</h3>
+            <p>Always mention HairMe within the first <strong>10 seconds</strong> of your video. This is crucial for brand recognition and platform algorithms.</p>
+
+            <h3>Call-to-Action</h3>
+            <p>End every video with a clear call-to-action. Examples:</p>
+            <ul>
+                <li>"Download HairMe in the App Store"</li>
+                <li>"Link in bio to try it yourself"</li>
+                <li>"Get your perfect hairstyle with HairMe"</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- How to Show the App -->
+    <section class="content-section">
+        <div class="container">
+            <h2>How to Show the App</h2>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem;">The main features to show are the hairstyle recommendation and the hair health scan results.</p>
+
+            <div class="feature-with-image">
+                <img src="images/features/ai_face_analysis.png" alt="Hairstyle Recommendation" class="feature-image-side">
+                <div class="feature-text-side">
+                    <h4>Hairstyle Recommendation</h4>
+                    <p>Display the personalized hairstyle suggestions tailored to the user's face shape and features.</p>
+                </div>
+            </div>
+
+            <div class="feature-with-image">
+                <img src="images/features/hairHealth.png" alt="Hair Health Scan Results" class="feature-image-side">
+                <div class="feature-text-side">
+                    <h4>Hair Health Scan Results</h4>
+                    <p>Show the hair health analysis results with detailed insights about hair condition and recommendations.</p>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 1rem; margin-bottom: 0.75rem;">
+                <h4 style="font-size: 1rem; margin-bottom: 0.4rem;">How to Record</h4>
+                <p style="font-size: 0.85rem; margin-bottom: 0;">You can show yourself taking the photos for the scan, record yourself making a scan, or, if your video doesn't require it, record only the scan result (face shape analysis results).</p>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <div class="accordion-header" id="secondaryFeaturesToggle">
+                    <h4 style="margin: 0; color: var(--text-color); font-size: 1rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; padding: 0.5rem 0;">
+                        <span>Secondary Features (Optional)</span>
+                        <i class="fas fa-chevron-down accordion-icon" style="transition: transform 0.3s ease; font-size: 0.9rem;"></i>
+                    </h4>
+                </div>
+                <div class="accordion-content" id="secondaryFeaturesContent">
+                    <p style="margin-bottom: 0.75rem; margin-top: 0.75rem; font-size: 0.85rem;">You can also mention these features, but they are <strong>not mandatory</strong>:</p>
+
+                    <div class="secondary-feature-with-image">
+                        <img src="images/products_screen/products_screen.png" alt="Product Recommendations" class="secondary-feature-image">
+                        <div class="secondary-feature-text">
+                            <h4>Product Recommendations</h4>
+                            <p>Show product suggestions for hair care and styling.</p>
+                        </div>
+                    </div>
+
+                    <div class="secondary-feature-with-image">
+                        <img src="images/features/personalized_recommendations.png" alt="Hair Routine" class="secondary-feature-image">
+                        <div class="secondary-feature-text">
+                            <h4>Hair Routine Recommendations</h4>
+                            <p>Display personalized daily hair care routines.</p>
+                        </div>
+                    </div>
+
+                    <div class="secondary-feature-with-image">
+                        <img src="images/features/attraction.png" alt="Other App Functions" class="secondary-feature-image">
+                        <div class="secondary-feature-text">
+                            <h4>Other App Functions</h4>
+                            <p>Mention any other features that might be relevant to your content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Process -->
+    <section class="content-section" style="background: var(--section-dark);">
+        <div class="container">
+            <h2>Content Submission Process</h2>
+
+            <h3>How to Submit Your Content</h3>
+            <ol>
+                <li>Create your video following the guidelines above</li>
+                <li>Review your content to ensure it meets all requirements</li>
+                <li>Send it to <a href="https://www.instagram.com/hairme.ai" target="_blank" style="color: var(--primary-color); text-decoration: underline;">@HairMe.ai</a> and wait for approval (it will come very soon)</li>
+                <li>Upload to your platform (TikTok, Instagram Reels, or YouTube Shorts)</li>
+                <li>Share the link with <a href="https://www.instagram.com/hairme.ai" target="_blank" style="color: var(--primary-color); text-decoration: underline;">@HairMe.ai</a> on Instagram via the contact method provided</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Need Help?</h2>
+            <p>If you have questions, need clarification, or want feedback on your content, don't hesitate to reach out!</p>
+            <a href="https://www.instagram.com/hairme.ai" target="_blank" class="contact-button">Contact Our Team</a>
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.5);">We're here to support you in creating amazing content!</p>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="modalImage" src="" alt="Enlarged image">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (icon) {
+                        if (navLinks.classList.contains('active')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Image modal functionality
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeBtn = document.querySelector('.image-modal-close');
+            // Image modal functionality - use event delegation for better reliability
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('feature-image-side') || e.target.classList.contains('secondary-feature-image')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal.classList.add('active');
+                    modalImg.src = e.target.src;
+                    modalImg.alt = e.target.alt;
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Accordion functionality for secondary features
+            const secondaryFeaturesToggle = document.getElementById('secondaryFeaturesToggle');
+            const secondaryFeaturesContent = document.getElementById('secondaryFeaturesContent');
+
+            if (secondaryFeaturesToggle && secondaryFeaturesContent) {
+                const accordionIcon = secondaryFeaturesToggle.querySelector('.accordion-icon');
+
+                secondaryFeaturesToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const isExpanded = secondaryFeaturesContent.classList.contains('expanded');
+
+                    if (isExpanded) {
+                        secondaryFeaturesContent.classList.remove('expanded');
+                        if (accordionIcon) {
+                            accordionIcon.classList.remove('rotated');
+                        }
+                    } else {
+                        secondaryFeaturesContent.classList.add('expanded');
+                        if (accordionIcon) {
+                            accordionIcon.classList.add('rotated');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

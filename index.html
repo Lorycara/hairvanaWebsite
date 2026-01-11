@@ -2097,7 +2097,14 @@
 
         // Language Detection
         function detectLanguage() {
-            // Check localStorage first (user preference)
+            // Check URL parameter first (for testing/forcing language)
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            if (urlLang === 'it' || urlLang === 'en') {
+                return urlLang;
+            }
+
+            // Check localStorage (user preference)
             const savedLang = localStorage.getItem('preferredLanguage');
             if (savedLang) {
                 return savedLang;
