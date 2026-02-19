@@ -1,5 +1,5 @@
 PRIVACY NOTICE
-Last updated February 04, 2025
+Last updated February 19, 2026
 This Privacy Notice for HairMe ("we," "us," or "our"), describes how and why we might access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services"), including when you:
 Download and use our mobile application (HairMe), or any other application of ours that links to this Privacy Notice
 Engage with us in other related ways, including any sales, marketing, or events
@@ -15,6 +15,7 @@ How do we keep your information safe? We have adequate organizational and techni
 What are your rights? Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about your privacy rights.
 How do you exercise your rights? The easiest way to exercise your rights is by submitting a data subject access request, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
 Want to learn more about what we do with any information we collect? Review the Privacy Notice in full.
+Do we use third-party AI? When you use the scan or chat features, we send the data needed for that feature (e.g. photos, messages) to our AI provider (OpenAI) to provide analysis and responses. We describe this in detail in "Third-party AI services" below.
 1. WHAT INFORMATION DO WE COLLECT?
 Personal information you disclose to us
 In Short: We collect personal information that you provide to us.
@@ -42,6 +43,7 @@ Enable future features like trend-based recommendations
 Allowing you to access your facial analysis results anytime through your account
 Push Notifications. We may request to send you push notifications regarding your account or certain features of the application(s). If you wish to opt out from receiving these types of communications, you may turn them off in your device's settings.
 Storage and Retention of Facial Data: All facial analysis data is stored securely in our Firebase Firestore database, where it is linked only to your user profile. This data is retained only for as long as you maintain an active account. When you delete your account, all facial data, including images and analysis results, will be permanently deleted from our systems. You can access, manage, or delete your facial data at any time through the app.
+Data used for AI features. When you use the hairstyle scan or in-app chat, we use the following for analysis and responses: (1) the photos you upload for a scan, (2) the messages and any images you send in chat, (3) your chosen gender and preferences (e.g. hair goals, styling effort) when relevant to a scan. This data is collected when you use those features in the app and is processed by us and our AI service provider as described in "When and with whom do we share your personal information" and "Third-party AI services."
 This information is primarily needed to maintain the security and operation of our application(s), for troubleshooting, and for our internal analytics and reporting purposes.
 All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.
 Information automatically collected
@@ -89,9 +91,20 @@ We also may need to share your personal information in the following situations:
 Business Transfers. We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.
 Affiliates. We may share your information with our affiliates, in which case we will require those affiliates to honor this Privacy Notice. Affiliates include our parent company and any subsidiaries, joint venture partners, or other companies that we control or that are under common control with us.
 Business Partners. We may share your information with our business partners to offer you certain products, services, or promotions.
+Facial and chat data shared with our AI provider. To provide the hairstyle scan and chat features, we send certain personal data to our third-party AI service provider (OpenAI). This includes: facial images and related data you provide for scans (e.g. face shape, gender, preferences), and the messages and any images you send in chat. We do this only to deliver and improve those features. We require our AI provider to protect your data under contractual terms that provide the same or equal protection as described in this notice. For full details, see "Third-party AI services" below.
+Third-party AI services. We use a third-party AI service provider, OpenAI, to power our hairstyle analysis and in-app chat.
+Who receives the data: OpenAI (https://openai.com), which processes data on our behalf to provide AI analysis and chat responses.
+What data we send: (1) For scans: the facial images you upload, your selected gender, and any preferences you provide (e.g. hair goals, styling effort). (2) For chat: the text and any images you send in the conversation.
+How we collect it: You provide this data when you use the scan feature (by uploading photos and choosing options) and when you use the chat feature (by sending messages and optional images).
+Why we share it: To analyze your photos and provide personalized hairstyle recommendations, and to generate chat responses.
+How we protect it: Data is transmitted over encrypted connections. Under our agreement with OpenAI, they do not use your data to train their public models. For more on how OpenAI handles data, see https://openai.com/policies/privacy-policy.
+Protection: We only use providers that agree by contract to protect your data with the same or equal level of protection as described in this Privacy Notice and to use the data only for the purposes we specify.
 We have disclosed the following categories of personal information to third parties for a business or commercial purpose in the preceding twelve (12) months:
 Category A. Identifiers
-Important Note about Facial Data: While we may share some information with third parties, facial analysis data (including face shape, measurements, and characteristics) is never shared with third parties. This data remains strictly within our Firebase Firestore database and is only used for providing our hairstyle recommendation service.
+Category D. Biometric information (facial characteristics), when used for scan analysis
+Category G. Images (facial photos and chat images)
+Category B. Protected classification characteristics (e.g. gender), when relevant to scans
+The categories of third parties include our AI service provider (OpenAI), as described in "Third-party AI services" above, in addition to the cloud, analytics, and payment providers listed above.
 5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
 In Short: We may use cookies and other tracking technologies to collect and store your information.
 We may use cookies and similar tracking technologies (like web beacons and pixels) to gather information when you interact with our Services. Some online tracking technologies help us maintain the security of our Services and your account, prevent crashes, fix bugs, save your preferences, and assist with basic site functions.
@@ -166,7 +179,10 @@ We may disclose your personal information with our service providers pursuant to
 We may use your personal information for our own business purposes, such as for undertaking internal research for technological development and demonstration. This is not considered to be "selling" of your personal information.
 We have not sold or shared any personal information to third parties for a business or commercial purpose in the preceding twelve (12) months. We have disclosed the following categories of personal information to third parties for a business or commercial purpose in the preceding twelve (12) months:
 Category A. Identifiers
-The categories of third parties to whom we disclosed personal information for a business or commercial purpose can be found under "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?"
+Category B. Protected classification characteristics (e.g. gender)
+Category D. Biometric information (facial characteristics)
+Category G. Images (facial photos and chat images)
+The categories of third parties to whom we disclosed personal information for a business or commercial purpose include: cloud computing services (e.g. Google Firebase), analytics services, payment processors, and our AI service provider (OpenAI), as described under "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?" and "Third-party AI services."
 Your Rights
 You have rights under certain US state data protection laws. However, these rights are not absolute, and in certain cases, we may decline your request as permitted by law. These rights include:
 Right to know whether or not we are processing your personal data
