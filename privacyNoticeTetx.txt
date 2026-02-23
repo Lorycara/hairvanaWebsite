@@ -4,6 +4,32 @@ This Privacy Notice for HairMe ("we," "us," or "our"), describes how and why we 
 Download and use our mobile application (HairMe), or any other application of ours that links to this Privacy Notice
 Engage with us in other related ways, including any sales, marketing, or events
 Questions or concerns? Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services.
+
+DATA COLLECTION, USAGE, AND SHARING IN PLAIN LANGUAGE
+
+Data Collection and Usage
+To provide our hairstyle scan and in-app chat features, we collect and use personally identifiable information that you provide when you use the app. This includes: (1) photos of your face that you upload for a scan, (2) the messages and any images you send in the in-app chat, (3) your account information (such as name, email, or social login profile), (4) your selected gender and preferences (e.g. hair goals, styling effort) when you use a scan. This information is retained and used as described in this Privacy Notice and only to provide and improve our Service.
+
+Data Collection Methodology
+Data about your face is collected directly from the photos you upload when you use the hairstyle scan feature in the app. Once uploaded, we send those images to our AI service provider (OpenAI), which analyzes your facial features (such as face shape, forehead shape, cheekbones, and other characteristics) to generate your attractiveness rating, hairstyle recommendations, and suggestions for improvement. When you use the in-app chat, the text and any images you type or send are also sent to OpenAI so we can generate responses. We do not collect or process your face or chat data on our own servers for AI analysis; that processing is done by OpenAI on our behalf.
+
+Data Retention Policy
+Your account data and facial analysis results (including scan results and any stored images) are stored on our infrastructure (Google Firebase). We retain this data for as long as you maintain an active account. When you delete your account, all associated data, including facial images and analysis results, is permanently deleted from our systems. Data sent to OpenAI for processing is handled according to our agreement with them and their privacy policy; they do not use your data to train their public models.
+
+Data Disclosure and Sharing
+We share your face data and chat messages with our AI provider, OpenAI, solely to provide the scan and chat features. We do not sell your personal information. We do not share your face data or chat content with advertisers or other third parties for their own marketing or purposes.
+
+The app integrates the following third-party services that may collect or process information:
+
+We use:
+OpenAI — to analyze your photos and generate hairstyle recommendations and chat responses (face and chat data are sent to OpenAI as described above).
+Google Firebase — for authentication, hosting, and storing your account and scan data (Firestore, Cloud Storage).
+Firebase Crashlytics — to collect crash and error reports to improve app stability (device and usage data).
+Analytics services — to understand how users interact with our Service (e.g. usage statistics).
+Payment processors — to process in-app purchases (payment is handled by Apple; we do not store your full payment details).
+
+These third parties are granted access to your Personal Information only to perform the tasks we assign them and are bound by contract not to disclose or use it for any other purpose.
+
 SUMMARY OF KEY POINTS
 This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our table of contents below to find the section you are looking for.
 What personal information do we process? When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. Learn more about personal information you disclose to us.
@@ -15,6 +41,7 @@ How do we keep your information safe? We have adequate organizational and techni
 What are your rights? Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about your privacy rights.
 How do you exercise your rights? The easiest way to exercise your rights is by submitting a data subject access request, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
 Want to learn more about what we do with any information we collect? Review the Privacy Notice in full.
+For a plain-language overview of what we collect, how we collect it, and who we share it with (including OpenAI), see "Data Collection, Usage, and Sharing in Plain Language" above.
 Do we use third-party AI? When you use the scan or chat features, we send the data needed for that feature (e.g. photos, messages) to our AI provider (OpenAI) to provide analysis and responses. We describe this in detail in "Third-party AI services" below.
 1. WHAT INFORMATION DO WE COLLECT?
 Personal information you disclose to us
